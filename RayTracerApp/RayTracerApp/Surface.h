@@ -1,6 +1,6 @@
 #pragma once
 #include "pch.h"
-#include "Vector.h"
+#include "Ray.h"
 
 class Surface
 {
@@ -12,6 +12,10 @@ public:
 	void Normal(Vector d) { Normal_ = d; }
 	Vector Point() const { return Point_; }
 	void Point(Vector d) { Point_ = d; }
+
+	float GetAngleBetweenNormalAndVector(Vector vec);
+	bool Intersection(Ray ray, float & dist, Vector &point);
+
 
 private:
 	Vector Normal_;

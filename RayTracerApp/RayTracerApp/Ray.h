@@ -6,7 +6,9 @@ class Ray
 {
 public:
 	Ray();
-	Ray(Vector o, Vector d);
+	Ray(Vector origin, Vector direction);
+	Ray(Vector origin, float dis);
+	Ray(Vector origin, Vector direction, float dis);
 
 	Vector Origin() const { return Origin_; }
 	void Origin(Vector o) { Origin_ = o; }
@@ -16,6 +18,8 @@ public:
 	void Direction(Vector d) { Direction_ = d; }
 	float Distance() const { return Distance_; }
 	void Distance(float d) { Distance_ = d; }
+
+	std::string ToString();
 
 private:
 	Vector Origin_;
