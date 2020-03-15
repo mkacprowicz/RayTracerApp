@@ -34,7 +34,7 @@ public:
 	float Z() const { return Z_; }
 	void Z(float z) { Z_ = z; }
 
-	std::string ToString();
+	friend std::ostream& operator<<(std::ostream& os, const Vector& vec);
 
 private:
 	float X_;

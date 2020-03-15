@@ -24,7 +24,7 @@ Sphere::Sphere(Vector v, float r)
 	this->Radius_ = r;
 }
 
-int Sphere::Intersection(Ray ray, float& dist, Vector& p)
+int Sphere::Intersection(Ray ray, float& dist, Vector& p) const
 {
 	Vector vec = ray.Origin() - this->Center_;
 	float b = (-1.0f) * vec.Dot(ray.Direction());
@@ -35,8 +35,8 @@ int Sphere::Intersection(Ray ray, float& dist, Vector& p)
 	if (det > 0)
 	{
 		det = std::sqrtf(det);
-		float i1 = b - det;
-		float i2 = b + det;
+		const float i1 = b - det;
+		const float i2 = b + det;
 
 		if (i2 > 0)
 		{
@@ -59,16 +59,15 @@ int Sphere::Intersection(Ray ray, float& dist, Vector& p)
 		}
 	}
 
-	Vector hitPoint;
-
-	hitPoint = ray.Origin() + dist * ray.Direction();
+	const Vector hitPoint = ray.Origin() + dist * ray.Direction();
 
 	p = hitPoint;
 
 	return res;
 }
 
-std::string Sphere::ToString()
+std::ostream& operator<<(std::ostream& os, const Sphere& sph)
 {
-	return "Sphere(" + this->Center_.ToString() + "," + std::to_string(this->Radius_) + ")";
+	os << "Sphere(" << sph.Center_ << "," << std::to_string(sph.Radius_) << ")";
+	return os;
 }

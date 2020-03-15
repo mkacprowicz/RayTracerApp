@@ -19,7 +19,7 @@ public:
 	float Distance() const { return Distance_; }
 	void Distance(float d) { Distance_ = d; }
 
-	std::string ToString();
+	friend std::ostream& operator<<(std::ostream& os, const Ray& ray);
 
 private:
 	Vector Origin_;

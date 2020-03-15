@@ -18,20 +18,20 @@ int main()
 	// #2
 	ShowNum(2);
 
-	Sphere S(Vector(0, 0, 0), 10);
-	std::cout << S.ToString() << std::endl;
+	const Sphere S(Vector(0, 0, 0), 10);
+	std::cout << S << std::endl;
 
 	// #3
 	ShowNum(3);
 
-	Ray R1(Vector(0, 0, -20), S.Center());
-	std::cout << R1.ToString() << std::endl;
+	const Ray R1(Vector(0, 0, -20), S.Center());
+	std::cout << R1 << std::endl;
 
 	// #4
 	ShowNum(4);
 
-	Ray R2(R1.Origin(), Vector(0, 1, 0));
-	std::cout << R2.ToString() << std::endl;
+	const Ray R2(R1.Origin(), Vector(0, 1, 0));
+	std::cout << R2 << std::endl;
 
 	// #5
 	ShowNum(5);
@@ -42,7 +42,7 @@ int main()
 	if (result > 0)
 	{
 		std::cout << "HIT" << std::endl;
-		std::cout << point.ToString() << std::endl;
+		std::cout << point << std::endl;
 	}
 	else
 	{
@@ -56,7 +56,7 @@ int main()
 	if (result > 0)
 	{
 		std::cout << "HIT" << std::endl;
-		std::cout << point.ToString() << std::endl;
+		std::cout << point << std::endl;
 	}
 	else
 	{
@@ -71,12 +71,12 @@ int main()
 
 	float length2 = 25;
 	Vector point2;
-	int result2 = S.Intersection(r3, length2, point2);
+	const int result2 = S.Intersection(r3, length2, point2);
 
 	if (result2 > 0)
 	{
 		std::cout << "HIT" << std::endl;
-		std::cout << point2.ToString() << std::endl;
+		std::cout << point2 << std::endl;
 	}
 	else
 	{
@@ -102,7 +102,7 @@ int main()
 	Vector point3;
 	bool result3 = P.Intersection(R2, dis, point3);
 
-	std::cout << point3.ToString() << std::endl;
+	std::cout << point3 << std::endl;
 }
 
 void ShowNum(int num)

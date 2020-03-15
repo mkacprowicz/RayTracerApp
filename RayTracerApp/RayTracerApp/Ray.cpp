@@ -26,7 +26,8 @@ Ray::Ray(Vector origin, Vector direction, float dis)
 	this->Distance_ = dis;
 }
 
-std::string Ray::ToString()
+std::ostream& operator<<(std::ostream& os, const Ray& ray)
 {
-	return "Ray(" + this->Origin_.ToString() + "," + this->Direction_.ToString() + "," + this->Destination_.ToString() + "," + std::to_string(this->Distance_) + ")";
+	os << "Ray(" << ray.Origin_ << "," << ray.Direction_ << "," << ray.Destination_ << "," << std::to_string(ray.Distance_) << ")";
+	return os;
 }

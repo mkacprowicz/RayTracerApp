@@ -144,7 +144,9 @@ Vector Vector::Zero()
 	return Vector(0.0f, 0.0f, 0.0f);
 }
 
-std::string Vector::ToString()
+
+std::ostream& operator<<(std::ostream& os, const Vector& vec)
 {
-	return "Vector(" + std::to_string(this->X_) + "," + std::to_string(this->Y_) + "," + std::to_string(this->Z_) + ")";
+	os << "Vector(" << std::to_string(vec.X_) << "," << std::to_string(vec.Y_) << "," + std::to_string(vec.Z_) << ")";
+	return os;
 }
