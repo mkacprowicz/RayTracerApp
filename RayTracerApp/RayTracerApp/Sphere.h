@@ -10,7 +10,7 @@ public:
 	Sphere(Vector v);
 	Sphere(Vector v, float r);
 
-	int Intersection(Ray ray, float & dist, Vector &p) const;
+	float Intersection(Ray ray, Vector &p, float& t) const;
 
 	Vector Center() const { return Center_; }
 	void Center(Vector o) { Center_ = o; }

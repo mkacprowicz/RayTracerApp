@@ -24,7 +24,7 @@ int main()
 	// #3
 	ShowNum(3);
 
-	const Ray R1(Vector(0, 0, -20), S.Center());
+	const Ray R1(Vector(0, 0, -20), Vector(0, 0, -1));
 	std::cout << R1 << std::endl;
 
 	// #4
@@ -36,46 +36,45 @@ int main()
 	// #5
 	ShowNum(5);
 
-	float length = 25;
+	float length = 0;
 	Vector point = Vector::Zero();
-	int result = S.Intersection(R1, length, point);
-	if (result > 0)
+	float result = S.Intersection(R1, point, length);
+
+	if (result != 0)
 	{
-		std::cout << "HIT" << std::endl;
 		std::cout << point << std::endl;
 	}
 	else
 	{
 		std::cout << "MISS" << std::endl;
 	}
-	
-	///////////
 
+	///////////////////////
+
+	length = 0;
 	point = Vector::Zero();
-	result = S.Intersection(R2, length, point);
-	if (result > 0)
+	result = S.Intersection(R2, point, length);
+
+	if (result != 0)
 	{
-		std::cout << "HIT" << std::endl;
 		std::cout << point << std::endl;
 	}
 	else
 	{
 		std::cout << "MISS" << std::endl;
 	}
-
 
 	// #6
 	ShowNum(6);
 
-	Ray r3(Vector(0, 0, -24), Vector(0, 0, 0));
+	Ray R3(Vector(0, 0, -24), Vector(0, 0, 1));
 
-	float length2 = 25;
-	Vector point2;
-	const int result2 = S.Intersection(r3, length2, point2);
+	float length2 = 0;
+	Vector point2 = Vector::Zero();
+	float result2 = S.Intersection(R3, point2, length2);
 
-	if (result2 > 0)
+	if (result2 != 0)
 	{
-		std::cout << "HIT" << std::endl;
 		std::cout << point2 << std::endl;
 	}
 	else

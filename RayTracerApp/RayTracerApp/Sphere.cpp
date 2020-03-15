@@ -24,46 +24,34 @@ Sphere::Sphere(Vector v, float r)
 	this->Radius_ = r;
 }
 
-int Sphere::Intersection(Ray ray, float& dist, Vector& p) const
+float Sphere::Intersection(Ray ray, Vector& p, float &t) const
 {
 	Vector vec = ray.Origin() - this->Center_;
-	float b = (-1.0f) * vec.Dot(ray.Direction());
-	float det = (b * b) - (-1.0) * vec.Dot(vec) + this->Radius_;
+	float a = ray.Direction().LenghtSquared();
+	float b = 2.0 * vec.Dot(ray.Direction());
+	float c = vec.LenghtSquared() - this->Radius_ * this->Radius_;
 
-	int res = 0;
+	float discriminant = b * b - 4 * a * c;
 
-	if (det > 0)
+	float res = 0;
+
+	if (discriminant < 0)
 	{
-		det = std::sqrtf(det);
-		const float i1 = b - det;
-		const float i2 = b + det;
-
-		if (i2 > 0)
-		{
-			if (i1 < 0)
-			{
-				if (i2 < dist)
-				{
-					dist = i2;
-					res = 2;
-				}
-			}
-			else
-			{
-				if (i1 < dist)
-				{
-					dist = i1;
-					res = 1;
-				}
-			}
-		}
+		res = 0;
+		return res;
 	}
 
-	const Vector hitPoint = ray.Origin() + dist * ray.Direction();
 
+	float discSq = std::sqrtf(discriminant);
+
+	float denom = 2 * a;
+
+	t = (-b - discSq) / denom;
+	
+	const Vector hitPoint = ray.Origin() + t * ray.Direction();
 	p = hitPoint;
 
-	return res;
+	return t;
 }
 
 std::ostream& operator<<(std::ostream& os, const Sphere& sph)
