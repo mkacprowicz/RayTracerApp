@@ -155,7 +155,6 @@
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="Image.cpp" />
-    <ClCompile Include="ImageLoader.cpp" />
     <ClCompile Include="LightIntensity.cpp" />
     <ClCompile Include="OrtoCamera.cpp" />
     <ClCompile Include="PerspectiveCamera.cpp" />
@@ -168,7 +167,6 @@
   <ItemGroup>
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Image.hpp" />
-    <ClInclude Include="ImageLoader.hpp" />
     <ClInclude Include="LightIntensity.h" />
     <ClInclude Include="OrtoCamera.h" />
     <ClInclude Include="pch.h" />
