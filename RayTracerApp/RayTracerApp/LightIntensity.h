@@ -18,6 +18,8 @@ public:
 	void G(float g) { G_ = g; }
 	float B() const { return B_; }
 	void B(float b) { B_ = b; }
+	float A() const { return A_; }
+	void A(float a) { A_ = a; }
 
 	void operator()(float r, float g, float b) { R_ = r; G_ = g; B_ = b; }
 	void operator()(float r, float g) { R_ = r; G_ = g; B_ = 0.0f; }
@@ -38,5 +40,6 @@ protected:
 	float R_; 
 	float G_; 
 	float B_;
+	float A_;
 };
 

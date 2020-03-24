@@ -9,7 +9,9 @@
 #include "PerspectiveCamera.h"
 #include "OrtoCamera.h"
 
-#include "ImageLoader.hpp"
+#include "LightIntensity.h"
+#include "Image.hpp"
+
 
 float RandomFloat();
 
@@ -19,109 +21,107 @@ int main()
 
 	std::vector<unsigned char> output_image_data;
 
-	int image_width = 800;
-	int image_height = 800;
-	int samples_per_pixel = 100;
+	Image img(800, 800, 100);
 
 	PerspectiveCamera pCam;
-	
+
 	Sphere s(Vector(0, 0, -1.0f), 0.4f);
 	Sphere s2(Vector(0.6f, 0, -1.5f), 0.4f);
 
-	for (auto j = image_height - 1; j >= 0; j--)
+	for (auto j = img.Height() - 1; j >= 0; j--)
 	{
-		for (auto i = 0; i < image_width; i++)
+		for (auto i = 0; i < img.Width(); i++)
 		{
-			Vector color;
+			LightIntensity color;
 
-			//for (auto k = 0; k < samples_per_pixel; k++)
+			auto u = (i + RandomFloat()) / img.Width();
+			auto v = (j + RandomFloat()) / img.Height();
+			Ray ray = pCam.GetRay(u, v);
+
+			bool intersection = s.Hit(ray, 0.0f, FLT_MAX);
+			bool intersection2 = s2.Hit(ray, 0.0f, FLT_MAX);
+
+
+			if (intersection)
 			{
-				auto u = (i + RandomFloat()) / image_width;
-				auto v = (j + RandomFloat()) / image_height;
-				Ray ray = pCam.GetRay(u, v);
-							
-				bool intersection = s.Hit(ray, 0.0f, FLT_MAX);
-				bool intersection2 = s2.Hit(ray, 0.0f, FLT_MAX);
-
-
-				if (intersection)
-				{
-					color.X(0);
-					color.Y(0);
-					color.Z(255);
-				}
-				else if (intersection2)
-				{
-					color.X(255);
-					color.Y(0);
-					color.Z(0);
-				}
-				else
-				{
-					color.X(255);
-					color.Y(255);
-					color.Z(255);
-				}
+				color.R(0);
+				color.G(0);
+				color.B(255);
+				color.A(255);
+			}
+			else if (intersection2)
+			{
+				color.R(255);
+				color.G(0);
+				color.B(0);
+				color.A(255);
+			}
+			else
+			{
+				color.R(255);
+				color.G(255);
+				color.B(255);
+				color.A(255);
 			}
 
-			output_image_data.push_back(color.X());
-			output_image_data.push_back(color.Y());
-			output_image_data.push_back(color.Z());
-			output_image_data.push_back(255);
+			output_image_data.push_back(color.R());
+			output_image_data.push_back(color.G());
+			output_image_data.push_back(color.B());
+			output_image_data.push_back(color.A());
 		}
 	}
 
-	ImageMisc::WriteImage("resultPer.bmp", image_width, image_height, 4, output_image_data.data());
+	img.WriteImage("Results//resultPer.bmp", img.Width(), img.Height(), 4, output_image_data.data());
 
 
 	OrtoCamera oCam;
 
 	output_image_data.clear();
 
-	for (auto j = image_height - 1; j >= 0; j--)
+	for (auto j = img.Height() - 1; j >= 0; j--)
 	{
-		for (auto i = 0; i < image_width; i++)
+		for (auto i = 0; i < img.Width(); i++)
 		{
-			Vector color;
+			LightIntensity color;
 
-			//for (auto k = 0; k < samples_per_pixel; k++)
+			auto u = (i + RandomFloat()) / img.Width();
+			auto v = (j + RandomFloat()) / img.Height();
+			Ray ray = oCam.GetRay(u, v);
+
+			bool intersection = s.Hit(ray, 0.0f, FLT_MAX);
+			bool intersection2 = s2.Hit(ray, 0.0f, FLT_MAX);
+
+
+			if (intersection)
 			{
-				auto u = (i + RandomFloat()) / image_width;
-				auto v = (j + RandomFloat()) / image_height;
-				Ray ray = oCam.GetRay(u, v);
-
-				bool intersection = s.Hit(ray, 0.0f, FLT_MAX);
-				bool intersection2 = s2.Hit(ray, 0.0f, FLT_MAX);
-
-
-				if (intersection)
-				{
-					color.X(0);
-					color.Y(0);
-					color.Z(255);
-				}
-				else if (intersection2)
-				{
-					color.X(255);
-					color.Y(0);
-					color.Z(0);
-				}
-				else
-				{
-					color.X(255);
-					color.Y(255);
-					color.Z(255);
-				}
+				color.R(0);
+				color.G(0);
+				color.B(255);
+				color.A(255);
+			}
+			else if (intersection2)
+			{
+				color.R(255);
+				color.G(0);
+				color.B(0);
+				color.A(255);
+			}
+			else
+			{
+				color.R(255);
+				color.G(255);
+				color.B(255);
+				color.A(255);
 			}
 
-			output_image_data.push_back(color.X());
-			output_image_data.push_back(color.Y());
-			output_image_data.push_back(color.Z());
-			output_image_data.push_back(255);
+			output_image_data.push_back(color.R());
+			output_image_data.push_back(color.G());
+			output_image_data.push_back(color.B());
+			output_image_data.push_back(color.A());
 		}
 	}
 
-	ImageMisc::WriteImage("resultOrto.bmp", image_width, image_height, 4, output_image_data.data());
+	img.WriteImage("Results//resultOrto.bmp", img.Width(), img.Height(), 4, output_image_data.data());
 
 	std::cout << "Done" << std::endl;
 }
