@@ -8,3 +8,8 @@
 #include <cstdlib>
 #include <stdexcept>
 #include <cmath>
+#include <fstream> 
+#include <vector>
+#include <memory>
+#include <filesystem>
+#include <map>

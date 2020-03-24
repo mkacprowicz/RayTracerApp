@@ -11,6 +11,8 @@ public:
 	Sphere(Vector v, float r);
 
 	float Intersection(Ray ray, Vector &p, float& t) const;
+	bool Intersection(Ray ray) const;
+	bool IntersectionB(Ray ray) const;
 
 	Vector Center() const { return Center_; }
 	void Center(Vector o) { Center_ = o; }
