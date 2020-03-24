@@ -1,5 +1,7 @@
 #pragma once
 #include "Camera.h"
+
+//! Camera is a class which is a representation of a ortographic camera
 class OrtoCamera :
 	public Camera
 {

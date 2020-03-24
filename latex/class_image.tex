@@ -3,83 +3,29 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_image_abb20937b3256735f0f7549d1b5e9c10d}\label{class_image_abb20937b3256735f0f7549d1b5e9c10d}} 
-{\bfseries Image} (std\+::string filename)
+\mbox{\Hypertarget{class_image_a167f71eb86cd47c5af7a382f9bb0a360}\label{class_image_a167f71eb86cd47c5af7a382f9bb0a360}} 
+{\bfseries Image} (int h, int w, int s)
 \item 
-\mbox{\Hypertarget{class_image_a9f7ac23119727c4310bb02e23e603b83}\label{class_image_a9f7ac23119727c4310bb02e23e603b83}} 
-{\bfseries Image} (unsigned char $\ast$data, const int width, const int height)
+\mbox{\Hypertarget{class_image_ac14665f7475ec99c7099ad5a6f64815b}\label{class_image_ac14665f7475ec99c7099ad5a6f64815b}} 
+void {\bfseries Write\+Image} (char const $\ast$filename, int x, int y, int comp, const void $\ast$data)
 \item 
-\mbox{\Hypertarget{class_image_ab87a085dfcd6445389269df92309574f}\label{class_image_ab87a085dfcd6445389269df92309574f}} 
-int \& {\bfseries get\+\_\+height} ()
+\mbox{\Hypertarget{class_image_a617543a57fd7abf1a4a052539fe35807}\label{class_image_a617543a57fd7abf1a4a052539fe35807}} 
+int {\bfseries Height} () const
 \item 
-\mbox{\Hypertarget{class_image_aefa7c406fbd14bc8d6f24fd8e8aae7a3}\label{class_image_aefa7c406fbd14bc8d6f24fd8e8aae7a3}} 
-void {\bfseries set\+\_\+height} (int height)
+\mbox{\Hypertarget{class_image_af9a0e8ec6921ac6fd7286468dd64bffe}\label{class_image_af9a0e8ec6921ac6fd7286468dd64bffe}} 
+void {\bfseries Height} (int height)
 \item 
-\mbox{\Hypertarget{class_image_ac3702e1de4ff28f4c5bf1b52785b0479}\label{class_image_ac3702e1de4ff28f4c5bf1b52785b0479}} 
-int \& {\bfseries get\+\_\+width} ()
+\mbox{\Hypertarget{class_image_a191889676e394b6eba27e994edb7e02d}\label{class_image_a191889676e394b6eba27e994edb7e02d}} 
+int {\bfseries Width} () const
 \item 
-\mbox{\Hypertarget{class_image_ac16ecb0082786fc20439a57da5f24d14}\label{class_image_ac16ecb0082786fc20439a57da5f24d14}} 
-void {\bfseries set\+\_\+width} (int width)
+\mbox{\Hypertarget{class_image_abf4ff44fb5b48b272dae8d4135ed3bbd}\label{class_image_abf4ff44fb5b48b272dae8d4135ed3bbd}} 
+void {\bfseries Width} (int width)
 \item 
-\mbox{\Hypertarget{class_image_a767db7b8847d41f617dc1a679ce4cd61}\label{class_image_a767db7b8847d41f617dc1a679ce4cd61}} 
-void {\bfseries set\+\_\+filename} (const char $\ast$filename)
+\mbox{\Hypertarget{class_image_ae588a5769218410fe20360745ba9943b}\label{class_image_ae588a5769218410fe20360745ba9943b}} 
+int {\bfseries Samples\+Per\+Pixel} () const
 \item 
-\mbox{\Hypertarget{class_image_a068a4d3be75bb9f14e754986adb3b816}\label{class_image_a068a4d3be75bb9f14e754986adb3b816}} 
-unsigned char $\ast$ {\bfseries get\+\_\+data} () const
-\item 
-\mbox{\Hypertarget{class_image_a0cc8f47adf084e11243031385094a98f}\label{class_image_a0cc8f47adf084e11243031385094a98f}} 
-void {\bfseries set\+\_\+data} (unsigned char $\ast$data)
-\item 
-\mbox{\Hypertarget{class_image_ace57249a0d0d3fe9b02713898776001d}\label{class_image_ace57249a0d0d3fe9b02713898776001d}} 
-float {\bfseries get\+\_\+size} () const
-\item 
-\mbox{\Hypertarget{class_image_a16ca4ac4ea3f51d3e739aaf55bbe9424}\label{class_image_a16ca4ac4ea3f51d3e739aaf55bbe9424}} 
-void {\bfseries set\+\_\+size} (float size)
-\item 
-\mbox{\Hypertarget{class_image_ae6f8969057892a39ea453cb5a825f123}\label{class_image_ae6f8969057892a39ea453cb5a825f123}} 
-std\+::string {\bfseries get\+\_\+filename} () const
-\item 
-\mbox{\Hypertarget{class_image_a44e31678387124aace34af5b2b13e79a}\label{class_image_a44e31678387124aace34af5b2b13e79a}} 
-std\+::vector$<$ unsigned char $>$ {\bfseries get\+\_\+main\+\_\+data} () const
-\item 
-\mbox{\Hypertarget{class_image_a6922cb282f3977a95294a48a25d6e030}\label{class_image_a6922cb282f3977a95294a48a25d6e030}} 
-void {\bfseries set\+\_\+main\+\_\+data} (std\+::vector$<$ unsigned char $>$ main\+\_\+data)
-\item 
-\mbox{\Hypertarget{class_image_a85ddd87e115db3ef865ccee97b7aed2c}\label{class_image_a85ddd87e115db3ef865ccee97b7aed2c}} 
-int {\bfseries get\+\_\+channels} () const
-\item 
-\mbox{\Hypertarget{class_image_a5120110aeb0e44976af7e6ee315eafb5}\label{class_image_a5120110aeb0e44976af7e6ee315eafb5}} 
-void {\bfseries set\+\_\+channels} (int channels)
-\item 
-\mbox{\Hypertarget{class_image_adf4e901b7673b5bd71c687cb3f636174}\label{class_image_adf4e901b7673b5bd71c687cb3f636174}} 
-std\+::string {\bfseries get\+\_\+save\+\_\+path} () const
-\item 
-\mbox{\Hypertarget{class_image_af783cbeede393215a33cec94084b28d9}\label{class_image_af783cbeede393215a33cec94084b28d9}} 
-void {\bfseries set\+\_\+save\+\_\+path} (const std\+::string \&save\+\_\+path)
-\item 
-\mbox{\Hypertarget{class_image_afe70b9688e8e0012369de31339456d92}\label{class_image_afe70b9688e8e0012369de31339456d92}} 
-std\+::vector$<$ float $>$ {\bfseries get\+Reds} (Colors Red)
-\item 
-\mbox{\Hypertarget{class_image_a16f53a067da8e1de67d99dbc3a6e5930}\label{class_image_a16f53a067da8e1de67d99dbc3a6e5930}} 
-std\+::vector$<$ float $>$ {\bfseries get\+\_\+red\+\_\+histogram} () const
-\item 
-\mbox{\Hypertarget{class_image_a8a10f8acaa1cc608aa3d79b263cd313b}\label{class_image_a8a10f8acaa1cc608aa3d79b263cd313b}} 
-void {\bfseries set\+\_\+red\+\_\+histogram} (const std\+::vector$<$ float $>$ \&red\+\_\+histogram)
-\item 
-\mbox{\Hypertarget{class_image_a0875f43f763f07ec49ecab6825ef2303}\label{class_image_a0875f43f763f07ec49ecab6825ef2303}} 
-std\+::vector$<$ float $>$ {\bfseries get\+\_\+green\+\_\+histogram} () const
-\item 
-\mbox{\Hypertarget{class_image_aa0f0906fb0c0f6bf12924416bd86ceb7}\label{class_image_aa0f0906fb0c0f6bf12924416bd86ceb7}} 
-void {\bfseries set\+\_\+green\+\_\+histogram} (const std\+::vector$<$ float $>$ \&green\+\_\+histogram)
-\item 
-\mbox{\Hypertarget{class_image_a8ddb6110014088a84619dd1d38b6c873}\label{class_image_a8ddb6110014088a84619dd1d38b6c873}} 
-std\+::vector$<$ float $>$ {\bfseries get\+\_\+blue\+\_\+histogram} () const
-\item 
-\mbox{\Hypertarget{class_image_a20bb5db2f4576e4962baa9ff5b7a9a44}\label{class_image_a20bb5db2f4576e4962baa9ff5b7a9a44}} 
-void {\bfseries set\+\_\+blue\+\_\+histogram} (const std\+::vector$<$ float $>$ \&blue\+\_\+histogram)
-\item 
-\mbox{\Hypertarget{class_image_a7eecde7f279cc81cc7f35229401fecd7}\label{class_image_a7eecde7f279cc81cc7f35229401fecd7}} 
-float {\bfseries sum\+\_\+histogram\+\_\+elements} (Colors color, int n) const
+\mbox{\Hypertarget{class_image_a0fe07d9a53ecc18bab8b75f2de146726}\label{class_image_a0fe07d9a53ecc18bab8b75f2de146726}} 
+void {\bfseries Samples\+Per\+Pixel} (int samples\+Per\+Pixel)
 \end{DoxyCompactItemize}
 
 

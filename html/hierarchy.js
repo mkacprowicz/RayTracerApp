@@ -6,7 +6,6 @@ var hierarchy =
     ] ],
     [ "Image", "class_image.html", null ],
     [ "LightIntensity", "class_light_intensity.html", null ],
-    [ "ImageMisc::Pixel", "struct_image_misc_1_1_pixel.html", null ],
     [ "Ray", "class_ray.html", null ],
     [ "Sphere", "class_sphere.html", null ],
     [ "Surface", "class_surface.html", null ],

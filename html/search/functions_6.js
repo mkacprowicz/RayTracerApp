@@ -1,5 +1,11 @@
 var searchData=
 [
-  ['ray_49',['Ray',['../class_ray.html#a2e3d2c29f2df4ab3da10da79d4acb852',1,'Ray::Ray()'],['../class_ray.html#a45105f0bf1d53f595a34e11977c12142',1,'Ray::Ray(Vector origin, Vector direction)'],['../class_ray.html#ad0288e84aa6367c05e94ddc3321ef830',1,'Ray::Ray(Vector origin, float dis)'],['../class_ray.html#a5573f261316305cb3b520a789c221aeb',1,'Ray::Ray(Vector origin, Vector direction, float dis)']]],
-  ['reflect_50',['Reflect',['../class_vector.html#a3e98e3ccc4a5c060dad1d9e406a8a70a',1,'Vector']]]
+  ['operator_2a_56',['operator*',['../class_light_intensity.html#a5341c53336f230f47264d6ac71fdef1c',1,'LightIntensity::operator*(float num)'],['../class_light_intensity.html#ae4e944bcedb1c103ec552490e40c1358',1,'LightIntensity::operator*(LightIntensity &amp;li)']]],
+  ['operator_2a_3d_57',['operator*=',['../class_light_intensity.html#a67d0b0bb037fbb0188688a68336fe090',1,'LightIntensity']]],
+  ['operator_2b_58',['operator+',['../class_light_intensity.html#a89028fdef4b39c9279e111a4b24e6851',1,'LightIntensity']]],
+  ['operator_2b_3d_59',['operator+=',['../class_light_intensity.html#a5df2656d683c271aa863e8d00fd26d08',1,'LightIntensity']]],
+  ['operator_2d_60',['operator-',['../class_light_intensity.html#a83a579c1453608c26f97f943ec891c1a',1,'LightIntensity']]],
+  ['operator_2d_3d_61',['operator-=',['../class_light_intensity.html#abcedfb1456d0846d589bb9c7fef5bd95',1,'LightIntensity']]],
+  ['operator_2f_62',['operator/',['../class_light_intensity.html#a3e82ba880f93e621fadf421caeb66f51',1,'LightIntensity']]],
+  ['operator_2f_3d_63',['operator/=',['../class_light_intensity.html#a3a1aba3f5938834e8aadbc7bbc481aa7',1,'LightIntensity']]]
 ];

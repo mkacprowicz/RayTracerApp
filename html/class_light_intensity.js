@@ -4,6 +4,8 @@ var class_light_intensity =
     [ "LightIntensity", "class_light_intensity.html#a63ace91b1525581c29d7acd680559e20", null ],
     [ "LightIntensity", "class_light_intensity.html#a630392dc8780d3178c001ca772ffdddb", null ],
     [ "LightIntensity", "class_light_intensity.html#a1c5dc22b77c22975e26654cdd331cf94", null ],
+    [ "A", "class_light_intensity.html#a608a0f8f264d9951bb328c8b3186f78a", null ],
+    [ "A", "class_light_intensity.html#ae5fc661147af0b057707febc0bcc6c9a", null ],
     [ "Add", "class_light_intensity.html#a535a30e2074e61d6de656fd0c0b85672", null ],
     [ "B", "class_light_intensity.html#a70bf8621941ba851a6a75196d0453890", null ],
     [ "B", "class_light_intensity.html#a1ee57955aaad64937eb68532b545159c", null ],
@@ -24,6 +26,7 @@ var class_light_intensity =
     [ "R", "class_light_intensity.html#aaba0a157f7752c000cdc751583295d85", null ],
     [ "R", "class_light_intensity.html#a4216f1e1e56d363fff7ea34f33675037", null ],
     [ "operator<<", "class_light_intensity.html#af6211661cbcfb1f21fc419026cb0f13a", null ],
+    [ "A_", "class_light_intensity.html#abc35e8aaff04fd721e48171f4f4b6e90", null ],
     [ "B_", "class_light_intensity.html#a784b33e22e196f2d0a683f4456d3e75c", null ],
     [ "G_", "class_light_intensity.html#a147a0488882cfe2a470c73d6c819f667", null ],
     [ "R_", "class_light_intensity.html#a8857851d0bdd2204e6c02733717a0369", null ]
