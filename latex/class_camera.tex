@@ -1,19 +1,40 @@
 \hypertarget{class_camera}{}\doxysection{Camera Class Reference}
 \label{class_camera}\index{Camera@{Camera}}
+Inheritance diagram for Camera\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_camera}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_camera_a1492d314fae60d907bb00c8073487485}\label{class_camera_a1492d314fae60d907bb00c8073487485}} 
-{\bfseries Camera} (\mbox{\hyperlink{class_vector}{Vector}} position, \mbox{\hyperlink{class_vector}{Vector}} target)
+\mbox{\Hypertarget{class_camera_a18614bb3a9524ba75cc382545ff5ceb4}\label{class_camera_a18614bb3a9524ba75cc382545ff5ceb4}} 
+virtual \mbox{\hyperlink{class_ray}{Ray}} {\bfseries Get\+Ray} (float u, float v)=0
 \item 
-\mbox{\Hypertarget{class_camera_a143d9d5a54917a720abfc8d7a68e1b9f}\label{class_camera_a143d9d5a54917a720abfc8d7a68e1b9f}} 
-\mbox{\hyperlink{class_ray}{Ray}} {\bfseries Get\+Ray} (float u, float v)
+\mbox{\Hypertarget{class_camera_a57ee04125fadc8a0a9a5659edec0efce}\label{class_camera_a57ee04125fadc8a0a9a5659edec0efce}} 
+virtual void {\bfseries Render} ()=0
 \item 
 \mbox{\Hypertarget{class_camera_a2113a625aec268223cea9be3ea299201}\label{class_camera_a2113a625aec268223cea9be3ea299201}} 
 \mbox{\hyperlink{class_vector}{Vector}} {\bfseries Origin} () const
 \item 
 \mbox{\Hypertarget{class_camera_a66e4f115956c84baaf9edc6272900886}\label{class_camera_a66e4f115956c84baaf9edc6272900886}} 
 void {\bfseries Origin} (\mbox{\hyperlink{class_vector}{Vector}} position)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_camera_ace6aa94d4ddfa0a165256a5ed77cc0f9}\label{class_camera_ace6aa94d4ddfa0a165256a5ed77cc0f9}} 
+\mbox{\hyperlink{class_vector}{Vector}} {\bfseries Origin\+\_\+}
+\item 
+\mbox{\Hypertarget{class_camera_a6c3072f30472fab56ba31e1b09a56550}\label{class_camera_a6c3072f30472fab56ba31e1b09a56550}} 
+\mbox{\hyperlink{class_vector}{Vector}} {\bfseries Lower\+Left\+Corner\+\_\+}
+\item 
+\mbox{\Hypertarget{class_camera_a1d362051d59911aa2121d0ea00660c8f}\label{class_camera_a1d362051d59911aa2121d0ea00660c8f}} 
+\mbox{\hyperlink{class_vector}{Vector}} {\bfseries Horizontal\+\_\+}
+\item 
+\mbox{\Hypertarget{class_camera_a99f6c833a7cf761d203bb5f1dcdc9552}\label{class_camera_a99f6c833a7cf761d203bb5f1dcdc9552}} 
+\mbox{\hyperlink{class_vector}{Vector}} {\bfseries Vertical\+\_\+}
 \end{DoxyCompactItemize}
 
 

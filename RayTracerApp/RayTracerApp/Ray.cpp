@@ -1,7 +1,7 @@
 #include "Ray.h"
 
 /**
-* Default constructor. Creates a ray object that has it's parameters set to (0, 0, 0).
+* Default constructor. Creates a ray object that has it's parameters set to  \f$ (0, 0, 0) \f$ .
 * @return Zero Ray object
 */
 Ray::Ray()

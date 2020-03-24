@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pixel_28',['Pixel',['../struct_image_misc_1_1_pixel.html',1,'ImageMisc']]]
+  ['ortocamera_30',['OrtoCamera',['../class_orto_camera.html',1,'']]]
 ];
