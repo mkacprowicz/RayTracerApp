@@ -1,8 +1,5 @@
 var searchData=
 [
-  ['nearplane_56',['NearPlane',['../class_camera.html#a7bf66f4eef3a58602fb90812b3bae93e',1,'Camera::NearPlane() const'],['../class_camera.html#a09e9946eebe97d59a86af7e550f32ac6',1,'Camera::NearPlane(float nearPlane)']]],
-  ['negate_57',['Negate',['../class_vector.html#addbf2b19fc2fcd4a52f1c55fd24bbb54',1,'Vector']]],
-  ['normal_58',['Normal',['../class_surface.html#a299b5b06c7d388af9024dd63f3fb1086',1,'Surface::Normal() const'],['../class_surface.html#a0ea3eb508266cc628c5f1fb7f9e0ee01',1,'Surface::Normal(Vector d)']]],
-  ['normalize_59',['Normalize',['../class_vector.html#a37fafbf4bf8aa73238f45b785658132b',1,'Vector']]],
-  ['normalizeproduct_60',['NormalizeProduct',['../class_vector.html#a2fdadd9b5403f1784b14c2ad1e83a741',1,'Vector']]]
+  ['ray_17',['Ray',['../class_ray.html',1,'Ray'],['../class_ray.html#a2e3d2c29f2df4ab3da10da79d4acb852',1,'Ray::Ray()'],['../class_ray.html#a45105f0bf1d53f595a34e11977c12142',1,'Ray::Ray(Vector origin, Vector direction)'],['../class_ray.html#ad0288e84aa6367c05e94ddc3321ef830',1,'Ray::Ray(Vector origin, float dis)'],['../class_ray.html#a5573f261316305cb3b520a789c221aeb',1,'Ray::Ray(Vector origin, Vector direction, float dis)']]],
+  ['reflect_18',['Reflect',['../class_vector.html#a3e98e3ccc4a5c060dad1d9e406a8a70a',1,'Vector']]]
 ];

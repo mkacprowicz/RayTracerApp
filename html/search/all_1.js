@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['image_1',['Image',['../class_image.html',1,'']]]
+  ['camera_1',['Camera',['../class_camera.html',1,'']]]
 ];

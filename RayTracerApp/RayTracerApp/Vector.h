@@ -1,6 +1,13 @@
 #pragma once
 #include "pch.h"
 
+//! Vector class which is a representation of a 3D vector
+/**
+* The <code>Vector</code> class is a representation of 
+* a geometric object that has magnitude (or length) and direction. 
+* Vectors can be added to other vectors according to vector algebra.
+*
+*/
 class Vector
 {
 public:

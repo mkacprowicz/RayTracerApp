@@ -105,26 +105,25 @@ $(document).ready(function(){initNavTree('_sphere_8h_source.html',''); initResiz
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="class_sphere.html#a890a63ff583cb88e7ec4e840b4ef5eb9">Sphere</a>(<a class="code" href="class_vector.html">Vector</a> v);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_sphere.html#a890a63ff583cb88e7ec4e840b4ef5eb9">Sphere</a>(<a class="code" href="class_vector.html">Vector</a> v, <span class="keywordtype">float</span> r);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">float</span> Intersection(<a class="code" href="class_ray.html">Ray</a> ray, <a class="code" href="class_vector.html">Vector</a> &amp;p, <span class="keywordtype">float</span>&amp; t) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">bool</span> Intersection(<a class="code" href="class_ray.html">Ray</a> ray) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">bool</span> IntersectionB(<a class="code" href="class_ray.html">Ray</a> ray) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_vector.html">Vector</a> Center()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Center_; }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> Center(<a class="code" href="class_vector.html">Vector</a> o) { Center_ = o; }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">float</span> Radius()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Radius_; }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> Radius(<span class="keywordtype">float</span> r) { Radius_ = r; }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">friend</span> std::ostream&amp; operator &lt;&lt;(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="class_sphere.html">Sphere</a>&amp; sph);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="class_vector.html">Vector</a> Center_;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">float</span> Radius_;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;};</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_sphere.html#a9ad3064385bdfb3d3e4f6280e4844ce4">Hit</a>(<a class="code" href="class_ray.html">Ray</a> ray, <span class="keywordtype">float</span> t_min, <span class="keywordtype">float</span> t_max) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_vector.html">Vector</a> Center()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Center_; }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> Center(<a class="code" href="class_vector.html">Vector</a> o) { Center_ = o; }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">float</span> Radius()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Radius_; }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> Radius(<span class="keywordtype">float</span> r) { Radius_ = r; }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">friend</span> std::ostream&amp; operator &lt;&lt;(std::ostream&amp; os, <span class="keyword">const</span> <a class="code" href="class_sphere.html">Sphere</a>&amp; sph);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <a class="code" href="class_vector.html">Vector</a> Center_;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">float</span> Radius_;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclass_sphere_html_a9ad3064385bdfb3d3e4f6280e4844ce4"><div class="ttname"><a href="class_sphere.html#a9ad3064385bdfb3d3e4f6280e4844ce4">Sphere::Hit</a></div><div class="ttdeci">bool Hit(Ray ray, float t_min, float t_max) const</div><div class="ttdef"><b>Definition:</b> Sphere.cpp:82</div></div>
 <div class="ttc" id="aclass_sphere_html_a890a63ff583cb88e7ec4e840b4ef5eb9"><div class="ttname"><a href="class_sphere.html#a890a63ff583cb88e7ec4e840b4ef5eb9">Sphere::Sphere</a></div><div class="ttdeci">Sphere()</div><div class="ttdef"><b>Definition:</b> Sphere.cpp:7</div></div>
 <div class="ttc" id="aclass_ray_html"><div class="ttname"><a href="class_ray.html">Ray</a></div><div class="ttdoc">Ray class which is a representation of a ray function.</div><div class="ttdef"><b>Definition:</b> Ray.h:16</div></div>
-<div class="ttc" id="aclass_vector_html"><div class="ttname"><a href="class_vector.html">Vector</a></div><div class="ttdef"><b>Definition:</b> Vector.h:4</div></div>
+<div class="ttc" id="aclass_vector_html"><div class="ttname"><a href="class_vector.html">Vector</a></div><div class="ttdoc">Vector class which is a representation of a 3D vector.</div><div class="ttdef"><b>Definition:</b> Vector.h:11</div></div>
 <div class="ttc" id="aclass_sphere_html"><div class="ttname"><a href="class_sphere.html">Sphere</a></div><div class="ttdoc">Sphere class which is a representation of a sphere solid.</div><div class="ttdef"><b>Definition:</b> Sphere.h:19</div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

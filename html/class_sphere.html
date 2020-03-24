@@ -108,21 +108,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a890a63ff583cb88e7ec4e840b4ef5eb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6324c968f5db50b7ea4d5c3fa94aab2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sphere.html#ab6324c968f5db50b7ea4d5c3fa94aab2">Sphere</a> (float r)</td></tr>
 <tr class="separator:ab6324c968f5db50b7ea4d5c3fa94aab2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af29844f6a02e023cd583bc2d05175924"><td class="memItemLeft" align="right" valign="top"><a id="af29844f6a02e023cd583bc2d05175924"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Sphere</b> (<a class="el" href="class_vector.html">Vector</a> v)</td></tr>
+<tr class="memitem:af29844f6a02e023cd583bc2d05175924"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sphere.html#af29844f6a02e023cd583bc2d05175924">Sphere</a> (<a class="el" href="class_vector.html">Vector</a> v)</td></tr>
 <tr class="separator:af29844f6a02e023cd583bc2d05175924"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4c71d7ca1eb3e897b305985559e8085a"><td class="memItemLeft" align="right" valign="top"><a id="a4c71d7ca1eb3e897b305985559e8085a"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Sphere</b> (<a class="el" href="class_vector.html">Vector</a> v, float r)</td></tr>
+<tr class="memitem:a4c71d7ca1eb3e897b305985559e8085a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sphere.html#a4c71d7ca1eb3e897b305985559e8085a">Sphere</a> (<a class="el" href="class_vector.html">Vector</a> v, float r)</td></tr>
 <tr class="separator:a4c71d7ca1eb3e897b305985559e8085a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a86a44ece1e69c9091e5e8638a306c8c2"><td class="memItemLeft" align="right" valign="top"><a id="a86a44ece1e69c9091e5e8638a306c8c2"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>Intersection</b> (<a class="el" href="class_ray.html">Ray</a> ray, <a class="el" href="class_vector.html">Vector</a> &amp;p, float &amp;t) const</td></tr>
-<tr class="separator:a86a44ece1e69c9091e5e8638a306c8c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a151fc4d68eb53b8a792ad10a4aaae7b3"><td class="memItemLeft" align="right" valign="top"><a id="a151fc4d68eb53b8a792ad10a4aaae7b3"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>Intersection</b> (<a class="el" href="class_ray.html">Ray</a> ray) const</td></tr>
-<tr class="separator:a151fc4d68eb53b8a792ad10a4aaae7b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae22be78e542e143a1a3c798c0419ccc4"><td class="memItemLeft" align="right" valign="top"><a id="ae22be78e542e143a1a3c798c0419ccc4"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>IntersectionB</b> (<a class="el" href="class_ray.html">Ray</a> ray) const</td></tr>
-<tr class="separator:ae22be78e542e143a1a3c798c0419ccc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ad3064385bdfb3d3e4f6280e4844ce4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_sphere.html#a9ad3064385bdfb3d3e4f6280e4844ce4">Hit</a> (<a class="el" href="class_ray.html">Ray</a> ray, float t_min, float t_max) const</td></tr>
+<tr class="separator:a9ad3064385bdfb3d3e4f6280e4844ce4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a240a18c3bd29a6e9a2180b6990f0c767"><td class="memItemLeft" align="right" valign="top"><a id="a240a18c3bd29a6e9a2180b6990f0c767"></a>
 <a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Center</b> () const</td></tr>
 <tr class="separator:a240a18c3bd29a6e9a2180b6990f0c767"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -144,7 +135,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_sphere.html" title="Sphere class which is a representation of a sphere solid.">Sphere</a> class which is a representation of a sphere solid. </p>
-<p>The <code><a class="el" href="class_sphere.html" title="Sphere class which is a representation of a sphere solid.">Sphere</a></code> class is a representation of a Set of points that are equaly apart (sphere radius) in a 3D space. In order to define a sphere, we need to determine it's center, with a Point or <a class="el" href="class_vector.html">Vector</a>, and it's radius - real number. <a class="el" href="class_sphere.html" title="Sphere class which is a representation of a sphere solid.">Sphere</a> that has a center equal to \( c = (c_x, c_y, c_z) \) and radius equal to \( R \) can be determied with a formula: </p><p class="formulaDsp">
+<p>The <code><a class="el" href="class_sphere.html" title="Sphere class which is a representation of a sphere solid.">Sphere</a></code> class is a representation of a Set of points that are equaly apart (sphere radius) in a 3D space. In order to define a sphere, we need to determine it's center, with a Point or <a class="el" href="class_vector.html" title="Vector class which is a representation of a 3D vector.">Vector</a>, and it's radius - real number. <a class="el" href="class_sphere.html" title="Sphere class which is a representation of a sphere solid.">Sphere</a> that has a center equal to \( c = (c_x, c_y, c_z) \) and radius equal to \( R \) can be determied with a formula: </p><p class="formulaDsp">
 \[ (x-c_x)^2 + (y-c_y)^2 + (z-c_z)^2 - R^2 = 0 \]
 </p>
 <p> which is equivalent to a vector formula: </p><p class="formulaDsp">
@@ -153,7 +144,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 <p> Every point that satisfies that equation belongs to the sphere. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a890a63ff583cb88e7ec4e840b4ef5eb9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a890a63ff583cb88e7ec4e840b4ef5eb9">&#9670;&nbsp;</a></span>Sphere() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a890a63ff583cb88e7ec4e840b4ef5eb9">&#9670;&nbsp;</a></span>Sphere() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -171,7 +162,7 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
 </div>
 </div>
 <a id="ab6324c968f5db50b7ea4d5c3fa94aab2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6324c968f5db50b7ea4d5c3fa94aab2">&#9670;&nbsp;</a></span>Sphere() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6324c968f5db50b7ea4d5c3fa94aab2">&#9670;&nbsp;</a></span>Sphere() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -192,6 +183,131 @@ std::ostream &amp;&#160;</td><td class="memItemRight" valign="bottom"><b>operato
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_sphere.html" title="Sphere class which is a representation of a sphere solid.">Sphere</a> object </dd></dl>
+
+</div>
+</div>
+<a id="af29844f6a02e023cd583bc2d05175924"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af29844f6a02e023cd583bc2d05175924">&#9670;&nbsp;</a></span>Sphere() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sphere::Sphere </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector.html">Vector</a>&#160;</td>
+          <td class="paramname"><em>v</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Basic constructor. Creates a sphere object that has center in \( v \) and radius equal to \( 1 \) </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">v</td><td>- center of a sphere </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_sphere.html" title="Sphere class which is a representation of a sphere solid.">Sphere</a> object </dd></dl>
+
+</div>
+</div>
+<a id="a4c71d7ca1eb3e897b305985559e8085a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c71d7ca1eb3e897b305985559e8085a">&#9670;&nbsp;</a></span>Sphere() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Sphere::Sphere </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector.html">Vector</a>&#160;</td>
+          <td class="paramname"><em>v</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>r</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Basic constructor. Creates a sphere object that has center in \( v \) and radius equal to \( r \) </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">r</td><td>- radius of a sphere </td></tr>
+    <tr><td class="paramname">v</td><td>- center of a sphere </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_sphere.html" title="Sphere class which is a representation of a sphere solid.">Sphere</a> object </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9ad3064385bdfb3d3e4f6280e4844ce4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ad3064385bdfb3d3e4f6280e4844ce4">&#9670;&nbsp;</a></span>Hit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Sphere::Hit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_ray.html">Ray</a>&#160;</td>
+          <td class="paramname"><em>ray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>t_min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>t_max</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Function that checks whether or not <a class="el" href="class_sphere.html" title="Sphere class which is a representation of a sphere solid.">Sphere</a> intersects with a <a class="el" href="class_ray.html" title="Ray class which is a representation of a ray function.">Ray</a>. There are three possible cases that can occur:</p><ul>
+<li><a class="el" href="class_ray.html" title="Ray class which is a representation of a ray function.">Ray</a> doesn't hit a <a class="el" href="class_sphere.html" title="Sphere class which is a representation of a sphere solid.">Sphere</a></li>
+<li><a class="el" href="class_ray.html" title="Ray class which is a representation of a ray function.">Ray</a> hits a <a class="el" href="class_sphere.html" title="Sphere class which is a representation of a sphere solid.">Sphere</a> in one point</li>
+<li><a class="el" href="class_ray.html" title="Ray class which is a representation of a ray function.">Ray</a> hits a <a class="el" href="class_sphere.html" title="Sphere class which is a representation of a sphere solid.">Sphere</a> in two points To examine which case is valid we have to determine an equation: <p class="formulaDsp">
+\[ ||A + Bt -c||^2 = r^2 &lt;=&gt; (A + Bt - c) \cdot (A + Bt - c) = r^2 \\ t^2(B \cdot B) + 2t(B \cdot (A - c)) + (A - c) \cdot (A - c) = r^2 \\ t^2(B \cdot B) + 2t(B \cdot (A - c)) + (A - c) \cdot (A - c) - r^2 = 0 \\ \]
+</p>
+ which is equal to quadratic equation: <p class="formulaDsp">
+\[ at^2 + bt + c = 0 \]
+</p>
+ where: <p class="formulaDsp">
+\[ a = B \cdot B = ||B||^2 \\ b = 2(B \cdot (A - c)) \\ c = (A - c) \cdot (A - c) - r^2 = ||A - c||^2 - r^2 \]
+</p>
+ what can be simplified: <p class="formulaDsp">
+\[ t = \frac{-2(B \cdot (A - c)) \pm \sqrt{(2(B \cdot (A - c)))^2 - 4||B||^2 (||A - c||^2 - r^2)}}{2||B||} \\ ||A||^2 = 1, so \\ t = -(B * (A - c)) \pm \sqrt{(B \cdot (A - c))^2 - ||A - c||^2 + r^2)} \]
+</p>
+</li>
+<li>if the sqrt value \( (B \cdot (A - c))^2 - ||A - c||^2 + r^2) &lt; 0\) equation cannot be solved, thus <a class="el" href="class_ray.html" title="Ray class which is a representation of a ray function.">Ray</a> is not intersecting with a <a class="el" href="class_sphere.html" title="Sphere class which is a representation of a sphere solid.">Sphere</a></li>
+<li>if it's equal to \( 0 \) there is only one solution - the <a class="el" href="class_ray.html" title="Ray class which is a representation of a ray function.">Ray</a> intersects with a <a class="el" href="class_sphere.html" title="Sphere class which is a representation of a sphere solid.">Sphere</a> in one spot</li>
+<li>if it's more than zero the <a class="el" href="class_ray.html" title="Ray class which is a representation of a ray function.">Ray</a> intersects with the Spehere in two spots <dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ray</td><td>- radius of a sphere </td></tr>
+    <tr><td class="paramname">t_min</td><td>- minimal length of a ray cast (it's starting point) </td></tr>
+    <tr><td class="paramname">t_max</td><td>- maximal length of a ray cast (it's end point) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Bool - tells us whether it intersects or not </dd></dl>
+</li>
+</ul>
 
 </div>
 </div>

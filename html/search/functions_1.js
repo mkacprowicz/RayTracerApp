@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['sphere_18',['Sphere',['../class_sphere.html#a890a63ff583cb88e7ec4e840b4ef5eb9',1,'Sphere::Sphere()'],['../class_sphere.html#ab6324c968f5db50b7ea4d5c3fa94aab2',1,'Sphere::Sphere(float r)']]]
+  ['div_34',['Div',['../class_vector.html#a884039bdb79b1e5d45d41e5cef2d2718',1,'Vector']]],
+  ['dot_35',['Dot',['../class_vector.html#af6ad888b666c4ac70a25d25b8b57b145',1,'Vector']]]
 ];
