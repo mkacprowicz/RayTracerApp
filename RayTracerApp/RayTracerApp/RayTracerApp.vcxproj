@@ -157,6 +157,8 @@
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="ImageLoader.cpp" />
     <ClCompile Include="LightIntensity.cpp" />
+    <ClCompile Include="OrtoCamera.cpp" />
+    <ClCompile Include="PerspectiveCamera.cpp" />
     <ClCompile Include="Ray.cpp" />
     <ClCompile Include="RayTracerApp.cpp" />
     <ClCompile Include="Sphere.cpp" />
@@ -168,7 +170,9 @@
     <ClInclude Include="Image.hpp" />
     <ClInclude Include="ImageLoader.hpp" />
     <ClInclude Include="LightIntensity.h" />
+    <ClInclude Include="OrtoCamera.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="PerspectiveCamera.h" />
     <ClInclude Include="Ray.h" />
     <ClInclude Include="Sphere.h" />
     <ClInclude Include="Surface.h" />
