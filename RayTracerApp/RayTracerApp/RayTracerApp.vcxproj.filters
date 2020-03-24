@@ -33,9 +33,6 @@
     <ClCompile Include="LightIntensity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="ImageLoader.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Image.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -66,9 +63,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LightIntensity.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ImageLoader.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="vendor\stb_image\stb_image.h">
