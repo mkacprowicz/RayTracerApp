@@ -1,0 +1,88 @@
+\hypertarget{class_sphere}{}\doxysection{Sphere Class Reference}
+\label{class_sphere}\index{Sphere@{Sphere}}
+
+
+\mbox{\hyperlink{class_sphere}{Sphere}} class which is a representation of a sphere solid.  
+
+
+
+
+{\ttfamily \#include $<$Sphere.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_sphere_a890a63ff583cb88e7ec4e840b4ef5eb9}{Sphere}} ()
+\item 
+\mbox{\hyperlink{class_sphere_ab6324c968f5db50b7ea4d5c3fa94aab2}{Sphere}} (float r)
+\item 
+\mbox{\Hypertarget{class_sphere_af29844f6a02e023cd583bc2d05175924}\label{class_sphere_af29844f6a02e023cd583bc2d05175924}} 
+{\bfseries Sphere} (\mbox{\hyperlink{class_vector}{Vector}} v)
+\item 
+\mbox{\Hypertarget{class_sphere_a4c71d7ca1eb3e897b305985559e8085a}\label{class_sphere_a4c71d7ca1eb3e897b305985559e8085a}} 
+{\bfseries Sphere} (\mbox{\hyperlink{class_vector}{Vector}} v, float r)
+\item 
+\mbox{\Hypertarget{class_sphere_a86a44ece1e69c9091e5e8638a306c8c2}\label{class_sphere_a86a44ece1e69c9091e5e8638a306c8c2}} 
+float {\bfseries Intersection} (\mbox{\hyperlink{class_ray}{Ray}} ray, \mbox{\hyperlink{class_vector}{Vector}} \&p, float \&t) const
+\item 
+\mbox{\Hypertarget{class_sphere_a151fc4d68eb53b8a792ad10a4aaae7b3}\label{class_sphere_a151fc4d68eb53b8a792ad10a4aaae7b3}} 
+bool {\bfseries Intersection} (\mbox{\hyperlink{class_ray}{Ray}} ray) const
+\item 
+\mbox{\Hypertarget{class_sphere_ae22be78e542e143a1a3c798c0419ccc4}\label{class_sphere_ae22be78e542e143a1a3c798c0419ccc4}} 
+bool {\bfseries IntersectionB} (\mbox{\hyperlink{class_ray}{Ray}} ray) const
+\item 
+\mbox{\Hypertarget{class_sphere_a240a18c3bd29a6e9a2180b6990f0c767}\label{class_sphere_a240a18c3bd29a6e9a2180b6990f0c767}} 
+\mbox{\hyperlink{class_vector}{Vector}} {\bfseries Center} () const
+\item 
+\mbox{\Hypertarget{class_sphere_a5ee9df31ad1f85cecfb67ae4984a79b5}\label{class_sphere_a5ee9df31ad1f85cecfb67ae4984a79b5}} 
+void {\bfseries Center} (\mbox{\hyperlink{class_vector}{Vector}} o)
+\item 
+\mbox{\Hypertarget{class_sphere_a3cb9d4615e9e7dddd0ce370dec079987}\label{class_sphere_a3cb9d4615e9e7dddd0ce370dec079987}} 
+float {\bfseries Radius} () const
+\item 
+\mbox{\Hypertarget{class_sphere_a0fffb7a2b22fa1f3e9b6b451601f2860}\label{class_sphere_a0fffb7a2b22fa1f3e9b6b451601f2860}} 
+void {\bfseries Radius} (float r)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sphere_a7c508acfe6fd22d42c3cea2c5d55a547}\label{class_sphere_a7c508acfe6fd22d42c3cea2c5d55a547}} 
+std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\hyperlink{class_sphere}{Sphere}} \&sph)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_sphere}{Sphere}} class which is a representation of a sphere solid. 
+
+The {\ttfamily \mbox{\hyperlink{class_sphere}{Sphere}}} class is a representation of a Set of points that are equaly apart (sphere radius) in a 3D space. In order to define a sphere, we need to determine it\textquotesingle{}s center, with a Point or \mbox{\hyperlink{class_vector}{Vector}}, and it\textquotesingle{}s radius -\/ real number. \mbox{\hyperlink{class_sphere}{Sphere}} that has a center equal to $ c = (c_x, c_y, c_z) $ and radius equal to $ R $ can be determied with a formula\+: \[ (x-c_x)^2 + (y-c_y)^2 + (z-c_z)^2 - R^2 = 0 \] which is equivalent to a vector formula\+: \[ (p-c) \cdot (p-c) - R^2 = 0 \] Every point that satisfies that equation belongs to the sphere. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_sphere_a890a63ff583cb88e7ec4e840b4ef5eb9}\label{class_sphere_a890a63ff583cb88e7ec4e840b4ef5eb9}} 
+\index{Sphere@{Sphere}!Sphere@{Sphere}}
+\index{Sphere@{Sphere}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{Sphere()}{Sphere()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Sphere\+::\+Sphere (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. Creates a sphere object that has center in $ (0,0,0) $ and radius equal to $ 1 $ \begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_sphere}{Sphere}} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_sphere_ab6324c968f5db50b7ea4d5c3fa94aab2}\label{class_sphere_ab6324c968f5db50b7ea4d5c3fa94aab2}} 
+\index{Sphere@{Sphere}!Sphere@{Sphere}}
+\index{Sphere@{Sphere}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{Sphere()}{Sphere()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Sphere\+::\+Sphere (\begin{DoxyParamCaption}\item[{float}]{r }\end{DoxyParamCaption})}
+
+Basic constructor. Creates a sphere object that has center in $ (0,0,0) $ and radius equal to $ r $ 
+\begin{DoxyParams}{Parameters}
+{\em r} & -\/ radius of a sphere \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_sphere}{Sphere}} object 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ray\+Tracer\+App/\+Ray\+Tracer\+App/Sphere.\+h\item 
+Ray\+Tracer\+App/\+Ray\+Tracer\+App/Sphere.\+cpp\end{DoxyCompactItemize}

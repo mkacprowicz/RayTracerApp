@@ -1,0 +1,27 @@
+\hypertarget{_ray_8cpp}{}\doxysection{Ray\+Tracer\+App/\+Ray\+Tracer\+App/\+Ray.cpp File Reference}
+\label{_ray_8cpp}\index{RayTracerApp/RayTracerApp/Ray.cpp@{RayTracerApp/RayTracerApp/Ray.cpp}}
+{\ttfamily \#include \char`\"{}Ray.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{_ray_8cpp_a5c8a3bf0a8e125a67943f442cbbf8e06}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_ray}{Ray}} \&ray)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_ray_8cpp_a5c8a3bf0a8e125a67943f442cbbf8e06}\label{_ray_8cpp_a5c8a3bf0a8e125a67943f442cbbf8e06}} 
+\index{Ray.cpp@{Ray.cpp}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Ray.cpp@{Ray.cpp}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_ray}{Ray}} \&}]{ray }\end{DoxyParamCaption})}
+
+Overlaoded $<$$<$ operator for debug purposes. Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_ray}{Ray}} ray();}
+\DoxyCodeLine{std::cout << ray;}
+\end{DoxyCode}
+ Output\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{stringliteral}{"Ray(0,0,0)"}}
+\end{DoxyCode}
+ 

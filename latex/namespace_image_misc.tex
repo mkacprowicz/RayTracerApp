@@ -1,0 +1,53 @@
+\hypertarget{namespace_image_misc}{}\doxysection{Image\+Misc Namespace Reference}
+\label{namespace_image_misc}\index{ImageMisc@{ImageMisc}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_image_misc_1_1_pixel}{Pixel}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{namespace_image_misc_a60731823ca9bec9347a3a87b3810eb16}{Load\+Picture\+Data}} (const char $\ast$filename, int $\ast$x, int $\ast$y, int $\ast$n)
+\item 
+void \mbox{\hyperlink{namespace_image_misc_a0c941808250bd069a366eb8fcd8a1fa2}{Get\+Pixel}} (stbi\+\_\+uc $\ast$image, size\+\_\+t image\+Width, size\+\_\+t x, size\+\_\+t y, unsigned char $\ast$r, unsigned char $\ast$g, unsigned char $\ast$b, unsigned char $\ast$a)
+\item 
+void \mbox{\hyperlink{namespace_image_misc_a62a2cbd354f85d385ebec73d218b5d50}{Get\+Pixel\+Neighbourhood}} (stbi\+\_\+uc $\ast$image, size\+\_\+t image\+Width, int poi, int matrix\+\_\+size, std\+::shared\+\_\+ptr$<$ std\+::vector$<$ \mbox{\hyperlink{struct_image_misc_1_1_pixel}{Pixel}} $>$$>$ pixel\+\_\+neighbourhood, int \&centre\+\_\+point)
+\item 
+void \mbox{\hyperlink{namespace_image_misc_a91166bd0ceb410d66c8fab6292ed3037}{Save\+Pixel}} (stbi\+\_\+uc $\ast$data, size\+\_\+t image\+Width, size\+\_\+t x, size\+\_\+t y, unsigned char $\ast$r, unsigned char $\ast$g, unsigned char $\ast$b, unsigned char $\ast$a)
+\item 
+void \mbox{\hyperlink{namespace_image_misc_a440ecb3aba71eb903e21ac6cbc3964ef}{Write\+Image}} (char const $\ast$filename, int x, int y, int comp, const void $\ast$data)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{namespace_image_misc_a0c941808250bd069a366eb8fcd8a1fa2}\label{namespace_image_misc_a0c941808250bd069a366eb8fcd8a1fa2}} 
+\index{ImageMisc@{ImageMisc}!GetPixel@{GetPixel}}
+\index{GetPixel@{GetPixel}!ImageMisc@{ImageMisc}}
+\doxysubsubsection{\texorpdfstring{GetPixel()}{GetPixel()}}
+{\footnotesize\ttfamily void Image\+Misc\+::\+Get\+Pixel (\begin{DoxyParamCaption}\item[{stbi\+\_\+uc $\ast$}]{image,  }\item[{size\+\_\+t}]{image\+Width,  }\item[{size\+\_\+t}]{x,  }\item[{size\+\_\+t}]{y,  }\item[{unsigned char $\ast$}]{r,  }\item[{unsigned char $\ast$}]{g,  }\item[{unsigned char $\ast$}]{b,  }\item[{unsigned char $\ast$}]{a }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_image_misc_a62a2cbd354f85d385ebec73d218b5d50}\label{namespace_image_misc_a62a2cbd354f85d385ebec73d218b5d50}} 
+\index{ImageMisc@{ImageMisc}!GetPixelNeighbourhood@{GetPixelNeighbourhood}}
+\index{GetPixelNeighbourhood@{GetPixelNeighbourhood}!ImageMisc@{ImageMisc}}
+\doxysubsubsection{\texorpdfstring{GetPixelNeighbourhood()}{GetPixelNeighbourhood()}}
+{\footnotesize\ttfamily void Image\+Misc\+::\+Get\+Pixel\+Neighbourhood (\begin{DoxyParamCaption}\item[{stbi\+\_\+uc $\ast$}]{image,  }\item[{size\+\_\+t}]{image\+Width,  }\item[{int}]{poi,  }\item[{int}]{matrix\+\_\+size,  }\item[{std\+::shared\+\_\+ptr$<$ std\+::vector$<$ \mbox{\hyperlink{struct_image_misc_1_1_pixel}{Pixel}} $>$$>$}]{pixel\+\_\+neighbourhood,  }\item[{int \&}]{centre\+\_\+point }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_image_misc_a60731823ca9bec9347a3a87b3810eb16}\label{namespace_image_misc_a60731823ca9bec9347a3a87b3810eb16}} 
+\index{ImageMisc@{ImageMisc}!LoadPictureData@{LoadPictureData}}
+\index{LoadPictureData@{LoadPictureData}!ImageMisc@{ImageMisc}}
+\doxysubsubsection{\texorpdfstring{LoadPictureData()}{LoadPictureData()}}
+{\footnotesize\ttfamily unsigned char $\ast$ Image\+Misc\+::\+Load\+Picture\+Data (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename,  }\item[{int $\ast$}]{x,  }\item[{int $\ast$}]{y,  }\item[{int $\ast$}]{n }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_image_misc_a91166bd0ceb410d66c8fab6292ed3037}\label{namespace_image_misc_a91166bd0ceb410d66c8fab6292ed3037}} 
+\index{ImageMisc@{ImageMisc}!SavePixel@{SavePixel}}
+\index{SavePixel@{SavePixel}!ImageMisc@{ImageMisc}}
+\doxysubsubsection{\texorpdfstring{SavePixel()}{SavePixel()}}
+{\footnotesize\ttfamily void Image\+Misc\+::\+Save\+Pixel (\begin{DoxyParamCaption}\item[{stbi\+\_\+uc $\ast$}]{data,  }\item[{size\+\_\+t}]{image\+Width,  }\item[{size\+\_\+t}]{x,  }\item[{size\+\_\+t}]{y,  }\item[{unsigned char $\ast$}]{r = {\ttfamily NULL},  }\item[{unsigned char $\ast$}]{g = {\ttfamily NULL},  }\item[{unsigned char $\ast$}]{b = {\ttfamily NULL},  }\item[{unsigned char $\ast$}]{a = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{namespace_image_misc_a440ecb3aba71eb903e21ac6cbc3964ef}\label{namespace_image_misc_a440ecb3aba71eb903e21ac6cbc3964ef}} 
+\index{ImageMisc@{ImageMisc}!WriteImage@{WriteImage}}
+\index{WriteImage@{WriteImage}!ImageMisc@{ImageMisc}}
+\doxysubsubsection{\texorpdfstring{WriteImage()}{WriteImage()}}
+{\footnotesize\ttfamily void Image\+Misc\+::\+Write\+Image (\begin{DoxyParamCaption}\item[{char const $\ast$}]{filename,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{comp,  }\item[{const void $\ast$}]{data }\end{DoxyParamCaption})}
+

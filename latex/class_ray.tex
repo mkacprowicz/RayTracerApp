@@ -1,0 +1,142 @@
+\hypertarget{class_ray}{}\doxysection{Ray Class Reference}
+\label{class_ray}\index{Ray@{Ray}}
+
+
+\mbox{\hyperlink{class_ray}{Ray}} class which is a representation of a ray function.  
+
+
+
+
+{\ttfamily \#include $<$Ray.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ray_a2e3d2c29f2df4ab3da10da79d4acb852}{Ray}} ()
+\item 
+\mbox{\hyperlink{class_ray_a45105f0bf1d53f595a34e11977c12142}{Ray}} (\mbox{\hyperlink{class_vector}{Vector}} origin, \mbox{\hyperlink{class_vector}{Vector}} direction)
+\item 
+\mbox{\hyperlink{class_ray_ad0288e84aa6367c05e94ddc3321ef830}{Ray}} (\mbox{\hyperlink{class_vector}{Vector}} origin, float dis)
+\item 
+\mbox{\hyperlink{class_ray_a5573f261316305cb3b520a789c221aeb}{Ray}} (\mbox{\hyperlink{class_vector}{Vector}} origin, \mbox{\hyperlink{class_vector}{Vector}} direction, float dis)
+\item 
+\mbox{\Hypertarget{class_ray_a88a27af7a629ee35758409846a5f9b00}\label{class_ray_a88a27af7a629ee35758409846a5f9b00}} 
+\mbox{\hyperlink{class_vector}{Vector}} {\bfseries Origin} () const
+\item 
+\mbox{\Hypertarget{class_ray_a5f6ce06460d1b972fe1de971762657b5}\label{class_ray_a5f6ce06460d1b972fe1de971762657b5}} 
+void {\bfseries Origin} (\mbox{\hyperlink{class_vector}{Vector}} o)
+\item 
+\mbox{\Hypertarget{class_ray_a9663dd2c517fd02e9bf4cee3456b975b}\label{class_ray_a9663dd2c517fd02e9bf4cee3456b975b}} 
+\mbox{\hyperlink{class_vector}{Vector}} {\bfseries Destination} () const
+\item 
+\mbox{\Hypertarget{class_ray_a7db364e0cef44f2785c64ebe8c77da6d}\label{class_ray_a7db364e0cef44f2785c64ebe8c77da6d}} 
+void {\bfseries Destination} (\mbox{\hyperlink{class_vector}{Vector}} d)
+\item 
+\mbox{\Hypertarget{class_ray_a443fe7715a9534f79a9ce69fb7415ac6}\label{class_ray_a443fe7715a9534f79a9ce69fb7415ac6}} 
+\mbox{\hyperlink{class_vector}{Vector}} {\bfseries Direction} () const
+\item 
+\mbox{\Hypertarget{class_ray_a27a822c21443bcea167ae900611d35b2}\label{class_ray_a27a822c21443bcea167ae900611d35b2}} 
+void {\bfseries Direction} (\mbox{\hyperlink{class_vector}{Vector}} d)
+\item 
+\mbox{\Hypertarget{class_ray_af2c1c8923cacb3259cdb11b1c8aa3694}\label{class_ray_af2c1c8923cacb3259cdb11b1c8aa3694}} 
+float {\bfseries Distance} () const
+\item 
+\mbox{\Hypertarget{class_ray_ad7aaa89d78daa7daafba9b97b2815810}\label{class_ray_ad7aaa89d78daa7daafba9b97b2815810}} 
+void {\bfseries Distance} (float d)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_ray_a5c8a3bf0a8e125a67943f442cbbf8e06}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_ray}{Ray}} \&ray)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_ray}{Ray}} class which is a representation of a ray function. 
+
+The {\ttfamily \mbox{\hyperlink{class_ray}{Ray}}} class represents a path that the light travels in a virtual scene. To find an object that ray intersects with we have to determine the ray function\+: \[ p(t) = A + t*B \] where p is a 3D position along a line in 3D. A is the ray origin, B is the ray direction and the ray parameter t is a real number. Depending on the t point p(t) moves along the ray. For example for t=2 and t=0 the ray funtions would be\+: \[ p(2) = A + 2*B, \\ p(0) = A + 0*B => p(0) = A \] 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_ray_a2e3d2c29f2df4ab3da10da79d4acb852}\label{class_ray_a2e3d2c29f2df4ab3da10da79d4acb852}} 
+\index{Ray@{Ray}!Ray@{Ray}}
+\index{Ray@{Ray}!Ray@{Ray}}
+\doxysubsubsection{\texorpdfstring{Ray()}{Ray()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily Ray\+::\+Ray (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor. Creates a ray object that has it\textquotesingle{}s parameters set to (0, 0, 0). \begin{DoxyReturn}{Returns}
+Zero \mbox{\hyperlink{class_ray}{Ray}} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_ray_a45105f0bf1d53f595a34e11977c12142}\label{class_ray_a45105f0bf1d53f595a34e11977c12142}} 
+\index{Ray@{Ray}!Ray@{Ray}}
+\index{Ray@{Ray}!Ray@{Ray}}
+\doxysubsubsection{\texorpdfstring{Ray()}{Ray()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily Ray\+::\+Ray (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector}}}]{origin,  }\item[{\mbox{\hyperlink{class_vector}{Vector}}}]{direction }\end{DoxyParamCaption})}
+
+Basic constructor. Creates a ray object that has fixed parameters. 
+\begin{DoxyParams}{Parameters}
+{\em origin} & -\/ origin (A parameter) of a ray function \\
+\hline
+{\em direction} & -\/ direction (B parameter) of a ray function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_ray}{Ray}} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_ray_ad0288e84aa6367c05e94ddc3321ef830}\label{class_ray_ad0288e84aa6367c05e94ddc3321ef830}} 
+\index{Ray@{Ray}!Ray@{Ray}}
+\index{Ray@{Ray}!Ray@{Ray}}
+\doxysubsubsection{\texorpdfstring{Ray()}{Ray()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily Ray\+::\+Ray (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector}}}]{origin,  }\item[{float}]{dis }\end{DoxyParamCaption})}
+
+Basic constructor. Creates a ray object that has fixed parameters. 
+\begin{DoxyParams}{Parameters}
+{\em origin} & -\/ origin (A parameter) of a ray function \\
+\hline
+{\em dist} & -\/ distance (t parameter) of a ray function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_ray}{Ray}} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_ray_a5573f261316305cb3b520a789c221aeb}\label{class_ray_a5573f261316305cb3b520a789c221aeb}} 
+\index{Ray@{Ray}!Ray@{Ray}}
+\index{Ray@{Ray}!Ray@{Ray}}
+\doxysubsubsection{\texorpdfstring{Ray()}{Ray()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily Ray\+::\+Ray (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector}}}]{origin,  }\item[{\mbox{\hyperlink{class_vector}{Vector}}}]{direction,  }\item[{float}]{dis }\end{DoxyParamCaption})}
+
+Basic constructor. Creates a ray object that has fixed parameters. 
+\begin{DoxyParams}{Parameters}
+{\em origin} & -\/ origin (A parameter) of a ray function \\
+\hline
+{\em direction} & -\/ direction (B parameter) of a ray function \\
+\hline
+{\em dist} & -\/ distance (t parameter) of a ray function \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_ray}{Ray}} object 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_ray_a5c8a3bf0a8e125a67943f442cbbf8e06}\label{class_ray_a5c8a3bf0a8e125a67943f442cbbf8e06}} 
+\index{Ray@{Ray}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Ray@{Ray}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{class_ray}{Ray}} \&}]{ray }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+Overlaoded $<$$<$ operator for debug purposes. Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{class_ray}{Ray}} ray();}
+\DoxyCodeLine{std::cout << ray;}
+\end{DoxyCode}
+ Output\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{stringliteral}{"Ray(0,0,0)"}}
+\end{DoxyCode}
+ 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ray\+Tracer\+App/\+Ray\+Tracer\+App/Ray.\+h\item 
+Ray\+Tracer\+App/\+Ray\+Tracer\+App/Ray.\+cpp\end{DoxyCompactItemize}

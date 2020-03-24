@@ -1,23 +1,43 @@
 #include "Sphere.h"
 
+/**
+* Default constructor. Creates a sphere object that has center in \f$ (0,0,0) \f$ and radius equal to \f$ 1 \f$
+* @return Sphere object
+*/
 Sphere::Sphere()
 {
 	this->Center_ = Vector::Zero();
 	this->Radius_ = 1.0f;
 }
 
+/**
+* Basic constructor. Creates a sphere object that has center in \f$ (0,0,0) \f$ and radius equal to \f$ r \f$
+* @param r - radius of a sphere
+* @return Sphere object
+*/
 Sphere::Sphere(float r)
 {
 	this->Center_ = Vector::Zero();
 	this->Radius_ = r;
 }
 
+/**
+* Basic constructor. Creates a sphere object that has center in \f$ v \f$ and radius equal to \f$ 1 \f$
+* @param v - center of a sphere
+* @return Sphere object
+*/
 Sphere::Sphere(Vector v)
 {
 	this->Center_ = v;
 	this->Radius_ = 1.0f;
 }
 
+/**
+* Basic constructor. Creates a sphere object that has center in \f$ v \f$ and radius equal to \f$ r \f$
+* @param r - radius of a sphere
+* @param v - center of a sphere
+* @return Sphere object
+*/
 Sphere::Sphere(Vector v, float r)
 {
 	this->Center_ = v;

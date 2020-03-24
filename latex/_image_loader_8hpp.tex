@@ -1,0 +1,28 @@
+\hypertarget{_image_loader_8hpp}{}\doxysection{Ray\+Tracer\+App/\+Ray\+Tracer\+App/\+Image\+Loader.hpp File Reference}
+\label{_image_loader_8hpp}\index{RayTracerApp/RayTracerApp/ImageLoader.hpp@{RayTracerApp/RayTracerApp/ImageLoader.hpp}}
+{\ttfamily \#include \char`\"{}pch.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vendor/stb\+\_\+image/stb\+\_\+image.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vendor/stb\+\_\+image/stb\+\_\+image\+\_\+write.\+h\char`\"{}}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_image_misc_1_1_pixel}{Image\+Misc\+::\+Pixel}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \mbox{\hyperlink{namespace_image_misc}{Image\+Misc}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char $\ast$ \mbox{\hyperlink{namespace_image_misc_a60731823ca9bec9347a3a87b3810eb16}{Image\+Misc\+::\+Load\+Picture\+Data}} (const char $\ast$filename, int $\ast$x, int $\ast$y, int $\ast$n)
+\item 
+void \mbox{\hyperlink{namespace_image_misc_a0c941808250bd069a366eb8fcd8a1fa2}{Image\+Misc\+::\+Get\+Pixel}} (stbi\+\_\+uc $\ast$image, size\+\_\+t image\+Width, size\+\_\+t x, size\+\_\+t y, unsigned char $\ast$r, unsigned char $\ast$g, unsigned char $\ast$b, unsigned char $\ast$a)
+\item 
+void \mbox{\hyperlink{namespace_image_misc_a62a2cbd354f85d385ebec73d218b5d50}{Image\+Misc\+::\+Get\+Pixel\+Neighbourhood}} (stbi\+\_\+uc $\ast$image, size\+\_\+t image\+Width, int poi, int matrix\+\_\+size, std\+::shared\+\_\+ptr$<$ std\+::vector$<$ Pixel $>$$>$ pixel\+\_\+neighbourhood, int \&centre\+\_\+point)
+\item 
+void \mbox{\hyperlink{namespace_image_misc_a91166bd0ceb410d66c8fab6292ed3037}{Image\+Misc\+::\+Save\+Pixel}} (stbi\+\_\+uc $\ast$data, size\+\_\+t image\+Width, size\+\_\+t x, size\+\_\+t y, unsigned char $\ast$r, unsigned char $\ast$g, unsigned char $\ast$b, unsigned char $\ast$a)
+\item 
+void \mbox{\hyperlink{namespace_image_misc_a440ecb3aba71eb903e21ac6cbc3964ef}{Image\+Misc\+::\+Write\+Image}} (char const $\ast$filename, int x, int y, int comp, const void $\ast$data)
+\end{DoxyCompactItemize}
