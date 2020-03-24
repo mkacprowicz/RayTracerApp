@@ -24,9 +24,7 @@ public:
 	Sphere(Vector v);
 	Sphere(Vector v, float r);
 
-	float Intersection(Ray ray, Vector &p, float& t) const;
-	bool Intersection(Ray ray) const;
-	bool IntersectionB(Ray ray) const;
+	bool Hit(Ray ray, float t_min, float t_max) const;
 
 	Vector Center() const { return Center_; }
 	void Center(Vector o) { Center_ = o; }

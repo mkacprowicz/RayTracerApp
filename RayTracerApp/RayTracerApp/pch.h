@@ -13,3 +13,4 @@
 #include <memory>
 #include <filesystem>
 #include <map>
+#include <cfloat>
