@@ -19,8 +19,6 @@ int main()
 {
 	std::cout << "Hello World" << std::endl;
 
-	std::vector<unsigned char> output_image_data;
-
 	Image img(800, 800, 100);
 
 	PerspectiveCamera pCam;
@@ -64,19 +62,16 @@ int main()
 				color.A(255);
 			}
 
-			output_image_data.push_back(color.R());
-			output_image_data.push_back(color.G());
-			output_image_data.push_back(color.B());
-			output_image_data.push_back(color.A());
+			img.SavePixel(color);
 		}
 	}
 
-	img.WriteImage("Results//resultPer.bmp", img.Width(), img.Height(), 4, output_image_data.data());
+	img.WriteImage("Results//resultPer.bmp", img.Width(), img.Height(), 4);
 
 
 	OrtoCamera oCam;
 
-	output_image_data.clear();
+	img.OutputImageData().clear();
 
 	for (auto j = img.Height() - 1; j >= 0; j--)
 	{
@@ -114,14 +109,11 @@ int main()
 				color.A(255);
 			}
 
-			output_image_data.push_back(color.R());
-			output_image_data.push_back(color.G());
-			output_image_data.push_back(color.B());
-			output_image_data.push_back(color.A());
+			img.SavePixel(color);
 		}
 	}
 
-	img.WriteImage("Results//resultOrto.bmp", img.Width(), img.Height(), 4, output_image_data.data());
+	img.WriteImage("Results//resultOrto.bmp", img.Width(), img.Height(), 4);
 
 	std::cout << "Done" << std::endl;
 }
