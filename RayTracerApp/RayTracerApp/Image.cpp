@@ -7,7 +7,7 @@
 #include "vendor/stb_image/stb_image_write.h"
 
 /**
-* Basic constructor. Creates a ray object that has fixed parameters.
+* Basic constructor. Creates an image to prepare file to render
 * @param h - height of image
 * @param w - widht of image
 * @param s - number of samples to sampling
