@@ -158,6 +158,7 @@
     <ClCompile Include="LightIntensity.cpp" />
     <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="obj_io.cpp" />
+    <ClCompile Include="OrthonormalBasis.cpp" />
     <ClCompile Include="OrtoCamera.cpp" />
     <ClCompile Include="PerspectiveCamera.cpp" />
     <ClCompile Include="Ray.cpp" />
@@ -174,6 +175,7 @@
     <ClInclude Include="LightIntensity.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="obj_io.hpp" />
+    <ClInclude Include="OrthonormalBasis.hpp" />
     <ClInclude Include="OrtoCamera.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="PerspectiveCamera.h" />
