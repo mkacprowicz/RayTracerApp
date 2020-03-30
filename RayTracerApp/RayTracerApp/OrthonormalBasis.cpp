@@ -11,5 +11,5 @@ OrthonormalBasis::OrthonormalBasis(Vector eye, Vector lookAt, Vector up)
 
 Vector OrthonormalBasis::operator*(Vector v)
 {
-	return (this->u * v.X + this->v * v.Y + this->w * v.Z);
+	return (this->u * v.X() + this->v * v.Y() + this->w * v.Z());
 }

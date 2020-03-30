@@ -8,6 +8,7 @@ private:
 	Vector w;
 
 public:
+	OrthonormalBasis() {};
 	OrthonormalBasis(Vector eye, Vector lookAt, Vector up);
 	Vector operator*(Vector v);
 
