@@ -12,6 +12,8 @@
 #include "LightIntensity.h"
 #include "Image.hpp"
 
+#include "Triangle.h"
+#include "Mesh.h"
 
 float RandomFloat();
 
@@ -26,6 +28,11 @@ int main()
 	Sphere s(Vector(0, 0, -1.0f), 0.4f);
 	Sphere s2(Vector(0.6f, 0, -1.5f), 0.4f);
 
+	Triangle t1(Vector(0.6f, 0, -1.5f), Vector(0.5f, 0.5f, -1.1f), Vector(0.9f, 0.3f, -1.5f));
+
+	Triangle t2(Vector(4.528552, 0.063698, -0.076053), Vector(4.401397, 0.491405, -0.060543), Vector(4.065627, 0.801094, -0.045114));
+
+
 	for (auto j = img.Height() - 1; j >= 0; j--)
 	{
 		for (auto i = 0; i < img.Width(); i++)
@@ -36,18 +43,22 @@ int main()
 			auto v = (j + RandomFloat()) / img.Height();
 			Ray ray = pCam.GetRay(u, v);
 
-			bool intersection = s.Hit(ray, 0.0f, FLT_MAX);
-			bool intersection2 = s2.Hit(ray, 0.0f, FLT_MAX);
+			//bool intersection = s.Hit(ray, 0.0f, FLT_MAX);
+			//bool intersection2 = s2.Hit(ray, 0.0f, FLT_MAX);
+
+			float ad = 0;
+	
+			bool intersection3 = t2.Intersection(ray, ad, ad);
 
 
-			if (intersection)
+			/*if (intersection)
 			{
 				color.R(0);
 				color.G(0);
 				color.B(255);
 				color.A(255);
 			}
-			else if (intersection2)
+			else*/ if (intersection3)
 			{
 				color.R(255);
 				color.G(0);
@@ -62,58 +73,22 @@ int main()
 				color.A(255);
 			}
 
-			img.SavePixel(color);
-		}
-	}
 
-	img.WriteImage("Results//resultPer.bmp", img.Width(), img.Height(), 4);
-
-
-	OrtoCamera oCam;
-
-	img.OutputImageData().clear();
-
-	for (auto j = img.Height() - 1; j >= 0; j--)
-	{
-		for (auto i = 0; i < img.Width(); i++)
-		{
-			LightIntensity color;
-
-			auto u = (i + RandomFloat()) / img.Width();
-			auto v = (j + RandomFloat()) / img.Height();
-			Ray ray = oCam.GetRay(u, v);
-
-			bool intersection = s.Hit(ray, 0.0f, FLT_MAX);
-			bool intersection2 = s2.Hit(ray, 0.0f, FLT_MAX);
-
-
-			if (intersection)
+			/*if (intersection3)
 			{
 				color.R(0);
-				color.G(0);
-				color.B(255);
-				color.A(255);
-			}
-			else if (intersection2)
-			{
-				color.R(255);
-				color.G(0);
+				color.G(255);
 				color.B(0);
 				color.A(255);
-			}
-			else
-			{
-				color.R(255);
-				color.G(255);
-				color.B(255);
-				color.A(255);
-			}
+			}*/
+
 
 			img.SavePixel(color);
 		}
 	}
 
-	img.WriteImage("Results//resultOrto.bmp", img.Width(), img.Height(), 4);
+	img.WriteImage("Results//result.bmp", img.Width(), img.Height(), 4);
+
 
 	std::cout << "Done" << std::endl;
 }

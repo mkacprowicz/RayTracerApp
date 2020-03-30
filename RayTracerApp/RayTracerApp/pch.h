@@ -14,3 +14,5 @@
 #include <filesystem>
 #include <map>
 #include <cfloat>
+#include <ostream>
+#include <sstream>
