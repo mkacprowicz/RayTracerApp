@@ -1,7 +1,7 @@
-#include "OrtoCamera.h"
+#include "PersCamera.h"
 
 
-OrtoCamera::OrtoCamera(Vector origin, Vector lookAt, Vector up, float distance)
+PersCamera::PersCamera(Vector origin, Vector lookAt, Vector up, float distance)
 {
 	this->onb_ = OrthonormalBasis(origin, lookAt, up);
 	this->Origin_ = origin;
@@ -14,16 +14,16 @@ OrtoCamera::OrtoCamera(Vector origin, Vector lookAt, Vector up, float distance)
 * @param v - vertical offset
 * @return Ray object
 */
-Ray OrtoCamera::GetRay(float u, float v)
+Ray PersCamera::GetRay(float u, float v)
 {
 	return Ray(Origin_, RayDirection(u, v));
 }
 
-void OrtoCamera::Render()
+void PersCamera::Render()
 {
 }
 
-Vector OrtoCamera::RayDirection(float u, float v)
+Vector PersCamera::RayDirection(float u, float v)
 {
 	return onb_ * Vector(u, v, -distance_);
 }

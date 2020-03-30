@@ -1,4 +1,4 @@
-#include "PerspectiveCamera.h"
+#include "OCamera.h"
 
 /**
 * Function that creates a Ray from a camera
@@ -6,11 +6,11 @@
 * @param v - vertical offset
 * @return Ray object
 */
-Ray PerspectiveCamera::GetRay(float u, float v)
+Ray OCamera::GetRay(float u, float v)
 {
 	return Ray(this->Origin_, this->LowerLeftCorner_ + u * this->Horizontal_ + v * this->Vertical_ - this->Origin_);
 }
 
-void PerspectiveCamera::Render()
+void OCamera::Render()
 {
 }

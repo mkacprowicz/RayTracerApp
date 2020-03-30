@@ -2,7 +2,7 @@
 #include "Camera.h"
 
 //! Camera is a class which is a representation of a perspective camera
-class PerspectiveCamera :
+class OCamera :
 	public Camera
 {
 public :

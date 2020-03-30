@@ -6,8 +6,7 @@
 
 #include "Sphere.h"
 #include "Surface.h"
-#include "PerspectiveCamera.h"
-#include "OrtoCamera.h"
+#include "PersCamera.h"
 
 #include "LightIntensity.h"
 #include "Image.hpp"
@@ -23,46 +22,37 @@ int main()
 
 	Image img(800, 800, 100);
 
-	PerspectiveCamera pCam;
+	PersCamera pCam(Vector(0, 0, -4.0f), Vector(0, 0, 0), Vector(0, -1.0f ,0), 1);
 
-	Sphere s(Vector(0, 0, -1.0f), 0.4f);
-	Sphere s2(Vector(0.6f, 0, -1.5f), 0.4f);
+	Sphere s(Vector(-4.f, 0, 0), 2.0f);
+	Sphere s2(Vector(4.f, 0, 0), 2.0f);
+	Sphere s3(Vector(0.f, 0, 3.0f), 2.0f);
 
-	Triangle t1(Vector(0.6f, 0, -1.5f), Vector(0.5f, 0.5f, -1.1f), Vector(0.9f, 0.3f, -1.5f));
+	Mesh m;
 
-	Triangle t2(Vector(4.528552, 0.063698, -0.076053), Vector(4.401397, 0.491405, -0.060543), Vector(4.065627, 0.801094, -0.045114));
+	m.ReadMeshFromFile(std::string("gourd.obj"));
 
-
-	for (auto j = img.Height() - 1; j >= 0; j--)
+	for (auto x = 0; x < img.Width(); x++)
 	{
-		for (auto i = 0; i < img.Width(); i++)
+		for (auto y = 0; y < img.Height(); y++)
 		{
 			LightIntensity color;
 
-			auto u = (i + RandomFloat()) / img.Width();
-			auto v = (j + RandomFloat()) / img.Height();
+			float u = ((y + RandomFloat()) / (float)img.Width()) * 2.0f - 1.0f;
+			float v = ((x + RandomFloat()) / (float)img.Height()) * 2.0f - 1.0f;
 			Ray ray = pCam.GetRay(u, v);
 
-			//bool intersection = s.Hit(ray, 0.0f, FLT_MAX);
-			//bool intersection2 = s2.Hit(ray, 0.0f, FLT_MAX);
-
-			float ad = 0;
-	
-			bool intersection3 = t2.Intersection(ray, ad, ad);
+			bool intersection = s.Hit(ray, 0.0f, FLT_MAX);
+			bool intersection2 = s2.Hit(ray, 0.0f, FLT_MAX);
+			bool intersection3 = s3.Hit(ray, 0.0f, FLT_MAX);
 
 
-			/*if (intersection)
+			
+			if (m.CheckIntersection(ray))
 			{
 				color.R(0);
 				color.G(0);
 				color.B(255);
-				color.A(255);
-			}
-			else*/ if (intersection3)
-			{
-				color.R(255);
-				color.G(0);
-				color.B(0);
 				color.A(255);
 			}
 			else
@@ -73,22 +63,11 @@ int main()
 				color.A(255);
 			}
 
-
-			/*if (intersection3)
-			{
-				color.R(0);
-				color.G(255);
-				color.B(0);
-				color.A(255);
-			}*/
-
-
 			img.SavePixel(color);
 		}
 	}
 
 	img.WriteImage("Results//result.bmp", img.Width(), img.Height(), 4);
-
 
 	std::cout << "Done" << std::endl;
 }
