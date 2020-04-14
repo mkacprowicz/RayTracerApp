@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['camera_60',['Camera',['../class_camera.html',1,'']]],
-  ['color_61',['Color',['../class_color.html',1,'']]]
+  ['camera_61',['Camera',['../class_camera.html',1,'']]],
+  ['color_62',['Color',['../class_color.html',1,'']]]
 ];

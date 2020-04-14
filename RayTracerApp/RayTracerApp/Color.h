@@ -2,7 +2,7 @@
 
 #include "pch.h"
 
-//! Color class that represents light intensiti for a color in RGB colorspace.
+//! Color class that represents light intensity for a color in RGB colorspace.
 /**
 * This class represents ambient light intensity in RGB colorspace. 
 * It has no position, and it's the same for every object in a virtual scene. 

@@ -9,11 +9,9 @@ Inheritance diagram for Reflective\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_reflective_a71fd77699ceef5eb7106d26546245580}\label{class_reflective_a71fd77699ceef5eb7106d26546245580}} 
-{\bfseries Reflective} (\mbox{\hyperlink{class_color}{Color}} material\+Color, float diffuse, float specular, float exponent, float reflectivity)
+\mbox{\hyperlink{class_reflective_a71fd77699ceef5eb7106d26546245580}{Reflective}} (\mbox{\hyperlink{class_color}{Color}} material\+Color, float diffuse, float specular, float exponent, float reflectivity)
 \item 
-\mbox{\Hypertarget{class_reflective_a4e27ad8f5fcc64e75136e5fe231fbd9f}\label{class_reflective_a4e27ad8f5fcc64e75136e5fe231fbd9f}} 
-\mbox{\hyperlink{class_color}{Color}} {\bfseries Shade} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_image_r_t}{Image\+RT}} $>$ tracer, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_hit_info}{Hit\+Info}} $>$ hit)
+\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_reflective_a4e27ad8f5fcc64e75136e5fe231fbd9f}{Shade}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_image_r_t}{Image\+RT}} $>$ tracer, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_hit_info}{Hit\+Info}} $>$ hit)
 \item 
 \mbox{\Hypertarget{class_reflective_a6aeeeb608a9bd357526e3bcff3994953}\label{class_reflective_a6aeeeb608a9bd357526e3bcff3994953}} 
 \mbox{\hyperlink{class_color}{Color}} {\bfseries Reflection\+Color} () const
@@ -27,6 +25,38 @@ float {\bfseries Reflectivity} () const
 \mbox{\Hypertarget{class_reflective_a70cf2cf95a90d01905977518ca79f98a}\label{class_reflective_a70cf2cf95a90d01905977518ca79f98a}} 
 void {\bfseries Reflectivity} (float r)
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_reflective_a71fd77699ceef5eb7106d26546245580}\label{class_reflective_a71fd77699ceef5eb7106d26546245580}} 
+\index{Reflective@{Reflective}!Reflective@{Reflective}}
+\index{Reflective@{Reflective}!Reflective@{Reflective}}
+\doxysubsubsection{\texorpdfstring{Reflective()}{Reflective()}}
+{\footnotesize\ttfamily Reflective\+::\+Reflective (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_color}{Color}}}]{material\+Color,  }\item[{float}]{diffuse,  }\item[{float}]{specular,  }\item[{float}]{exponent,  }\item[{float}]{reflectivity }\end{DoxyParamCaption})}
+
+Constructor for \mbox{\hyperlink{class_reflective}{Reflective}} class 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_reflective_a4e27ad8f5fcc64e75136e5fe231fbd9f}\label{class_reflective_a4e27ad8f5fcc64e75136e5fe231fbd9f}} 
+\index{Reflective@{Reflective}!Shade@{Shade}}
+\index{Shade@{Shade}!Reflective@{Reflective}}
+\doxysubsubsection{\texorpdfstring{Shade()}{Shade()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_color}{Color}} Reflective\+::\+Shade (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_image_r_t}{Image\+RT}} $>$}]{tracer,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_hit_info}{Hit\+Info}} $>$}]{hit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+The mirror reflection depends on the position of the observer and will change depending on his position. It should be emphasized here that the mirror reflection does not define the surface having the reflection properties of other objects like a mirror, it more defines the directional reflection of light and thus the creation of a characteristic flare in the form of a light spot. To obtain a surface that simulates mirror behavior, you would need to perform a ray recursion to find the intensity from the reflected object. To calculate the intensity on a mirror surface, calculate the reflected vector and the vector directed to the observer\+: \[ I_{out} = I_{in} (k_s cos^n \Theta) \\ I_{out} = I_{in} (k_s (R\cdot V)^n) \] The equation for calculating the direction of the reflected ray R\+: \[ R = I - 2 \times (N \cdot I) \cdot N \] $R$ is the directional vector of the reflected ray, $I$ is the direction of the origin of the ray, and $N$ is normal at the intersection. Having the direction of the reflected ray we should also have its point of origin. Which is the intersection of the object with the incoming ray. 
+\begin{DoxyParams}{Parameters}
+{\em tracer} & -\/ custom raytracer object \\
+\hline
+{\em hit} & -\/ info about ray hitting an object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_color}{Color}} object 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_material}{Material}}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

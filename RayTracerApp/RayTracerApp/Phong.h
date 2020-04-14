@@ -3,6 +3,7 @@
 #include "pch.h"
 #include "Material.h"
 
+//! Phong class is a representation of the Phong model
 class Phong : public Material
 {
 public:

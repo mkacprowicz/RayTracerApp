@@ -7,6 +7,7 @@
 
 class ImageRT;
 
+//! Material pure abstract class is a representation of phisical material
 class Material
 {
 public :

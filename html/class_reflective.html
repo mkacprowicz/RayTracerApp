@@ -81,17 +81,15 @@ Inheritance diagram for Reflective:</div>
  <div class="center">
   <img src="class_reflective.png" usemap="#Reflective_map" alt=""/>
   <map id="Reflective_map" name="Reflective_map">
-<area href="class_material.html" alt="Material" shape="rect" coords="0,0,68,24"/>
+<area href="class_material.html" title="Material pure abstract class is a representation of phisical material." alt="Material" shape="rect" coords="0,0,68,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a71fd77699ceef5eb7106d26546245580"><td class="memItemLeft" align="right" valign="top"><a id="a71fd77699ceef5eb7106d26546245580"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Reflective</b> (<a class="el" href="class_color.html">Color</a> materialColor, float diffuse, float specular, float exponent, float reflectivity)</td></tr>
+<tr class="memitem:a71fd77699ceef5eb7106d26546245580"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reflective.html#a71fd77699ceef5eb7106d26546245580">Reflective</a> (<a class="el" href="class_color.html">Color</a> materialColor, float diffuse, float specular, float exponent, float reflectivity)</td></tr>
 <tr class="separator:a71fd77699ceef5eb7106d26546245580"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e27ad8f5fcc64e75136e5fe231fbd9f"><td class="memItemLeft" align="right" valign="top"><a id="a4e27ad8f5fcc64e75136e5fe231fbd9f"></a>
-<a class="el" href="class_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Shade</b> (std::shared_ptr&lt; <a class="el" href="class_image_r_t.html">ImageRT</a> &gt; tracer, std::shared_ptr&lt; <a class="el" href="class_hit_info.html">HitInfo</a> &gt; hit)</td></tr>
+<tr class="memitem:a4e27ad8f5fcc64e75136e5fe231fbd9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reflective.html#a4e27ad8f5fcc64e75136e5fe231fbd9f">Shade</a> (std::shared_ptr&lt; <a class="el" href="class_image_r_t.html">ImageRT</a> &gt; tracer, std::shared_ptr&lt; <a class="el" href="class_hit_info.html">HitInfo</a> &gt; hit)</td></tr>
 <tr class="separator:a4e27ad8f5fcc64e75136e5fe231fbd9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6aeeeb608a9bd357526e3bcff3994953"><td class="memItemLeft" align="right" valign="top"><a id="a6aeeeb608a9bd357526e3bcff3994953"></a>
 <a class="el" href="class_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ReflectionColor</b> () const</td></tr>
@@ -106,6 +104,107 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>Reflectivity</b> () 
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Reflectivity</b> (float r)</td></tr>
 <tr class="separator:a70cf2cf95a90d01905977518ca79f98a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a71fd77699ceef5eb7106d26546245580"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71fd77699ceef5eb7106d26546245580">&#9670;&nbsp;</a></span>Reflective()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Reflective::Reflective </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_color.html">Color</a>&#160;</td>
+          <td class="paramname"><em>materialColor</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>diffuse</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>specular</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>exponent</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>reflectivity</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Constructor for <a class="el" href="class_reflective.html">Reflective</a> class </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a4e27ad8f5fcc64e75136e5fe231fbd9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e27ad8f5fcc64e75136e5fe231fbd9f">&#9670;&nbsp;</a></span>Shade()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_color.html">Color</a> Reflective::Shade </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_image_r_t.html">ImageRT</a> &gt;&#160;</td>
+          <td class="paramname"><em>tracer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_hit_info.html">HitInfo</a> &gt;&#160;</td>
+          <td class="paramname"><em>hit</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The mirror reflection depends on the position of the observer and will change depending on his position. It should be emphasized here that the mirror reflection does not define the surface having the reflection properties of other objects like a mirror, it more defines the directional reflection of light and thus the creation of a characteristic flare in the form of a light spot. To obtain a surface that simulates mirror behavior, you would need to perform a ray recursion to find the intensity from the reflected object. To calculate the intensity on a mirror surface, calculate the reflected vector and the vector directed to the observer: </p><p class="formulaDsp">
+\[ I_{out} = I_{in} (k_s cos^n \Theta) \\ I_{out} = I_{in} (k_s (R\cdot V)^n) \]
+</p>
+<p> The equation for calculating the direction of the reflected ray R: </p><p class="formulaDsp">
+\[ R = I - 2 \times (N \cdot I) \cdot N \]
+</p>
+<p> \(R\) is the directional vector of the reflected ray, \(I\) is the direction of the origin of the ray, and \(N\) is normal at the intersection. Having the direction of the reflected ray we should also have its point of origin. Which is the intersection of the object with the incoming ray. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">tracer</td><td>- custom raytracer object </td></tr>
+    <tr><td class="paramname">hit</td><td>- info about ray hitting an object </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_color.html" title="Color class that represents light intensity for a color in RGB colorspace.">Color</a> object </dd></dl>
+
+<p>Implements <a class="el" href="class_material.html">Material</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>RayTracerApp/RayTracerApp/<a class="el" href="_reflective_8h_source.html">Reflective.h</a></li>
 <li>RayTracerApp/RayTracerApp/Reflective.cpp</li>

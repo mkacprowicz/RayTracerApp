@@ -1,5 +1,14 @@
 \hypertarget{class_phong}{}\doxysection{Phong Class Reference}
 \label{class_phong}\index{Phong@{Phong}}
+
+
+\mbox{\hyperlink{class_phong}{Phong}} class is a representation of the \mbox{\hyperlink{class_phong}{Phong}} model.  
+
+
+
+
+{\ttfamily \#include $<$Phong.\+h$>$}
+
 Inheritance diagram for Phong\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -12,8 +21,7 @@ Inheritance diagram for Phong\+:\begin{figure}[H]
 \mbox{\Hypertarget{class_phong_aafa3fa10655f6598644fee8b19ad525c}\label{class_phong_aafa3fa10655f6598644fee8b19ad525c}} 
 {\bfseries Phong} (\mbox{\hyperlink{class_color}{Color}} material\+Color, float diffuse\+Coeff, float specular, float specular\+Exponent)
 \item 
-\mbox{\Hypertarget{class_phong_a68c859ec5e7bafd607aa27191f4d0434}\label{class_phong_a68c859ec5e7bafd607aa27191f4d0434}} 
-\mbox{\hyperlink{class_color}{Color}} {\bfseries Shade} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_image_r_t}{Image\+RT}} $>$ tracer, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_hit_info}{Hit\+Info}} $>$ hit)
+\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_phong_a68c859ec5e7bafd607aa27191f4d0434}{Shade}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_image_r_t}{Image\+RT}} $>$ tracer, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_hit_info}{Hit\+Info}} $>$ hit)
 \item 
 \mbox{\Hypertarget{class_phong_ab0bbd06453750dde77a69d7d1d5c7da1}\label{class_phong_ab0bbd06453750dde77a69d7d1d5c7da1}} 
 float {\bfseries Phong\+Factor} (\mbox{\hyperlink{class_vector}{Vector}} in\+Direction, \mbox{\hyperlink{class_vector}{Vector}} normal, \mbox{\hyperlink{class_vector}{Vector}} to\+Camera\+Direction)
@@ -42,6 +50,32 @@ float {\bfseries Specular\+Exponent} () const
 \mbox{\Hypertarget{class_phong_a7df77033f28971198a97798256dc70a2}\label{class_phong_a7df77033f28971198a97798256dc70a2}} 
 void {\bfseries Specular\+Exponent} (float se)
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_phong}{Phong}} class is a representation of the \mbox{\hyperlink{class_phong}{Phong}} model. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_phong_a68c859ec5e7bafd607aa27191f4d0434}\label{class_phong_a68c859ec5e7bafd607aa27191f4d0434}} 
+\index{Phong@{Phong}!Shade@{Shade}}
+\index{Shade@{Shade}!Phong@{Phong}}
+\doxysubsubsection{\texorpdfstring{Shade()}{Shade()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_color}{Color}} Phong\+::\+Shade (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_image_r_t}{Image\+RT}} $>$}]{tracer,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_hit_info}{Hit\+Info}} $>$}]{hit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+\mbox{\hyperlink{class_phong}{Phong}} model can be represented as given formula\+: \[ I_{out} = I_{in}(k_d (L \cdot N ) k_s (R \cdot V)^{n} ) \] where $L$ is the vector towards the light source, $V$ towards the observer, $N$ is normal to the surface and $R$ is the reflection direction. $k_d$ and $k_s$ respectively, reflection coefficients and diffuse reflection coefficient, $n$ reflection flare. As we are currently considering only direct lighting, we will save the \mbox{\hyperlink{class_phong}{Phong}} lighting model as\+: \[ L_{o} = L_{i}(k_d (L \cdot N ) k_s (R \cdot V)^{n} ) \] where $L_o$ is the intensity reflected to the observer and $L_i$ is the intensity from the light source. By writing this equation using the B\+R\+DF function, we get\+: \[ L_o = L_i Refl(w_i, w_o) \\ L_o = Refl(w_i, w_o)L_i \\ L_o = \frac{cos\theta_i dw_i}{cos\theta_i dw_i} Refl(w_i, w_o)L_i \\ L_o = \frac{Refl(w_i, w_o)}{cos\theta_i dw_i}L_i cos\theta_i dw_i \] The \mbox{\hyperlink{class_phong}{Phong}} lighting model can be considered as a special case of B\+R\+DF, used for materials with reflective properties approximated by\+: \[ BRDF(\theta_i, \phi_i, \theta_o, \phi_o) = \frac{Refl(w_i, w_o)}{cos\theta_i dw_i} \\ BRDF(\theta_i, \phi_i, \theta_o, \phi_o) = \frac{k_d (w_i \times N) + k_s (R \times w_o)^n}{cos\theta_i dw_i} \] 
+\begin{DoxyParams}{Parameters}
+{\em tracer} & -\/ custom raytracer object \\
+\hline
+{\em hit} & -\/ info about ray hitting an object \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_color}{Color}} object 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_material}{Material}}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
