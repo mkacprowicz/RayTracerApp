@@ -4,6 +4,8 @@
 #include "Vector.h"
 #include "Color.h"
 
+
+//! PointLight class which create point light in scene
 class PointLight
 {
 public:

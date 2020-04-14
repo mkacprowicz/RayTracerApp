@@ -4,6 +4,8 @@
 
 class World;
 
+
+//! Hitinfo class that represents infomation after hit ray in objects.
 class HitInfo
 {
 public:

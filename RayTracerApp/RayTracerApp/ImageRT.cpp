@@ -28,6 +28,11 @@ ImageRT::ImageRT(int h, int w, int maxDepth)
 	this->MaxDepth_ = maxDepth;
 }
 
+/**
+* Function that render image, and save to file
+* @param world - world, contains all objects in scene
+* @param camera - camera, from which one, image will be rendered
+*/
 void ImageRT::RayTrace(std::shared_ptr<World> world, std::shared_ptr<Camera> camera)
 {
 	for (auto y = 0; y < this->Height_; y++)
@@ -44,7 +49,12 @@ void ImageRT::RayTrace(std::shared_ptr<World> world, std::shared_ptr<Camera> cam
 		}
 	}
 }
-
+/**
+* Function that render image, and save to file
+* @param world - world, contains all objects in scene
+* @param camera - camera, from which one, image will be rendered
+* @param sampler - sampler, that contains samples to antyaliasing
+*/
 void ImageRT::RayTrace(std::shared_ptr<World> world, std::shared_ptr<Camera> camera, std::shared_ptr<Sampler> sampler)
 {
 	for (auto y = 0; y < this->Height_; y++)
@@ -70,6 +80,13 @@ void ImageRT::RayTrace(std::shared_ptr<World> world, std::shared_ptr<Camera> cam
 	}
 }
 
+/**
+* Function that counting color per pixel
+* @param world - world, contains all objects in scene
+* @param ray - ray, that will be counting per pixel
+* @param currenthDepth - maximum numbers of reflections
+* @return Color object
+*/
 Color ImageRT::ShadeRay(std::shared_ptr<World> world, Ray ray, int currentDepth)
 {
 	if (currentDepth > this->MaxDepth_)

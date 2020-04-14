@@ -4,7 +4,7 @@
 #include "SampleDistributor.h"
 #include "SampleGenerator.h"
 
-
+//! Sampler class which is a class to organising samples for antyaliasing
 class Sampler
 {
 public:

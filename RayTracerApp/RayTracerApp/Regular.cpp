@@ -1,5 +1,9 @@
 #include "Regular.h"
 
+/**
+* Function that preparing samples to antyaliasing
+* @param count - number of samples
+*/
 std::vector<Vector2> Regular::Sample(int count)
 {
 	int sampleRow = std::sqrtf(count);

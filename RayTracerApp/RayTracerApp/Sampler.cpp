@@ -29,6 +29,9 @@ Sampler::Sampler(std::shared_ptr<SampleGenerator> sampler, std::shared_ptr <Samp
 	int stopit = 5;
 }
 
+/**
+* Function to put samples to image \f$
+*/
 Vector2 Sampler::Single()
 {
 	Vector2 sample = this->Sets_[this->SetNdx_][this->SampleNdx_];
