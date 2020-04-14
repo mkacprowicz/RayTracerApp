@@ -1,53 +1,57 @@
-#include "LightIntensity.h"
+#include "Color.h"
 
 /**
-* Basic constructor. Creates LightIntensity object with paramters equal to (r, g, b)
+* Basic constructor. Creates Color object with paramters equal to (r, g, b)
 * @param r - red color parameter
 * @param g - green color parameter
 * @param b - blue color parameter
-* @return LightIntensity object
+* @return Color object
 */
-LightIntensity::LightIntensity(float r, float g, float b)
+Color::Color(float r, float g, float b)
 {
 	this->R_ = r; 
 	this->G_ = g;
 	this->B_ = b;
+	this->A_ = 255;
 }
 
 /**
-* Basic constructor. Creates LightIntensity object with paramters equal to (r, g, 0)
+* Basic constructor. Creates Color object with paramters equal to (r, g, 0)
 * @param r - red color parameter
 * @param g - green color parameter
-* @return LightIntensity object
+* @return Color object
 */
-LightIntensity::LightIntensity(float r, float g)
+Color::Color(float r, float g)
 {
 	this->R_ = r;
 	this->G_ = g;
 	this->B_ = 0.0f;
+	this->A_ = 255;
 }
 
 /**
-* Basic constructor. Creates LightIntensity object with paramters equal to (r, 0, 0)
+* Basic constructor. Creates Color object with paramters equal to (r, 0, 0)
 * @param r - red color parameter
-* @return LightIntensity object
+* @return Color object
 */
-LightIntensity::LightIntensity(float r)
+Color::Color(float r)
 {
 	this->R_ = r;
 	this->G_ = 0.0f;
 	this->B_ = 0.0f;
+	this->A_ = 255;
 }
 
 /**
-* Basic constructor. Creates LightIntensity object with paramters equal to (0, 0, 0)
-* @return LightIntensity object
+* Basic constructor. Creates Color object with paramters equal to (0, 0, 0)
+* @return Color object
 */
-LightIntensity::LightIntensity()
+Color::Color()
 {
 	this->R_ = 0.0f;
 	this->G_ = 0.0f;
 	this->B_ = 0.0f;
+	this->A_ = 255;
 }
 
 /**
@@ -55,9 +59,9 @@ LightIntensity::LightIntensity()
 * @param r - red color value to add
 * @param g - green color value to add
 * @param b - blue color value to add
-* @return LightIntensity object
+* @return Color object
 */
-void LightIntensity::Add(float r, float g, float b)
+void Color::Add(float r, float g, float b)
 {
 	this->R_ += r;
 	if (this->R_ > 255)
@@ -92,9 +96,9 @@ void LightIntensity::Add(float r, float g, float b)
 
 /**
 * Overloaded += operator that replaces current attributes with a sum of colors
-* @return LightIntensity object
+* @return Color object
 */
-void LightIntensity::operator+=(LightIntensity& li)
+void Color::operator+=(Color& li)
 {
 	this->R_ += li.R();
 	if (this->R_ > 255)
@@ -129,9 +133,9 @@ void LightIntensity::operator+=(LightIntensity& li)
 
 /**
 * Overloaded + operator that that sums two colors
-* @return LightIntensity object
+* @return Color object
 */
-LightIntensity LightIntensity::operator+(LightIntensity& li)
+Color Color::operator+(Color& li)
 {
 	this->R_ += li.R();
 	if (this->R_ > 255)
@@ -163,14 +167,14 @@ LightIntensity LightIntensity::operator+(LightIntensity& li)
 		this->B_ = 0;
 	}
 
-	return LightIntensity(this->R_, this->G_, this->B_);
+	return Color(this->R_, this->G_, this->B_);
 }
 
 /**
 * Overloaded - operator that that subtracts two colors
-* @return LightIntensity object
+* @return Color object
 */
-LightIntensity LightIntensity::operator-(LightIntensity& li)
+Color Color::operator-(Color& li)
 {
 	this->R_ -= li.R();
 	if (this->R_ > 255)
@@ -202,14 +206,14 @@ LightIntensity LightIntensity::operator-(LightIntensity& li)
 		this->B_ = 0;
 	}
 
-	return LightIntensity(this->R_, this->G_, this->B_);
+	return Color(this->R_, this->G_, this->B_);
 }
 
 /**
 * Overloaded -= operator that replaces current attributes with a difference of colors 
-* @return LightIntensity object
+* @return Color object
 */
-LightIntensity LightIntensity::operator-=(LightIntensity& li)
+Color Color::operator-=(Color& li)
 {
 	this->R_ -= li.R();
 	if (this->R_ > 255)
@@ -246,9 +250,9 @@ LightIntensity LightIntensity::operator-=(LightIntensity& li)
 
 /**
 * Overloaded *= operator that multiplies two LigtIntensity objects and replaces current one
-* @return LightIntensity object
+* @return Color object
 */
-LightIntensity LightIntensity::operator*=(LightIntensity& li)
+Color Color::operator*=(Color& li)
 {
 	this->R_ *= li.R();
 	if (this->R_ > 255)
@@ -285,9 +289,9 @@ LightIntensity LightIntensity::operator*=(LightIntensity& li)
 
 /**
 * Overloaded *= operator that divides two LigtIntensity objects and replaces current one
-* @return LightIntensity object
+* @return Color object
 */
-LightIntensity LightIntensity::operator/=(LightIntensity& li)
+Color Color::operator/=(Color& li)
 {
 	this->R_ /= li.R();
 	if (this->R_ > 255)
@@ -324,9 +328,9 @@ LightIntensity LightIntensity::operator/=(LightIntensity& li)
 
 /**
 * Overloaded * operator that multiplies LigtIntensity object by a float number
-* @return LightIntensity object
+* @return Color object
 */
-LightIntensity LightIntensity::operator*(float num)
+Color Color::operator*(float num)
 {
 	this->R_ *= num;
 	if (this->R_ > 255)
@@ -358,14 +362,14 @@ LightIntensity LightIntensity::operator*(float num)
 		this->B_ = 0;
 	}
 
-	return LightIntensity(this->R_, this->G_, this->B_);
+	return Color(this->R_, this->G_, this->B_);
 }
 
 /**
 * Overloaded * operator that multiplies two LigtIntensity objects
-* @return LightIntensity object
+* @return Color object
 */
-LightIntensity LightIntensity::operator*(LightIntensity& li)
+Color Color::operator*(Color& li)
 {
 	this->R_ *= li.R();
 	if (this->R_ > 255)
@@ -397,14 +401,14 @@ LightIntensity LightIntensity::operator*(LightIntensity& li)
 		this->B_ = 0;
 	}
 
-	return LightIntensity(this->R_, this->G_, this->B_);
+	return Color(this->R_, this->G_, this->B_);
 }
 
 /**
 * Overloaded * operator that divides two LigtIntensity objects
-* @return LightIntensity object
+* @return Color object
 */
-LightIntensity LightIntensity::operator/(float num)
+Color Color::operator/(float num)
 {
 	this->R_ /= num;
 	if (this->R_ > 255)
@@ -436,14 +440,14 @@ LightIntensity LightIntensity::operator/(float num)
 		this->B_ = 0;
 	}
 
-	return LightIntensity(this->R_, this->G_, this->B_);
+	return Color(this->R_, this->G_, this->B_);
 }
 
 /**
 * Overlaoded << operator for debug purposes.
 * Example:
 * @code
-* LightIntensity light(1,2,3);
+* Color light(1,2,3);
 * std::cout << light;
 * @endcode
 * Output:
@@ -451,7 +455,7 @@ LightIntensity LightIntensity::operator/(float num)
 * "R: 1, G: 2, B: 3"
 * @endcode
 */
-std::ostream& operator<<(std::ostream& str, LightIntensity& li)
+std::ostream& operator<<(std::ostream& str, Color& li)
 {
 	str << "R: " << std::to_string(li.R()) << ", G: " << std::to_string(li.G()) << ", B: " << std::to_string(li.B());
 	return str;

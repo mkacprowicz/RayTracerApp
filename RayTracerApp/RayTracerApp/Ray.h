@@ -13,6 +13,10 @@
 *	p(0) = A + 0*B => p(0) = A
 * \f]
 */
+
+static const float Epsilon = 0.00001f;
+static const float Huge = std::numeric_limits<float>::max();
+
 class Ray
 {
 public:
@@ -23,8 +27,6 @@ public:
 
 	Vector Origin() const { return Origin_; }
 	void Origin(Vector o) { Origin_ = o; }
-	Vector Destination() const { return Destination_; }
-	void Destination(Vector d) { Destination_ = d; }
 	Vector Direction() const { return Direction_; }
 	void Direction(Vector d) { Direction_ = d; }
 	float Distance() const { return Distance_; }
@@ -34,7 +36,6 @@ public:
 
 private:
 	Vector Origin_;
-	Vector Destination_;
 	Vector Direction_;
 	float Distance_;
 };

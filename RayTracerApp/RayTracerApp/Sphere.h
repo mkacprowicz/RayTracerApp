@@ -1,6 +1,7 @@
 #pragma once
 #include "pch.h"
 #include "Ray.h"
+#include "GeometricShape.h"
 
 //! Sphere class which is a representation of a sphere solid
 /**
@@ -16,15 +17,16 @@
 * \f]
 * Every point that satisfies that equation belongs to the sphere. 
 */
-class Sphere
+class Sphere : public GeometricShape
 {
 public:
 	Sphere();
 	Sphere(float r);
 	Sphere(Vector v);
 	Sphere(Vector v, float r);
+	Sphere(Vector v, float r, std::shared_ptr<Material> mat);
 
-	bool Hit(Ray ray, float t_min, float t_max) const;
+	bool HitTest(Ray ray, float& distance, Vector& normal);
 
 	Vector Center() const { return Center_; }
 	void Center(Vector o) { Center_ = o; }

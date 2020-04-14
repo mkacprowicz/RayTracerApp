@@ -1,15 +1,18 @@
 #pragma once
 
 #include "pch.h"
-#include "Shape.h"
+#include "GeometricShape.h"
 
-class Triangle : public Shape
+class Triangle : public GeometricShape
 {
 public:
 	Triangle();
 	Triangle(Vector a, Vector b, Vector c);
 
 	bool Intersection(Ray ray, float& t0, float& t1);
+
+	bool HitTest(Ray ray, float& distance, Vector& normal);
+
 
 	Vector A() const { return A_; }
 	void A(Vector a) { A_ = a; }

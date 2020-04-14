@@ -50,3 +50,8 @@ bool Triangle::Intersection(Ray ray, float& t0, float& t1)
 
 	return true;
 }
+
+bool Triangle::HitTest(Ray ray, float& distance, Vector& normal)
+{
+	return false;
+}

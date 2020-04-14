@@ -183,6 +183,18 @@ Vector Vector::Reflect(Vector normal)
 }
 
 /**
+* Function that reflects a Vector from a Normal
+* @param vec - a vector that will be reflect
+* @param normal - a normal to relfect from
+* @return copy of vector object
+*/
+Vector Vector::ReflectProduct(Vector vec, Vector normal)
+{
+	float dot = normal.Dot(vec);
+	return normal * dot * 2 - vec;
+}
+
+/**
 * Function that multiplies a Vector and a scalar according to the formula \f$ v_3 = [x_1 * f, y_1 * f, z_1 * f] \f$
 * @param f - number to multiply
 * @return result of a multiplication of a vector

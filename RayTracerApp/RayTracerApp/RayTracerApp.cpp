@@ -4,75 +4,58 @@
 #pragma once
 #include "pch.h"
 
+#include "ImageRT.h"
+#include "World.h"
+#include "Material.h"
+#include "PerfectDiffuse.h"
+#include "Phong.h"
+#include "Reflective.h"
+
+#include "Sampler.h"
+#include "SampleDistributor.h"
+#include "SampleGenerator.h"
+#include "Regular.h"
+#include "SquareDistributor.h"
+
+#include "PerspectiveCamera.h"
+#include "OrtogonalCamera.h"
+
 #include "Sphere.h"
 #include "Surface.h"
-#include "PersCamera.h"
-
-#include "LightIntensity.h"
-#include "Image.hpp"
-
 #include "Triangle.h"
 #include "Mesh.h"
-
-float RandomFloat();
 
 int main()
 {
 	std::cout << "Hello World" << std::endl;
 
-	Image img(800, 800, 100);
+	std::shared_ptr<ImageRT> img = std::make_shared<ImageRT>(800, 800, 5);
 
-	PersCamera pCam(Vector(0, 0, -4.0f), Vector(0, 0, 0), Vector(0, -1.0f ,0), 1);
+	auto world = std::make_shared<World>(Color(94, 188, 255));
 
-	Sphere s(Vector(-4.f, 0, 0), 2.0f);
-	Sphere s2(Vector(4.f, 0, 0), 2.0f);
-	Sphere s3(Vector(0.f, 0, 3.0f), 2.0f);
-
-	Mesh m;
-
-	m.ReadMeshFromFile(std::string("gourd.obj"));
-
-	for (auto x = 0; x < img.Width(); x++)
-	{
-		for (auto y = 0; y < img.Height(); y++)
-		{
-			LightIntensity color;
-
-			float u = ((y + RandomFloat()) / (float)img.Width()) * 2.0f - 1.0f;
-			float v = ((x + RandomFloat()) / (float)img.Height()) * 2.0f - 1.0f;
-			Ray ray = pCam.GetRay(u, v);
-
-			bool intersection = s.Hit(ray, 0.0f, FLT_MAX);
-			bool intersection2 = s2.Hit(ray, 0.0f, FLT_MAX);
-			bool intersection3 = s3.Hit(ray, 0.0f, FLT_MAX);
+	auto cameraO = std::make_shared<OrtogonalCamera>(Vector(0, 0, -5), 0, Vector2(5, 5));
+	auto cameraP = std::make_shared<PerspectiveCamera>(Vector(0, 1, -8), Vector(0, 0, 0), Vector(0, -1, 0), 1);
 
 
-			
-			if (m.CheckIntersection(ray))
-			{
-				color.R(0);
-				color.G(0);
-				color.B(255);
-				color.A(255);
-			}
-			else
-			{
-				color.R(255);
-				color.G(255);
-				color.B(255);
-				color.A(255);
-			}
+	auto redMat = std::make_shared<Reflective>(Color(255, 0, 0), 0.8f, 1, 300, 0.2f);
+	auto greenMat = std::make_shared<Reflective>(Color(0, 255, 0), 0.4f, 1, 300, 0.6f);
+	auto blueMat = std::make_shared<Reflective>(Color(0, 0, 255), 0.2f, 1, 300, 0.8f);
+	auto grayMat = std::make_shared<Reflective>(Color(180, 180, 180), 0.4f, 1, 300, 0.6f);
 
-			img.SavePixel(color);
-		}
-	}
 
-	img.WriteImage("Results//result.bmp", img.Width(), img.Height(), 4);
+	world->AddObject(std::make_shared<Sphere>(Vector(-4.f, 0, 0), 2, redMat));
+	world->AddObject(std::make_shared<Sphere>(Vector(4.f, 0, 0), 2, greenMat));
+	world->AddObject(std::make_shared<Sphere>(Vector(0.f, 0, 3.f), 2, blueMat));
+	world->AddObject(std::make_shared<Surface>(Vector(0, -2, 0), Vector(0, 1, 0), grayMat));
+
+	world->AddLight(std::make_shared<PointLight>(Vector(0, 5, -5), Color(255, 255, 255)));
+
+	const int SampleCt = 9;
+	auto antiAlias = std::make_shared<Sampler>(std::make_shared<Regular>(), std::make_shared<SquareDistributor>(), SampleCt, 4);
+
+	img->RayTrace(world, cameraP, antiAlias);
+	img->WriteImage("Results//result.bmp", img->Width(), img->Height(), 4);
 
 	std::cout << "Done" << std::endl;
-}
-
-float RandomFloat()
-{
-	return rand() / (RAND_MAX + 1.0f);
+	system("Results\\result.bmp");
 }

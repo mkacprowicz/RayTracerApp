@@ -1,6 +1,23 @@
 #pragma once
 #include "pch.h"
 
+
+struct Vector2
+{
+	float X_;
+	float Y_;
+
+	float X() const { return X_; }
+	void X(float x) { X_ = x; }
+	float Y() const { return Y_; }
+	void Y(float y) { Y_ = y; }
+
+	Vector2(float x, float y) : X_(x), Y_(y) {}
+	Vector2() { X_ = 0; Y_ = 0; }
+};
+
+
+
 //! Vector class which is a representation of a 3D vector
 /**
 * The <code>Vector</code> class is a representation of 
@@ -28,6 +45,8 @@ public:
 	void Mag(float f);
 
 	Vector Reflect(Vector normal);
+	Vector ReflectProduct(Vector vec, Vector normal);
+
 	Vector Lerp(Vector v, float t);
 	Vector ToPoint();
 	static Vector MagProduct(Vector v, float f);

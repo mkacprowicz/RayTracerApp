@@ -2,18 +2,18 @@
 
 #include "pch.h"
 
-//! LightIntensity class that represents light intensiti for a color in RGB colorspace.
+//! Color class that represents light intensiti for a color in RGB colorspace.
 /**
 * This class represents ambient light intensity in RGB colorspace. 
 * It has no position, and it's the same for every object in a virtual scene. 
 */
-class LightIntensity
+class Color
 {
 public:
-	LightIntensity(float r, float g, float b);
-	LightIntensity(float r, float g);
-	LightIntensity(float r);
-	LightIntensity();
+	Color(float r, float g, float b);
+	Color(float r, float g);
+	Color(float r);
+	Color();
 
 	void Add(float r, float g, float b);
 
@@ -29,17 +29,17 @@ public:
 	void operator()(float r, float g, float b) { R_ = r; G_ = g; B_ = b; }
 	void operator()(float r, float g) { R_ = r; G_ = g; B_ = 0.0f; }
 	void operator()(float r) { R_ = r; G_ = B_ = 0.0f; }
-	void operator+=(LightIntensity& li);
-	LightIntensity operator/(float num);
-	LightIntensity operator+(LightIntensity& li);
-	LightIntensity operator-(LightIntensity& li);	
-	LightIntensity operator-=(LightIntensity& li);
-	LightIntensity operator*=(LightIntensity& li);
-	LightIntensity operator/=(LightIntensity& li);
-	LightIntensity operator*(float num);
-	LightIntensity operator*(LightIntensity &li);
+	void operator+=(Color& li);
+	Color operator/(float num);
+	Color operator+(Color& li);
+	Color operator-(Color& li);	
+	Color operator-=(Color& li);
+	Color operator*=(Color& li);
+	Color operator/=(Color& li);
+	Color operator*(float num);
+	Color operator*(Color &li);
 
-	friend std::ostream& operator<<(std::ostream& str, LightIntensity &li);
+	friend std::ostream& operator<<(std::ostream& str, Color &li);
 
 protected:
 	float R_; 

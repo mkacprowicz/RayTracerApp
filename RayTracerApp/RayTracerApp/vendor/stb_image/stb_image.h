@@ -75,7 +75,7 @@ RECENT REVISION HISTORY:
 
  ============================    Contributors    =========================
 
- Image formats                          Extensions, features
+ ImageRT formats                          Extensions, features
     Sean Barrett (jpeg, png, bmp)          Jetro Lauha (stbi_info)
     Nicolas Schulz (hdr, psd)              Martin "SpartanJ" Golini (stbi_info)
     Jonathan Dummer (tga)                  James "moose2000" Brown (iPhone PNG)
@@ -6664,7 +6664,7 @@ static stbi_uc* stbi__gif_load_next(stbi__context* s, stbi__gif* g, int* comp, i
     for (;;) {
         int tag = stbi__get8(s);
         switch (tag) {
-        case 0x2C: /* Image Descriptor */
+        case 0x2C: /* ImageRT Descriptor */
         {
             stbi__int32 x, y, w, h;
             stbi_uc* o;

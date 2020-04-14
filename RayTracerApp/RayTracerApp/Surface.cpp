@@ -4,12 +4,35 @@ Surface::Surface()
 {
 	this->Normal_ = Vector::Zero();
 	this->Point_ = Vector::Zero();
+	this->ShapeMaterial_ = nullptr;
 }
 
-Surface::Surface(Vector nor, Vector poi)
+Surface::Surface(Vector poi, Vector nor)
 {
 	this->Normal_ = nor;
 	this->Point_ = poi;
+	this->ShapeMaterial_ = nullptr;
+}
+
+Surface::Surface(Vector poi, Vector nor, std::shared_ptr<Material> mat)
+{
+	this->Normal_ = nor;
+	this->Point_ = poi;
+	this->ShapeMaterial_ = mat;
+}
+
+bool Surface::HitTest(Ray ray, float& distance, Vector& normal)
+{
+	float t = (this->Point_ - ray.Origin()).Dot(this->Normal_) / ray.Direction().Dot(this->Normal_);
+
+	if (t > Epsilon)
+	{
+		distance = t;
+		normal = this->Normal_;
+		return true;
+	}
+
+	return false;
 }
 
 float Surface::GetAngleBetweenNormalAndVector(Vector vec)
