@@ -1,0 +1,73 @@
+\hypertarget{class_ortogonal_camera}{}\doxysection{Ortogonal\+Camera Class Reference}
+\label{class_ortogonal_camera}\index{OrtogonalCamera@{OrtogonalCamera}}
+
+
+\mbox{\hyperlink{class_ortogonal_camera}{Ortogonal\+Camera}} is a class which is a representation of a ortogonal camera.  
+
+
+
+
+{\ttfamily \#include $<$Ortogonal\+Camera.\+h$>$}
+
+Inheritance diagram for Ortogonal\+Camera\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_ortogonal_camera}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_ortogonal_camera_a3cddb9b93205f32beee8e2592b165595}\label{class_ortogonal_camera_a3cddb9b93205f32beee8e2592b165595}} 
+{\bfseries Ortogonal\+Camera} (\mbox{\hyperlink{class_vector}{Vector}} eye, float angle, \mbox{\hyperlink{struct_vector2}{Vector2}} size)
+\item 
+\mbox{\hyperlink{class_ray}{Ray}} \mbox{\hyperlink{class_ortogonal_camera_ad5aeaefba0e79d02ba6ef249ba9bd554}{Get\+Ray}} (\mbox{\hyperlink{struct_vector2}{Vector2}} uv)
+\item 
+\mbox{\Hypertarget{class_ortogonal_camera_a79366d8b826337e9b1ea450cd5a8ba0e}\label{class_ortogonal_camera_a79366d8b826337e9b1ea450cd5a8ba0e}} 
+\mbox{\hyperlink{class_vector}{Vector}} {\bfseries Eye\+Position} () const
+\item 
+\mbox{\Hypertarget{class_ortogonal_camera_a99d31b89178aa901d999bcf515c575f1}\label{class_ortogonal_camera_a99d31b89178aa901d999bcf515c575f1}} 
+void {\bfseries Eye\+Position} (\mbox{\hyperlink{class_vector}{Vector}} e)
+\item 
+\mbox{\Hypertarget{class_ortogonal_camera_ae2cad285d9e7a507dee5a8665f8954e7}\label{class_ortogonal_camera_ae2cad285d9e7a507dee5a8665f8954e7}} 
+float {\bfseries Angle} () const
+\item 
+\mbox{\Hypertarget{class_ortogonal_camera_a845412b56ece07603a2be64efc729d97}\label{class_ortogonal_camera_a845412b56ece07603a2be64efc729d97}} 
+void {\bfseries Angle} (float a)
+\item 
+\mbox{\Hypertarget{class_ortogonal_camera_a9abaaceec532dff5c6306201df71fbbb}\label{class_ortogonal_camera_a9abaaceec532dff5c6306201df71fbbb}} 
+\mbox{\hyperlink{struct_vector2}{Vector2}} {\bfseries Camera\+Size} () const
+\item 
+\mbox{\Hypertarget{class_ortogonal_camera_abc13337d29fa6a5891e4138cc84da65e}\label{class_ortogonal_camera_abc13337d29fa6a5891e4138cc84da65e}} 
+void {\bfseries Camera\+Size} (\mbox{\hyperlink{struct_vector2}{Vector2}} s)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_ortogonal_camera}{Ortogonal\+Camera}} is a class which is a representation of a ortogonal camera. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_ortogonal_camera_ad5aeaefba0e79d02ba6ef249ba9bd554}\label{class_ortogonal_camera_ad5aeaefba0e79d02ba6ef249ba9bd554}} 
+\index{OrtogonalCamera@{OrtogonalCamera}!GetRay@{GetRay}}
+\index{GetRay@{GetRay}!OrtogonalCamera@{OrtogonalCamera}}
+\doxysubsubsection{\texorpdfstring{GetRay()}{GetRay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ray}{Ray}} Ortogonal\+Camera\+::\+Get\+Ray (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{uv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+To generate the image in orthogonal (parallel) projection, we consider the view body that has a rectangular shape. This projection is suitable for depicting objects for which we want to avoid perspective distortion. To achieve that we are sending a ray from the center of each pixel of the projection plane toward the stage. The plane should be set to the center of the coordinate system. To locate the center of a pixel, perform a simple operation\+: \[ pixel\_width = \frac{2.0}{vertical\_image\_resolution} \\ pixel\_height = \frac{2.0}{horizontal\_image\_resolution} \] Having the size of the pixel it\textquotesingle{}s plausible to find it\textquotesingle{}s center in the coordinate system\+: \[ center\_x = -1.0 + (x + 0.5) * pixel\_width; \\ center\_y = 1.0 - (y + 0.5) * pixel\_height; \] 
+\begin{DoxyParams}{Parameters}
+{\em uv} & -\/ horizontal and vertical offset \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_ray}{Ray}} object 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_camera}{Camera}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ray\+Tracer\+App/\+Ray\+Tracer\+App/Ortogonal\+Camera.\+h\item 
+Ray\+Tracer\+App/\+Ray\+Tracer\+App/Ortogonal\+Camera.\+cpp\end{DoxyCompactItemize}

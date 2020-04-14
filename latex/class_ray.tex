@@ -1,14 +1,5 @@
 \hypertarget{class_ray}{}\doxysection{Ray Class Reference}
 \label{class_ray}\index{Ray@{Ray}}
-
-
-\mbox{\hyperlink{class_ray}{Ray}} class which is a representation of a ray function.  
-
-
-
-
-{\ttfamily \#include $<$Ray.\+h$>$}
-
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -25,12 +16,6 @@
 \item 
 \mbox{\Hypertarget{class_ray_a5f6ce06460d1b972fe1de971762657b5}\label{class_ray_a5f6ce06460d1b972fe1de971762657b5}} 
 void {\bfseries Origin} (\mbox{\hyperlink{class_vector}{Vector}} o)
-\item 
-\mbox{\Hypertarget{class_ray_a9663dd2c517fd02e9bf4cee3456b975b}\label{class_ray_a9663dd2c517fd02e9bf4cee3456b975b}} 
-\mbox{\hyperlink{class_vector}{Vector}} {\bfseries Destination} () const
-\item 
-\mbox{\Hypertarget{class_ray_a7db364e0cef44f2785c64ebe8c77da6d}\label{class_ray_a7db364e0cef44f2785c64ebe8c77da6d}} 
-void {\bfseries Destination} (\mbox{\hyperlink{class_vector}{Vector}} d)
 \item 
 \mbox{\Hypertarget{class_ray_a443fe7715a9534f79a9ce69fb7415ac6}\label{class_ray_a443fe7715a9534f79a9ce69fb7415ac6}} 
 \mbox{\hyperlink{class_vector}{Vector}} {\bfseries Direction} () const
@@ -50,11 +35,6 @@ void {\bfseries Distance} (float d)
 std\+::ostream \& \mbox{\hyperlink{class_ray_a5c8a3bf0a8e125a67943f442cbbf8e06}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_ray}{Ray}} \&ray)
 \end{DoxyCompactItemize}
 
-
-\doxysubsection{Detailed Description}
-\mbox{\hyperlink{class_ray}{Ray}} class which is a representation of a ray function. 
-
-The {\ttfamily \mbox{\hyperlink{class_ray}{Ray}}} class represents a path that the light travels in a virtual scene. To find an object that ray intersects with we have to determine the ray function\+: \[ p(t) = A + t*B \] where p is a 3D position along a line in 3D. A is the ray origin, B is the ray direction and the ray parameter t is a real number. Depending on the t point p(t) moves along the ray. For example for t=2 and t=0 the ray funtions would be\+: \[ p(2) = A + 2*B, \\ p(0) = A + 0*B => p(0) = A \] 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \mbox{\Hypertarget{class_ray_a2e3d2c29f2df4ab3da10da79d4acb852}\label{class_ray_a2e3d2c29f2df4ab3da10da79d4acb852}} 

@@ -1,0 +1,117 @@
+\hypertarget{class_image_r_t}{}\doxysection{Image\+RT Class Reference}
+\label{class_image_r_t}\index{ImageRT@{ImageRT}}
+
+
+\mbox{\hyperlink{class_image_r_t}{Image\+RT}} class which is a representation of a image.  
+
+
+
+
+{\ttfamily \#include $<$Image\+R\+T.\+h$>$}
+
+Inheritance diagram for Image\+RT\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_image_r_t}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_image_r_t_adf3738620a02a63901d24c9702c1b60c}{Image\+RT}} (int h, int w)
+\item 
+\mbox{\Hypertarget{class_image_r_t_a24ae83419cbe1c9ec4aab3edcd24adf3}\label{class_image_r_t_a24ae83419cbe1c9ec4aab3edcd24adf3}} 
+{\bfseries Image\+RT} (int h, int w, int max\+Depth)
+\item 
+\mbox{\Hypertarget{class_image_r_t_afb67d5e275fc247a57c652018c8b9667}\label{class_image_r_t_afb67d5e275fc247a57c652018c8b9667}} 
+void {\bfseries Ray\+Trace} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_world}{World}} $>$ world, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_camera}{Camera}} $>$ camera)
+\item 
+\mbox{\Hypertarget{class_image_r_t_ae74c2c5bf97f797424b6e9bbcb3122af}\label{class_image_r_t_ae74c2c5bf97f797424b6e9bbcb3122af}} 
+void {\bfseries Ray\+Trace} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_world}{World}} $>$ world, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_camera}{Camera}} $>$ camera, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sampler}{Sampler}} $>$ sampler)
+\item 
+\mbox{\Hypertarget{class_image_r_t_a160b408dc161815b6bc1190de01e0c89}\label{class_image_r_t_a160b408dc161815b6bc1190de01e0c89}} 
+\mbox{\hyperlink{class_color}{Color}} {\bfseries Shade\+Ray} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_world}{World}} $>$ world, \mbox{\hyperlink{class_ray}{Ray}} ray, int current\+Depth)
+\item 
+void \mbox{\hyperlink{class_image_r_t_af5246ee0eb1f305eb1e9eeb45c0a2101}{Write\+Image}} (char const $\ast$filename, int x, int y, int comp)
+\item 
+void \mbox{\hyperlink{class_image_r_t_a310535557d4ed3efbe5c7323539ea609}{Save\+Pixel}} (\mbox{\hyperlink{class_color}{Color}} li)
+\item 
+\mbox{\Hypertarget{class_image_r_t_a7bbcc22f1137b1cf6678b9ef50393842}\label{class_image_r_t_a7bbcc22f1137b1cf6678b9ef50393842}} 
+int {\bfseries Height} () const
+\item 
+\mbox{\Hypertarget{class_image_r_t_aa51bd9309af505463afb88cefdb29561}\label{class_image_r_t_aa51bd9309af505463afb88cefdb29561}} 
+void {\bfseries Height} (int height)
+\item 
+\mbox{\Hypertarget{class_image_r_t_ac509608d1dcf1ae69570d441f6af1ff8}\label{class_image_r_t_ac509608d1dcf1ae69570d441f6af1ff8}} 
+int {\bfseries Width} () const
+\item 
+\mbox{\Hypertarget{class_image_r_t_ade65b1ae3a6d1a28b22587e6d66bd47d}\label{class_image_r_t_ade65b1ae3a6d1a28b22587e6d66bd47d}} 
+void {\bfseries Width} (int width)
+\item 
+\mbox{\Hypertarget{class_image_r_t_aee47a515656de02d81ac5a76aa8e71ca}\label{class_image_r_t_aee47a515656de02d81ac5a76aa8e71ca}} 
+int {\bfseries Max\+Depth} () const
+\item 
+\mbox{\Hypertarget{class_image_r_t_a40283c679a6c312a89a9b3cf3bce1d9e}\label{class_image_r_t_a40283c679a6c312a89a9b3cf3bce1d9e}} 
+void {\bfseries Max\+Depth} (int m)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_image_r_t}{Image\+RT}} class which is a representation of a image. 
+
+The {\ttfamily \mbox{\hyperlink{class_image_r_t}{Image\+RT}}} class represents an image to render. Contains image height and width, vector with image pixels and number of samples to sampling. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_image_r_t_adf3738620a02a63901d24c9702c1b60c}\label{class_image_r_t_adf3738620a02a63901d24c9702c1b60c}} 
+\index{ImageRT@{ImageRT}!ImageRT@{ImageRT}}
+\index{ImageRT@{ImageRT}!ImageRT@{ImageRT}}
+\doxysubsubsection{\texorpdfstring{ImageRT()}{ImageRT()}}
+{\footnotesize\ttfamily Image\+R\+T\+::\+Image\+RT (\begin{DoxyParamCaption}\item[{int}]{h,  }\item[{int}]{w }\end{DoxyParamCaption})}
+
+Basic constructor. Creates an image to prepare file to render 
+\begin{DoxyParams}{Parameters}
+{\em h} & -\/ height of image \\
+\hline
+{\em w} & -\/ widht of image \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_image_r_t}{Image\+RT}} object 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_image_r_t_a310535557d4ed3efbe5c7323539ea609}\label{class_image_r_t_a310535557d4ed3efbe5c7323539ea609}} 
+\index{ImageRT@{ImageRT}!SavePixel@{SavePixel}}
+\index{SavePixel@{SavePixel}!ImageRT@{ImageRT}}
+\doxysubsubsection{\texorpdfstring{SavePixel()}{SavePixel()}}
+{\footnotesize\ttfamily void Image\+R\+T\+::\+Save\+Pixel (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_color}{Color}}}]{c }\end{DoxyParamCaption})}
+
+Function that writing image data to bmp file 
+\begin{DoxyParams}{Parameters}
+{\em li} & -\/ \mbox{\hyperlink{class_color}{Color}} object to save \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_image_r_t_af5246ee0eb1f305eb1e9eeb45c0a2101}\label{class_image_r_t_af5246ee0eb1f305eb1e9eeb45c0a2101}} 
+\index{ImageRT@{ImageRT}!WriteImage@{WriteImage}}
+\index{WriteImage@{WriteImage}!ImageRT@{ImageRT}}
+\doxysubsubsection{\texorpdfstring{WriteImage()}{WriteImage()}}
+{\footnotesize\ttfamily void Image\+R\+T\+::\+Write\+Image (\begin{DoxyParamCaption}\item[{char const $\ast$}]{filename,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{comp }\end{DoxyParamCaption})}
+
+Function that writing image data to bmp file 
+\begin{DoxyParams}{Parameters}
+{\em filename} & -\/ filename of bmp file \\
+\hline
+{\em x} & -\/ widht of file to save \\
+\hline
+{\em y} & -\/ height of file to save \\
+\hline
+{\em comp} & -\/ numbers of color channels \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ray\+Tracer\+App/\+Ray\+Tracer\+App/Image\+R\+T.\+h\item 
+Ray\+Tracer\+App/\+Ray\+Tracer\+App/Image\+R\+T.\+cpp\end{DoxyCompactItemize}

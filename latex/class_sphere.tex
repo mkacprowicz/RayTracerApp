@@ -9,6 +9,12 @@
 
 {\ttfamily \#include $<$Sphere.\+h$>$}
 
+Inheritance diagram for Sphere\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_sphere}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -20,7 +26,9 @@
 \item 
 \mbox{\hyperlink{class_sphere_a4c71d7ca1eb3e897b305985559e8085a}{Sphere}} (\mbox{\hyperlink{class_vector}{Vector}} v, float r)
 \item 
-bool \mbox{\hyperlink{class_sphere_a9ad3064385bdfb3d3e4f6280e4844ce4}{Hit}} (\mbox{\hyperlink{class_ray}{Ray}} ray, float t\+\_\+min, float t\+\_\+max) const
+\mbox{\hyperlink{class_sphere_a7c2c8a8806ecb2e929636c2cfe3b8cd9}{Sphere}} (\mbox{\hyperlink{class_vector}{Vector}} v, float r, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_material}{Material}} $>$ mat)
+\item 
+bool \mbox{\hyperlink{class_sphere_a966d8217283591249e719984dff5c2a6}{Hit\+Test}} (\mbox{\hyperlink{class_ray}{Ray}} ray, float \&distance, \mbox{\hyperlink{class_vector}{Vector}} \&normal)
 \item 
 \mbox{\Hypertarget{class_sphere_a240a18c3bd29a6e9a2180b6990f0c767}\label{class_sphere_a240a18c3bd29a6e9a2180b6990f0c767}} 
 \mbox{\hyperlink{class_vector}{Vector}} {\bfseries Center} () const
@@ -40,6 +48,7 @@ void {\bfseries Radius} (float r)
 \mbox{\Hypertarget{class_sphere_a7c508acfe6fd22d42c3cea2c5d55a547}\label{class_sphere_a7c508acfe6fd22d42c3cea2c5d55a547}} 
 std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&os, const \mbox{\hyperlink{class_sphere}{Sphere}} \&sph)
 \end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
@@ -51,7 +60,7 @@ The {\ttfamily \mbox{\hyperlink{class_sphere}{Sphere}}} class is a representatio
 \mbox{\Hypertarget{class_sphere_a890a63ff583cb88e7ec4e840b4ef5eb9}\label{class_sphere_a890a63ff583cb88e7ec4e840b4ef5eb9}} 
 \index{Sphere@{Sphere}!Sphere@{Sphere}}
 \index{Sphere@{Sphere}!Sphere@{Sphere}}
-\doxysubsubsection{\texorpdfstring{Sphere()}{Sphere()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+\doxysubsubsection{\texorpdfstring{Sphere()}{Sphere()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
 {\footnotesize\ttfamily Sphere\+::\+Sphere (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 Default constructor. Creates a sphere object that has center in $ (0,0,0) $ and radius equal to $ 1 $ \begin{DoxyReturn}{Returns}
@@ -60,7 +69,7 @@ Default constructor. Creates a sphere object that has center in $ (0,0,0) $ and 
 \mbox{\Hypertarget{class_sphere_ab6324c968f5db50b7ea4d5c3fa94aab2}\label{class_sphere_ab6324c968f5db50b7ea4d5c3fa94aab2}} 
 \index{Sphere@{Sphere}!Sphere@{Sphere}}
 \index{Sphere@{Sphere}!Sphere@{Sphere}}
-\doxysubsubsection{\texorpdfstring{Sphere()}{Sphere()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+\doxysubsubsection{\texorpdfstring{Sphere()}{Sphere()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
 {\footnotesize\ttfamily Sphere\+::\+Sphere (\begin{DoxyParamCaption}\item[{float}]{r }\end{DoxyParamCaption})}
 
 Basic constructor. Creates a sphere object that has center in $ (0,0,0) $ and radius equal to $ r $ 
@@ -74,7 +83,7 @@ Basic constructor. Creates a sphere object that has center in $ (0,0,0) $ and ra
 \mbox{\Hypertarget{class_sphere_af29844f6a02e023cd583bc2d05175924}\label{class_sphere_af29844f6a02e023cd583bc2d05175924}} 
 \index{Sphere@{Sphere}!Sphere@{Sphere}}
 \index{Sphere@{Sphere}!Sphere@{Sphere}}
-\doxysubsubsection{\texorpdfstring{Sphere()}{Sphere()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+\doxysubsubsection{\texorpdfstring{Sphere()}{Sphere()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
 {\footnotesize\ttfamily Sphere\+::\+Sphere (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector}}}]{v }\end{DoxyParamCaption})}
 
 Basic constructor. Creates a sphere object that has center in $ v $ and radius equal to $ 1 $ 
@@ -88,7 +97,7 @@ Basic constructor. Creates a sphere object that has center in $ v $ and radius e
 \mbox{\Hypertarget{class_sphere_a4c71d7ca1eb3e897b305985559e8085a}\label{class_sphere_a4c71d7ca1eb3e897b305985559e8085a}} 
 \index{Sphere@{Sphere}!Sphere@{Sphere}}
 \index{Sphere@{Sphere}!Sphere@{Sphere}}
-\doxysubsubsection{\texorpdfstring{Sphere()}{Sphere()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+\doxysubsubsection{\texorpdfstring{Sphere()}{Sphere()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
 {\footnotesize\ttfamily Sphere\+::\+Sphere (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector}}}]{v,  }\item[{float}]{r }\end{DoxyParamCaption})}
 
 Basic constructor. Creates a sphere object that has center in $ v $ and radius equal to $ r $ 
@@ -101,14 +110,32 @@ Basic constructor. Creates a sphere object that has center in $ v $ and radius e
 \begin{DoxyReturn}{Returns}
 \mbox{\hyperlink{class_sphere}{Sphere}} object 
 \end{DoxyReturn}
+\mbox{\Hypertarget{class_sphere_a7c2c8a8806ecb2e929636c2cfe3b8cd9}\label{class_sphere_a7c2c8a8806ecb2e929636c2cfe3b8cd9}} 
+\index{Sphere@{Sphere}!Sphere@{Sphere}}
+\index{Sphere@{Sphere}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{Sphere()}{Sphere()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily Sphere\+::\+Sphere (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector}}}]{v,  }\item[{float}]{r,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_material}{Material}} $>$}]{mat }\end{DoxyParamCaption})}
+
+Basic constructor. Creates a sphere object that has center in $ v $ and radius equal to $ r $ 
+\begin{DoxyParams}{Parameters}
+{\em r} & -\/ radius of a sphere \\
+\hline
+{\em v} & -\/ center of a sphere \\
+\hline
+{\em mat} & -\/ material of a sphere \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_sphere}{Sphere}} object 
+\end{DoxyReturn}
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_sphere_a9ad3064385bdfb3d3e4f6280e4844ce4}\label{class_sphere_a9ad3064385bdfb3d3e4f6280e4844ce4}} 
-\index{Sphere@{Sphere}!Hit@{Hit}}
-\index{Hit@{Hit}!Sphere@{Sphere}}
-\doxysubsubsection{\texorpdfstring{Hit()}{Hit()}}
-{\footnotesize\ttfamily bool Sphere\+::\+Hit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}}}]{ray,  }\item[{float}]{t\+\_\+min,  }\item[{float}]{t\+\_\+max }\end{DoxyParamCaption}) const}
+\mbox{\Hypertarget{class_sphere_a966d8217283591249e719984dff5c2a6}\label{class_sphere_a966d8217283591249e719984dff5c2a6}} 
+\index{Sphere@{Sphere}!HitTest@{HitTest}}
+\index{HitTest@{HitTest}!Sphere@{Sphere}}
+\doxysubsubsection{\texorpdfstring{HitTest()}{HitTest()}}
+{\footnotesize\ttfamily bool Sphere\+::\+Hit\+Test (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}}}]{ray,  }\item[{float \&}]{distance,  }\item[{\mbox{\hyperlink{class_vector}{Vector}} \&}]{normal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 Function that checks whether or not \mbox{\hyperlink{class_sphere}{Sphere}} intersects with a \mbox{\hyperlink{class_ray}{Ray}}. There are three possible cases that can occur\+:
 \begin{DoxyItemize}
@@ -121,9 +148,7 @@ Function that checks whether or not \mbox{\hyperlink{class_sphere}{Sphere}} inte
 \begin{DoxyParams}{Parameters}
 {\em ray} & -\/ radius of a sphere \\
 \hline
-{\em t\+\_\+min} & -\/ minimal length of a ray cast (it\textquotesingle{}s starting point) \\
-\hline
-{\em t\+\_\+max} & -\/ maximal length of a ray cast (it\textquotesingle{}s end point) \\
+{\em distance} & -\/ length to hit point \\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
@@ -131,6 +156,10 @@ Bool -\/ tells us whether it intersects or not
 \end{DoxyReturn}
 
 \end{DoxyItemize}
+
+Implements \mbox{\hyperlink{class_geometric_shape}{Geometric\+Shape}}.
+
+
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 

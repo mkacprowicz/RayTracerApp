@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['negate_53',['Negate',['../class_vector.html#addbf2b19fc2fcd4a52f1c55fd24bbb54',1,'Vector']]],
-  ['normalize_54',['Normalize',['../class_vector.html#a37fafbf4bf8aa73238f45b785658132b',1,'Vector']]],
-  ['normalizeproduct_55',['NormalizeProduct',['../class_vector.html#a2fdadd9b5403f1784b14c2ad1e83a741',1,'Vector']]]
+  ['imagert_95',['ImageRT',['../class_image_r_t.html#adf3738620a02a63901d24c9702c1b60c',1,'ImageRT']]],
+  ['intersection_96',['Intersection',['../class_triangle.html#a0f7271ef367468d3b7f8e84719b7f683',1,'Triangle']]]
 ];

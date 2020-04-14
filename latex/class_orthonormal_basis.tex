@@ -1,0 +1,25 @@
+\hypertarget{class_orthonormal_basis}{}\doxysection{Orthonormal\+Basis Class Reference}
+\label{class_orthonormal_basis}\index{OrthonormalBasis@{OrthonormalBasis}}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_orthonormal_basis_a514dc92f47995a22e58213438e7878de}{Orthonormal\+Basis}} (\mbox{\hyperlink{class_vector}{Vector}} eye, \mbox{\hyperlink{class_vector}{Vector}} look\+At, \mbox{\hyperlink{class_vector}{Vector}} up)
+\item 
+\mbox{\Hypertarget{class_orthonormal_basis_ac5f781bfb610ebceb74559dae20e7d5a}\label{class_orthonormal_basis_ac5f781bfb610ebceb74559dae20e7d5a}} 
+\mbox{\hyperlink{class_vector}{Vector}} {\bfseries operator$\ast$} (\mbox{\hyperlink{class_vector}{Vector}} v)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_orthonormal_basis_a514dc92f47995a22e58213438e7878de}\label{class_orthonormal_basis_a514dc92f47995a22e58213438e7878de}} 
+\index{OrthonormalBasis@{OrthonormalBasis}!OrthonormalBasis@{OrthonormalBasis}}
+\index{OrthonormalBasis@{OrthonormalBasis}!OrthonormalBasis@{OrthonormalBasis}}
+\doxysubsubsection{\texorpdfstring{OrthonormalBasis()}{OrthonormalBasis()}}
+{\footnotesize\ttfamily Orthonormal\+Basis\+::\+Orthonormal\+Basis (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector}}}]{eye,  }\item[{\mbox{\hyperlink{class_vector}{Vector}}}]{look\+At,  }\item[{\mbox{\hyperlink{class_vector}{Vector}}}]{up }\end{DoxyParamCaption})}
+
+We use orthonormal bases (O\+NB) in raytracing wherever we need a local coordinate system. The O\+NB can be constructed from any two vectors $a$ and $b$ (they need not be mutually perpendicular or normalized). The first step is to create a vector $w$ -\/ it is a normalized vector parallel to $a$. Then the vector $u$ is calculated as the normalized vector product $b \times w$. Ultimately v is equal $w \times u$ thus creating a clockwise coordinate system\+: \[ w = \frac{a}{||a||} \\ u = \frac{(b \times w)}{||b \times w||} \\ v = w \times u \] 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ray\+Tracer\+App/\+Ray\+Tracer\+App/Orthonormal\+Basis.\+hpp\item 
+Ray\+Tracer\+App/\+Ray\+Tracer\+App/Orthonormal\+Basis.\+cpp\end{DoxyCompactItemize}

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['vector_32',['Vector',['../class_vector.html',1,'Vector'],['../class_vector.html#a6f80c73b5f18dcf3f8e36065bdc8b9e5',1,'Vector::Vector()'],['../class_vector.html#a434cb204eeaa6b0f860a22f60ee2f408',1,'Vector::Vector(float x, float y, float z)'],['../class_vector.html#a0070b7b5e536d328cad1ddac04578120',1,'Vector::Vector(Vector v1, Vector v2)']]]
+  ['topoint_51',['ToPoint',['../class_vector.html#afd47414c315848a4f78e0c25af41ca75',1,'Vector']]],
+  ['triangle_52',['Triangle',['../class_triangle.html',1,'Triangle'],['../class_triangle.html#a5d7f442181848a4fc005de888e213385',1,'Triangle::Triangle()']]]
 ];

@@ -1,10 +1,28 @@
 \hypertarget{class_surface}{}\doxysection{Surface Class Reference}
 \label{class_surface}\index{Surface@{Surface}}
+Inheritance diagram for Surface\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_surface}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_surface_ad5997d262a49cb2a59a16085d6259e42}\label{class_surface_ad5997d262a49cb2a59a16085d6259e42}} 
-{\bfseries Surface} (\mbox{\hyperlink{class_vector}{Vector}} nor, \mbox{\hyperlink{class_vector}{Vector}} poi)
+\mbox{\Hypertarget{class_surface_ac13722e28af46130a26c9640d9d54e5a}\label{class_surface_ac13722e28af46130a26c9640d9d54e5a}} 
+{\bfseries Surface} (\mbox{\hyperlink{class_vector}{Vector}} poi, \mbox{\hyperlink{class_vector}{Vector}} nor)
+\item 
+\mbox{\Hypertarget{class_surface_aa937ad5ce59f182b3adeeae92b111723}\label{class_surface_aa937ad5ce59f182b3adeeae92b111723}} 
+{\bfseries Surface} (\mbox{\hyperlink{class_vector}{Vector}} poi, \mbox{\hyperlink{class_vector}{Vector}} nor, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_material}{Material}} $>$ mat)
+\item 
+\mbox{\Hypertarget{class_surface_a63aa1d38869323b1b54ef712318e1d7e}\label{class_surface_a63aa1d38869323b1b54ef712318e1d7e}} 
+bool {\bfseries Hit\+Test} (\mbox{\hyperlink{class_ray}{Ray}} ray, float \&distance, \mbox{\hyperlink{class_vector}{Vector}} \&normal)
+\item 
+\mbox{\Hypertarget{class_surface_a9848eec533bdeb86ebd21e178ac37fab}\label{class_surface_a9848eec533bdeb86ebd21e178ac37fab}} 
+float {\bfseries Get\+Angle\+Between\+Normal\+And\+Vector} (\mbox{\hyperlink{class_vector}{Vector}} vec)
+\item 
+\mbox{\Hypertarget{class_surface_a9ed41a8c3ea21218112c7af1c9f0b030}\label{class_surface_a9ed41a8c3ea21218112c7af1c9f0b030}} 
+bool {\bfseries Intersection} (\mbox{\hyperlink{class_ray}{Ray}} ray, float \&dist, \mbox{\hyperlink{class_vector}{Vector}} \&point)
 \item 
 \mbox{\Hypertarget{class_surface_a299b5b06c7d388af9024dd63f3fb1086}\label{class_surface_a299b5b06c7d388af9024dd63f3fb1086}} 
 \mbox{\hyperlink{class_vector}{Vector}} {\bfseries Normal} () const
@@ -17,13 +35,8 @@ void {\bfseries Normal} (\mbox{\hyperlink{class_vector}{Vector}} d)
 \item 
 \mbox{\Hypertarget{class_surface_a082baadad76487e8f44746272b76eb80}\label{class_surface_a082baadad76487e8f44746272b76eb80}} 
 void {\bfseries Point} (\mbox{\hyperlink{class_vector}{Vector}} d)
-\item 
-\mbox{\Hypertarget{class_surface_a9848eec533bdeb86ebd21e178ac37fab}\label{class_surface_a9848eec533bdeb86ebd21e178ac37fab}} 
-float {\bfseries Get\+Angle\+Between\+Normal\+And\+Vector} (\mbox{\hyperlink{class_vector}{Vector}} vec)
-\item 
-\mbox{\Hypertarget{class_surface_a9ed41a8c3ea21218112c7af1c9f0b030}\label{class_surface_a9ed41a8c3ea21218112c7af1c9f0b030}} 
-bool {\bfseries Intersection} (\mbox{\hyperlink{class_ray}{Ray}} ray, float \&dist, \mbox{\hyperlink{class_vector}{Vector}} \&point)
 \end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

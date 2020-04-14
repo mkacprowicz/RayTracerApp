@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['add_0',['Add',['../class_light_intensity.html#a535a30e2074e61d6de656fd0c0b85672',1,'LightIntensity::Add()'],['../class_vector.html#a28d6e89ce2274066cdec960d58926750',1,'Vector::Add()']]]
+  ['add_0',['Add',['../class_color.html#adc70caa0096fc094647507e8ba7f8acd',1,'Color::Add()'],['../class_vector.html#a28d6e89ce2274066cdec960d58926750',1,'Vector::Add()']]]
 ];

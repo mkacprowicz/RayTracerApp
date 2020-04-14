@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['div_44',['Div',['../class_vector.html#a884039bdb79b1e5d45d41e5cef2d2718',1,'Vector']]],
-  ['dot_45',['Dot',['../class_vector.html#af6ad888b666c4ac70a25d25b8b57b145',1,'Vector']]]
+  ['color_90',['Color',['../class_color.html#a373c542c99fb83ce9c7c08aae76b2718',1,'Color::Color(float r, float g, float b)'],['../class_color.html#a58e2b169f1480cc8509147691e5cf350',1,'Color::Color(float r, float g)'],['../class_color.html#a1d4ade9021343ae6b8f5808735819f9d',1,'Color::Color(float r)'],['../class_color.html#a9a742cbe9f9f4037f5d9f4e81a9b2428',1,'Color::Color()']]]
 ];

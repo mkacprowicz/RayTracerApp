@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['perspectivecamera_38',['PerspectiveCamera',['../class_perspective_camera.html',1,'']]]
+  ['loader_65',['Loader',['../classobjl_1_1_loader.html',1,'objl']]]
 ];

@@ -1,0 +1,41 @@
+\hypertarget{class_world}{}\doxysection{World Class Reference}
+\label{class_world}\index{World@{World}}
+Inheritance diagram for World\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_world}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_world_aa72e61baf53bcd98776d74d7dfbebb11}\label{class_world_aa72e61baf53bcd98776d74d7dfbebb11}} 
+{\bfseries World} (\mbox{\hyperlink{class_color}{Color}} background)
+\item 
+\mbox{\Hypertarget{class_world_ae408c47e2504693f6e40bcea46878b49}\label{class_world_ae408c47e2504693f6e40bcea46878b49}} 
+void {\bfseries Add\+Object} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_geometric_shape}{Geometric\+Shape}} $>$ object)
+\item 
+\mbox{\Hypertarget{class_world_ac7f0499b014ed2757d2aef469324e025}\label{class_world_ac7f0499b014ed2757d2aef469324e025}} 
+void {\bfseries Add\+Light} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_point_light}{Point\+Light}} $>$ light)
+\item 
+\mbox{\Hypertarget{class_world_a3951cb1ace8818c951d8b36f0cee9a5b}\label{class_world_a3951cb1ace8818c951d8b36f0cee9a5b}} 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_hit_info}{Hit\+Info}} $>$ {\bfseries Trace\+Ray} (\mbox{\hyperlink{class_ray}{Ray}} ray)
+\item 
+\mbox{\Hypertarget{class_world_ae202509a8ec9339513fda88bbdec1731}\label{class_world_ae202509a8ec9339513fda88bbdec1731}} 
+bool {\bfseries Any\+Obstacle\+Between} (\mbox{\hyperlink{class_vector}{Vector}} pointA, \mbox{\hyperlink{class_vector}{Vector}} pointB)
+\item 
+\mbox{\Hypertarget{class_world_af64adb0b2fa2378176686607db0fcfb4}\label{class_world_af64adb0b2fa2378176686607db0fcfb4}} 
+\mbox{\hyperlink{class_color}{Color}} {\bfseries Background\+Color} () const
+\item 
+\mbox{\Hypertarget{class_world_adf081645a97a42a1339f93e04e99cd06}\label{class_world_adf081645a97a42a1339f93e04e99cd06}} 
+void {\bfseries Background\+Color} (\mbox{\hyperlink{class_color}{Color}} c)
+\item 
+\mbox{\Hypertarget{class_world_ad0266ac9d8e93178ed6f4a5d2150686a}\label{class_world_ad0266ac9d8e93178ed6f4a5d2150686a}} 
+std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_point_light}{Point\+Light}} $>$ $>$ {\bfseries Lights} () const
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Ray\+Tracer\+App/\+Ray\+Tracer\+App/World.\+h\item 
+Ray\+Tracer\+App/\+Ray\+Tracer\+App/World.\+cpp\end{DoxyCompactItemize}

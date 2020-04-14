@@ -3,6 +3,7 @@
 #include "pch.h"
 #include "GeometricShape.h"
 
+//! Traingle is a class which is a representation of a triangle GeometricShape
 class Triangle : public GeometricShape
 {
 public:

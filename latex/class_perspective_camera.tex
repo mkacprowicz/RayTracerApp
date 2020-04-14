@@ -1,5 +1,14 @@
 \hypertarget{class_perspective_camera}{}\doxysection{Perspective\+Camera Class Reference}
 \label{class_perspective_camera}\index{PerspectiveCamera@{PerspectiveCamera}}
+
+
+\mbox{\hyperlink{class_perspective_camera}{Perspective\+Camera}} is a class which is a representation of a perspective camera.  
+
+
+
+
+{\ttfamily \#include $<$Perspective\+Camera.\+h$>$}
+
 Inheritance diagram for Perspective\+Camera\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,13 +18,69 @@ Inheritance diagram for Perspective\+Camera\+:\begin{figure}[H]
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_perspective_camera_a10291f9ccdfeb41bc1c8c477b23db9a2}\label{class_perspective_camera_a10291f9ccdfeb41bc1c8c477b23db9a2}} 
-\mbox{\hyperlink{class_ray}{Ray}} {\bfseries Get\+Ray} (float u, float v)
+\mbox{\Hypertarget{class_perspective_camera_a59aa96641c631f9c1254ba4faca29856}\label{class_perspective_camera_a59aa96641c631f9c1254ba4faca29856}} 
+{\bfseries Perspective\+Camera} (\mbox{\hyperlink{class_vector}{Vector}} origin, \mbox{\hyperlink{class_vector}{Vector}} look\+At, \mbox{\hyperlink{class_vector}{Vector}} up, float distance)
 \item 
-\mbox{\Hypertarget{class_perspective_camera_a71863f05909290d8b575dfbe6460df3c}\label{class_perspective_camera_a71863f05909290d8b575dfbe6460df3c}} 
-void {\bfseries Render} ()
+\mbox{\hyperlink{class_ray}{Ray}} \mbox{\hyperlink{class_perspective_camera_a2375fb2872d0b0f61a320d20f83a60c5}{Get\+Ray}} (\mbox{\hyperlink{struct_vector2}{Vector2}} uv)
+\item 
+\mbox{\hyperlink{class_vector}{Vector}} \mbox{\hyperlink{class_perspective_camera_adbd5edd47938c403a7fb848169e9f89d}{Ray\+Direction}} (\mbox{\hyperlink{struct_vector2}{Vector2}} v)
+\item 
+\mbox{\Hypertarget{class_perspective_camera_a7b88cb54951aad833db59a42ba9d1c3b}\label{class_perspective_camera_a7b88cb54951aad833db59a42ba9d1c3b}} 
+\mbox{\hyperlink{class_orthonormal_basis}{Orthonormal\+Basis}} {\bfseries Onb} () const
+\item 
+\mbox{\Hypertarget{class_perspective_camera_a7bc5aa2ce6920a2642358d6ebece740f}\label{class_perspective_camera_a7bc5aa2ce6920a2642358d6ebece740f}} 
+void {\bfseries Onb} (\mbox{\hyperlink{class_orthonormal_basis}{Orthonormal\+Basis}} o)
+\item 
+\mbox{\Hypertarget{class_perspective_camera_ae1aa2c1e72c69d4bb5ee05bde16eb90c}\label{class_perspective_camera_ae1aa2c1e72c69d4bb5ee05bde16eb90c}} 
+\mbox{\hyperlink{class_vector}{Vector}} {\bfseries Origin} () const
+\item 
+\mbox{\Hypertarget{class_perspective_camera_ace372893683c4639b6dbf6c76d8049ef}\label{class_perspective_camera_ace372893683c4639b6dbf6c76d8049ef}} 
+void {\bfseries Origin} (\mbox{\hyperlink{class_vector}{Vector}} o)
+\item 
+\mbox{\Hypertarget{class_perspective_camera_a8541fadb8ba8083c21076a0cbb5196dd}\label{class_perspective_camera_a8541fadb8ba8083c21076a0cbb5196dd}} 
+float {\bfseries Distance} () const
+\item 
+\mbox{\Hypertarget{class_perspective_camera_aa357249057e322f80a5b802ce0d099d9}\label{class_perspective_camera_aa357249057e322f80a5b802ce0d099d9}} 
+void {\bfseries Distance} (float d)
 \end{DoxyCompactItemize}
-\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_perspective_camera}{Perspective\+Camera}} is a class which is a representation of a perspective camera. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_perspective_camera_a2375fb2872d0b0f61a320d20f83a60c5}\label{class_perspective_camera_a2375fb2872d0b0f61a320d20f83a60c5}} 
+\index{PerspectiveCamera@{PerspectiveCamera}!GetRay@{GetRay}}
+\index{GetRay@{GetRay}!PerspectiveCamera@{PerspectiveCamera}}
+\doxysubsubsection{\texorpdfstring{GetRay()}{GetRay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ray}{Ray}} Perspective\+Camera\+::\+Get\+Ray (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{uv }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+In perspective projection, we get the effect of reducing objects as their distance from the observer increases. The width of the rear plane of the visual solid is different from the width of the front plane and the visual solid is pyramidal. the projection plane distance $s$ is predetermined; if the distance is greater, the resulting image will be larger and will also be generated after calculations. The projection system has a specific center $e$, which is defined in the center of the uvw coordinate system and set in the uvw database (coordinate system of the projection plane). \mbox{\hyperlink{class_ray}{Ray}} is calculated using \mbox{\hyperlink{class_orthonormal_basis}{Orthonormal\+Basis}} (O\+NB). Having O\+NB of the cameras available $(u, v, w)$, position of the point on the viewplane $(x, y)$, and distance of the viewplane from the eye $(d)$, we can easily calculate the direction of the ray coming out of the camera as \[ dir = xu + yv + dw \] 
+\begin{DoxyParams}{Parameters}
+{\em uv} & -\/ horizontal and vertical offset \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_ray}{Ray}} object 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_camera}{Camera}}.
+
+\mbox{\Hypertarget{class_perspective_camera_adbd5edd47938c403a7fb848169e9f89d}\label{class_perspective_camera_adbd5edd47938c403a7fb848169e9f89d}} 
+\index{PerspectiveCamera@{PerspectiveCamera}!RayDirection@{RayDirection}}
+\index{RayDirection@{RayDirection}!PerspectiveCamera@{PerspectiveCamera}}
+\doxysubsubsection{\texorpdfstring{RayDirection()}{RayDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_vector}{Vector}} Perspective\+Camera\+::\+Ray\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{v }\end{DoxyParamCaption})}
+
+Method that calculates direction of camera \mbox{\hyperlink{class_ray}{Ray}} 
+\begin{DoxyParams}{Parameters}
+{\em v} & -\/ vertical offset \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_vector}{Vector}} object -\/ direction of a \mbox{\hyperlink{class_ray}{Ray}} 
+\end{DoxyReturn}
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

@@ -1,6 +1,9 @@
 var searchData=
 [
-  ['sphere_28',['Sphere',['../class_sphere.html',1,'Sphere'],['../class_sphere.html#a890a63ff583cb88e7ec4e840b4ef5eb9',1,'Sphere::Sphere()'],['../class_sphere.html#ab6324c968f5db50b7ea4d5c3fa94aab2',1,'Sphere::Sphere(float r)'],['../class_sphere.html#af29844f6a02e023cd583bc2d05175924',1,'Sphere::Sphere(Vector v)'],['../class_sphere.html#a4c71d7ca1eb3e897b305985559e8085a',1,'Sphere::Sphere(Vector v, float r)']]],
-  ['sub_29',['Sub',['../class_vector.html#a6435acd0226758e41544f2d4b309d623',1,'Vector']]],
-  ['surface_30',['Surface',['../class_surface.html',1,'']]]
+  ['ray_37',['Ray',['../class_ray.html',1,'Ray'],['../class_ray.html#a2e3d2c29f2df4ab3da10da79d4acb852',1,'Ray::Ray()'],['../class_ray.html#a45105f0bf1d53f595a34e11977c12142',1,'Ray::Ray(Vector origin, Vector direction)'],['../class_ray.html#ad0288e84aa6367c05e94ddc3321ef830',1,'Ray::Ray(Vector origin, float dis)'],['../class_ray.html#a5573f261316305cb3b520a789c221aeb',1,'Ray::Ray(Vector origin, Vector direction, float dis)']]],
+  ['raydirection_38',['RayDirection',['../class_perspective_camera.html#adbd5edd47938c403a7fb848169e9f89d',1,'PerspectiveCamera']]],
+  ['reflect_39',['Reflect',['../class_vector.html#a3e98e3ccc4a5c060dad1d9e406a8a70a',1,'Vector']]],
+  ['reflective_40',['Reflective',['../class_reflective.html',1,'']]],
+  ['reflectproduct_41',['ReflectProduct',['../class_vector.html#a2a81d8ed4fa4e67e8065bda405cc0711',1,'Vector']]],
+  ['regular_42',['Regular',['../class_regular.html',1,'']]]
 ];
