@@ -9,11 +9,10 @@ class Triangle : public GeometricShape
 public:
 	Triangle();
 	Triangle(Vector a, Vector b, Vector c);
-
-	bool Intersection(Ray ray, float& t0, float& t1);
+	Triangle(Vector vertexa, Vector vertexb, Vector vertexc, std::shared_ptr<Material> mat);
+	Triangle(Vector vertexa, Vector vertexb, Vector vertexc, Vector normala, Vector normalb, Vector normalc, std::shared_ptr<Material> mat);
 
 	bool HitTest(Ray ray, float& distance, Vector& normal);
-
 
 	Vector A() const { return A_; }
 	void A(Vector a) { A_ = a; }
@@ -26,5 +25,12 @@ private:
 	Vector A_;
 	Vector B_;
 	Vector C_;
+
+	Vector VertexA;
+	Vector EdgeAB;
+	Vector EdgeAC;
+	Vector NormalA;
+	Vector NormalAB;
+	Vector NormalAC;
 };
 

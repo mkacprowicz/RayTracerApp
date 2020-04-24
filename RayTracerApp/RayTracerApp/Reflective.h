@@ -7,6 +7,7 @@ class Reflective : public Material
 {
 public:
 	Reflective(Color materialColor, float diffuse, float specular, float exponent, float reflectivity);
+	Reflective(Color materialColor, float diffuse, float specular, float exponent, float reflectivity, std::shared_ptr<Texture> texture);
 
 	Color Shade(std::shared_ptr<ImageRT> tracer, std::shared_ptr<HitInfo> hit);
 

@@ -22,7 +22,7 @@ public:
 	void RayTrace(std::shared_ptr<World> world, std::shared_ptr<Camera> camera);
 	void RayTrace(std::shared_ptr<World> world, std::shared_ptr<Camera> camera, std::shared_ptr<Sampler> sampler);
 	
-	Color ShadeRay(std::shared_ptr<World> world, Ray ray, int currentDepth);
+	Color ShadeRay(std::shared_ptr<World> world, Ray ray, int currentDepth, Vector2 uv);
 
 	void WriteImage(char const* filename, int x, int y, int comp);
 

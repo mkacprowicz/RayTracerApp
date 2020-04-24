@@ -43,7 +43,7 @@ void ImageRT::RayTrace(std::shared_ptr<World> world, std::shared_ptr<Camera> cam
 
 			Ray ray = camera->GetRay(pictureCoordinates);
 
-			Color resultColor = ShadeRay(world, ray, 0);
+			Color resultColor = ShadeRay(world, ray, 0, pictureCoordinates);
 
 			SavePixel(resultColor);
 		}
@@ -71,12 +71,15 @@ void ImageRT::RayTrace(std::shared_ptr<World> world, std::shared_ptr<Camera> cam
 
 				Ray ray = camera->GetRay(pictureCoordinates);
 
-				Color temp = ShadeRay(world, ray, 0) / (float)sampler->SampleCount();
+				Color temp = ShadeRay(world, ray, 0, pictureCoordinates) / (float)sampler->SampleCount();
 				totalColor = totalColor + temp;
 			}
 
 			SavePixel(totalColor);
 		}
+
+		float prog = (100.f * y) / Height();
+		std::cout << "Progres: " << prog << "%\n";
 	}
 }
 
@@ -85,9 +88,10 @@ void ImageRT::RayTrace(std::shared_ptr<World> world, std::shared_ptr<Camera> cam
 * @param world - world, contains all objects in scene
 * @param ray - ray, that will be counting per pixel
 * @param currenthDepth - maximum numbers of reflections
+* @param uv - picture UV coordinates
 * @return Color object
 */
-Color ImageRT::ShadeRay(std::shared_ptr<World> world, Ray ray, int currentDepth)
+Color ImageRT::ShadeRay(std::shared_ptr<World> world, Ray ray, int currentDepth, Vector2 uv)
 {
 	if (currentDepth > this->MaxDepth_)
 	{
@@ -105,6 +109,8 @@ Color ImageRT::ShadeRay(std::shared_ptr<World> world, Ray ray, int currentDepth)
 	}
 
 	auto material = info->HitObject()->ShapeMaterial();
+
+	material->UV = uv;
 
 	return material->Shade(shared_from_this(), info);
 }

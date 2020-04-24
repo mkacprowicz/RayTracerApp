@@ -25,6 +25,14 @@
 #include "Triangle.h"
 #include "Mesh.h"
 
+#include "Texture.h"
+
+
+#include "vendor/stb_image/stb_image.h"
+#include "vendor/stb_image/stb_image_write.h"
+
+
+
 int main()
 {
 	std::cout << "Hello World" << std::endl;
@@ -37,16 +45,31 @@ int main()
 	auto cameraP = std::make_shared<PerspectiveCamera>(Vector(0, 1, -8), Vector(0, 0, 0), Vector(0, -1, 0), 1);
 
 
+	std::shared_ptr<Texture> textureTiles = std::make_shared<Texture>("tiles.bmp");
+	std::shared_ptr<Texture> textureTex1 = std::make_shared<Texture>("Tex1.bmp");
+
 	auto redMat = std::make_shared<Reflective>(Color(255, 0, 0), 0.8f, 1, 300, 0.2f);
+	auto texMat = std::make_shared<PerfectDiffuse>(Color(255, 255, 255), textureTiles);
+	auto texTexMat = std::make_shared<PerfectDiffuse>(Color(255, 255, 255), textureTex1);
 	auto greenMat = std::make_shared<Reflective>(Color(0, 255, 0), 0.4f, 1, 300, 0.6f);
 	auto blueMat = std::make_shared<Reflective>(Color(0, 0, 255), 0.2f, 1, 300, 0.8f);
 	auto grayMat = std::make_shared<Reflective>(Color(180, 180, 180), 0.4f, 1, 300, 0.6f);
 
 
-	world->AddObject(std::make_shared<Sphere>(Vector(-4.f, 0, 0), 2, redMat));
-	world->AddObject(std::make_shared<Sphere>(Vector(4.f, 0, 0), 2, greenMat));
-	world->AddObject(std::make_shared<Sphere>(Vector(0.f, 0, 3.f), 2, blueMat));
+	world->AddObject(std::make_shared<Sphere>(Vector(-8.0f, 0, 4), 2, redMat));
+	world->AddObject(std::make_shared<Sphere>(Vector(3.6f, 0, -2.0f), 2, texTexMat));
+	//world->AddObject(std::make_shared<Sphere>(Vector(0.f, 0, 3.f), 2, blueMat));
 	world->AddObject(std::make_shared<Surface>(Vector(0, -2, 0), Vector(0, 1, 0), grayMat));
+
+	Mesh object;
+	object.ReadMeshFromFile(std::string("Box.obj"));
+	object.ComputeNormals();
+
+	for (int i = 0; i < object.Shape()->size(); i++)
+	{
+		auto tri = object.Shape()->data()[i];	
+		world->AddObject(std::make_shared<Triangle>(tri.A(), tri.B(), tri.C(), texMat));
+	}
 
 	world->AddLight(std::make_shared<PointLight>(Vector(0, 5, -5), Color(255, 255, 255)));
 

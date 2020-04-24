@@ -11,6 +11,14 @@ Reflective::Reflective(Color materialColor, float diffuse, float specular, float
 	this->ReflectionColor_ = materialColor;
 }
 
+Reflective::Reflective(Color materialColor, float diffuse, float specular, float exponent, float reflectivity, std::shared_ptr<Texture> texture)
+{
+	this->Direct_ = std::make_shared<Phong>(materialColor, diffuse, specular, exponent);
+	this->Reflectivity_ = reflectivity;
+	this->ReflectionColor_ = materialColor;
+	this->MaterialTexture = texture;
+}
+
 /**
 * The mirror reflection depends on the position of the observer and will change depending on his position. 
 * It should be emphasized here that the mirror reflection does not define the surface having the reflection properties of other objects like a mirror,
@@ -40,8 +48,15 @@ Color Reflective::Shade(std::shared_ptr<ImageRT> tracer, std::shared_ptr<HitInfo
 	Vector reflectionDirection = toCameraDirection.ReflectProduct(toCameraDirection, hit->Normal());
 	Ray reflectedRay(hit->HitPoint(), reflectionDirection);
 
-	Color temp = tracer->ShadeRay(hit->CurrentWorld(), reflectedRay, hit->Depth()) * this->ReflectionColor_ * this->Reflectivity_;
+	Color temp = tracer->ShadeRay(hit->CurrentWorld(), reflectedRay, hit->Depth(), this->UV) * this->ReflectionColor_ * this->Reflectivity_;
 	radiance = radiance + temp;
+
+	if (IsTextured())
+	{
+		temp = this->MaterialTexture->GetTexelColor(this->UV);
+		//radiance = radiance * temp;
+		radiance = temp;
+	}
 
 	return radiance;
 }

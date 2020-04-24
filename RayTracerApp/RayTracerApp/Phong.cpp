@@ -16,6 +16,15 @@ Phong::Phong(Color materialColor, float diffuseCoeff, float specular, float spec
 	this->SpecularExponent_ = specularExponent;
 }
 
+Phong::Phong(Color materialColor, float diffuseCoeff, float specular, float specularExponent, std::shared_ptr<Texture> texture)
+{
+	this->MaterialColor_ = materialColor;
+	this->DiffuseCoeff_ = diffuseCoeff;
+	this->Specular_ = specular;
+	this->SpecularExponent_ = specularExponent;
+	this->MaterialTexture = texture;
+}
+
 /**
 * Phong model can be represented as given formula:
 * \f[
@@ -75,6 +84,12 @@ Color Phong::Shade(std::shared_ptr<ImageRT> tracer, std::shared_ptr<HitInfo> hit
 		}
 
 		totalColor = totalColor + result;
+	}
+
+	if (IsTextured())
+	{
+		Color temp = this->MaterialTexture->GetTexelColor(this->UV);
+		totalColor = totalColor * temp;
 	}
 
 	return totalColor;

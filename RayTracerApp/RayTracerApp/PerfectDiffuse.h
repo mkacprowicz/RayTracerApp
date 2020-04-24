@@ -8,6 +8,7 @@ class PerfectDiffuse : public Material
 public:
 	PerfectDiffuse();
 	PerfectDiffuse(Color rgb);
+	PerfectDiffuse(Color rgb, std::shared_ptr<Texture> texture);
 
 	Color Shade(std::shared_ptr<ImageRT> tracer, std::shared_ptr<HitInfo> hit);
 

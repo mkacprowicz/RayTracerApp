@@ -9,6 +9,7 @@ class Phong : public Material
 public:
 	Phong();
 	Phong(Color materialColor, float diffuseCoeff, float specular, float specularExponent);
+	Phong(Color materialColor, float diffuseCoeff, float specular, float specularExponent, std::shared_ptr<Texture> texture);
 
 	Color Shade(std::shared_ptr<ImageRT> tracer, std::shared_ptr<HitInfo> hit);
 	float PhongFactor(Vector inDirection, Vector normal, Vector toCameraDirection);
