@@ -94,15 +94,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a24ae83419cbe1c9ec4aab3edcd24adf3"><td class="memItemLeft" align="right" valign="top"><a id="a24ae83419cbe1c9ec4aab3edcd24adf3"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>ImageRT</b> (int h, int w, int maxDepth)</td></tr>
 <tr class="separator:a24ae83419cbe1c9ec4aab3edcd24adf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afb67d5e275fc247a57c652018c8b9667"><td class="memItemLeft" align="right" valign="top"><a id="afb67d5e275fc247a57c652018c8b9667"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>RayTrace</b> (std::shared_ptr&lt; <a class="el" href="class_world.html">World</a> &gt; world, std::shared_ptr&lt; <a class="el" href="class_camera.html">Camera</a> &gt; camera)</td></tr>
+<tr class="memitem:afb67d5e275fc247a57c652018c8b9667"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image_r_t.html#afb67d5e275fc247a57c652018c8b9667">RayTrace</a> (std::shared_ptr&lt; <a class="el" href="class_world.html">World</a> &gt; world, std::shared_ptr&lt; <a class="el" href="class_camera.html">Camera</a> &gt; camera)</td></tr>
 <tr class="separator:afb67d5e275fc247a57c652018c8b9667"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae74c2c5bf97f797424b6e9bbcb3122af"><td class="memItemLeft" align="right" valign="top"><a id="ae74c2c5bf97f797424b6e9bbcb3122af"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>RayTrace</b> (std::shared_ptr&lt; <a class="el" href="class_world.html">World</a> &gt; world, std::shared_ptr&lt; <a class="el" href="class_camera.html">Camera</a> &gt; camera, std::shared_ptr&lt; <a class="el" href="class_sampler.html">Sampler</a> &gt; sampler)</td></tr>
+<tr class="memitem:ae74c2c5bf97f797424b6e9bbcb3122af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image_r_t.html#ae74c2c5bf97f797424b6e9bbcb3122af">RayTrace</a> (std::shared_ptr&lt; <a class="el" href="class_world.html">World</a> &gt; world, std::shared_ptr&lt; <a class="el" href="class_camera.html">Camera</a> &gt; camera, std::shared_ptr&lt; <a class="el" href="class_sampler.html">Sampler</a> &gt; sampler)</td></tr>
 <tr class="separator:ae74c2c5bf97f797424b6e9bbcb3122af"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a160b408dc161815b6bc1190de01e0c89"><td class="memItemLeft" align="right" valign="top"><a id="a160b408dc161815b6bc1190de01e0c89"></a>
-<a class="el" href="class_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ShadeRay</b> (std::shared_ptr&lt; <a class="el" href="class_world.html">World</a> &gt; world, <a class="el" href="class_ray.html">Ray</a> ray, int currentDepth)</td></tr>
-<tr class="separator:a160b408dc161815b6bc1190de01e0c89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93ac5390d0817efbd5cbbab8ec2ad87a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image_r_t.html#a93ac5390d0817efbd5cbbab8ec2ad87a">ShadeRay</a> (std::shared_ptr&lt; <a class="el" href="class_world.html">World</a> &gt; world, <a class="el" href="class_ray.html">Ray</a> ray, int currentDepth, <a class="el" href="struct_vector2.html">Vector2</a> uv)</td></tr>
+<tr class="separator:a93ac5390d0817efbd5cbbab8ec2ad87a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5246ee0eb1f305eb1e9eeb45c0a2101"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image_r_t.html#af5246ee0eb1f305eb1e9eeb45c0a2101">WriteImage</a> (char const *filename, int x, int y, int comp)</td></tr>
 <tr class="separator:af5246ee0eb1f305eb1e9eeb45c0a2101"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a310535557d4ed3efbe5c7323539ea609"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_image_r_t.html#a310535557d4ed3efbe5c7323539ea609">SavePixel</a> (<a class="el" href="class_color.html">Color</a> li)</td></tr>
@@ -167,6 +164,83 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>MaxDepth</b> (int m)<
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="afb67d5e275fc247a57c652018c8b9667"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb67d5e275fc247a57c652018c8b9667">&#9670;&nbsp;</a></span>RayTrace() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ImageRT::RayTrace </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_world.html">World</a> &gt;&#160;</td>
+          <td class="paramname"><em>world</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_camera.html">Camera</a> &gt;&#160;</td>
+          <td class="paramname"><em>camera</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Function that render image, and save to file </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">world</td><td>- world, contains all objects in scene </td></tr>
+    <tr><td class="paramname">camera</td><td>- camera, from which one, image will be rendered </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae74c2c5bf97f797424b6e9bbcb3122af"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae74c2c5bf97f797424b6e9bbcb3122af">&#9670;&nbsp;</a></span>RayTrace() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ImageRT::RayTrace </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_world.html">World</a> &gt;&#160;</td>
+          <td class="paramname"><em>world</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_camera.html">Camera</a> &gt;&#160;</td>
+          <td class="paramname"><em>camera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_sampler.html">Sampler</a> &gt;&#160;</td>
+          <td class="paramname"><em>sampler</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Function that render image, and save to file </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">world</td><td>- world, contains all objects in scene </td></tr>
+    <tr><td class="paramname">camera</td><td>- camera, from which one, image will be rendered </td></tr>
+    <tr><td class="paramname">sampler</td><td>- sampler, that contains samples to antyaliasing </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a310535557d4ed3efbe5c7323539ea609"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a310535557d4ed3efbe5c7323539ea609">&#9670;&nbsp;</a></span>SavePixel()</h2>
 
@@ -188,6 +262,56 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>MaxDepth</b> (int m)<
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a93ac5390d0817efbd5cbbab8ec2ad87a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93ac5390d0817efbd5cbbab8ec2ad87a">&#9670;&nbsp;</a></span>ShadeRay()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_color.html">Color</a> ImageRT::ShadeRay </td>
+          <td>(</td>
+          <td class="paramtype">std::shared_ptr&lt; <a class="el" href="class_world.html">World</a> &gt;&#160;</td>
+          <td class="paramname"><em>world</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_ray.html">Ray</a>&#160;</td>
+          <td class="paramname"><em>ray</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>currentDepth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_vector2.html">Vector2</a>&#160;</td>
+          <td class="paramname"><em>uv</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Function that counting color per pixel </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">world</td><td>- world, contains all objects in scene </td></tr>
+    <tr><td class="paramname">ray</td><td>- ray, that will be counting per pixel </td></tr>
+    <tr><td class="paramname">currenthDepth</td><td>- maximum numbers of reflections </td></tr>
+    <tr><td class="paramname">uv</td><td>- picture UV coordinates </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_color.html" title="Color class that represents light intensity for a color in RGB colorspace.">Color</a> object </dd></dl>
 
 </div>
 </div>
@@ -241,8 +365,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>MaxDepth</b> (int m)<
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>RayTracerApp/RayTracerApp/<a class="el" href="_image_r_t_8h_source.html">ImageRT.h</a></li>
-<li>RayTracerApp/RayTracerApp/ImageRT.cpp</li>
+<li>D:/dev/RayTracerApp/RayTracerApp/RayTracerApp/<a class="el" href="_image_r_t_8h_source.html">ImageRT.h</a></li>
+<li>D:/dev/RayTracerApp/RayTracerApp/RayTracerApp/ImageRT.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

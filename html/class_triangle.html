@@ -94,10 +94,13 @@ Inheritance diagram for Triangle:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5d7f442181848a4fc005de888e213385"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_triangle.html#a5d7f442181848a4fc005de888e213385">Triangle</a> (<a class="el" href="class_vector.html">Vector</a> a, <a class="el" href="class_vector.html">Vector</a> b, <a class="el" href="class_vector.html">Vector</a> c)</td></tr>
 <tr class="separator:a5d7f442181848a4fc005de888e213385"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f7271ef367468d3b7f8e84719b7f683"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_triangle.html#a0f7271ef367468d3b7f8e84719b7f683">Intersection</a> (<a class="el" href="class_ray.html">Ray</a> ray, float &amp;t0, float &amp;t1)</td></tr>
-<tr class="separator:a0f7271ef367468d3b7f8e84719b7f683"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac198b18919bb4fa17df8c92bfcbaec7"><td class="memItemLeft" align="right" valign="top"><a id="aac198b18919bb4fa17df8c92bfcbaec7"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>HitTest</b> (<a class="el" href="class_ray.html">Ray</a> ray, float &amp;distance, <a class="el" href="class_vector.html">Vector</a> &amp;normal)</td></tr>
+<tr class="memitem:a14d6d11337870b780fc412a79b975049"><td class="memItemLeft" align="right" valign="top"><a id="a14d6d11337870b780fc412a79b975049"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Triangle</b> (<a class="el" href="class_vector.html">Vector</a> vertexa, <a class="el" href="class_vector.html">Vector</a> vertexb, <a class="el" href="class_vector.html">Vector</a> vertexc, std::shared_ptr&lt; <a class="el" href="class_material.html">Material</a> &gt; mat)</td></tr>
+<tr class="separator:a14d6d11337870b780fc412a79b975049"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acff16b03d92a2bf28c7d0494b1b092a8"><td class="memItemLeft" align="right" valign="top"><a id="acff16b03d92a2bf28c7d0494b1b092a8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Triangle</b> (<a class="el" href="class_vector.html">Vector</a> vertexa, <a class="el" href="class_vector.html">Vector</a> vertexb, <a class="el" href="class_vector.html">Vector</a> vertexc, <a class="el" href="class_vector.html">Vector</a> normala, <a class="el" href="class_vector.html">Vector</a> normalb, <a class="el" href="class_vector.html">Vector</a> normalc, std::shared_ptr&lt; <a class="el" href="class_material.html">Material</a> &gt; mat)</td></tr>
+<tr class="separator:acff16b03d92a2bf28c7d0494b1b092a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac198b18919bb4fa17df8c92bfcbaec7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_triangle.html#aac198b18919bb4fa17df8c92bfcbaec7">HitTest</a> (<a class="el" href="class_ray.html">Ray</a> ray, float &amp;distance, <a class="el" href="class_vector.html">Vector</a> &amp;normal)</td></tr>
 <tr class="separator:aac198b18919bb4fa17df8c92bfcbaec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2d135da37785fde457b5560f2769d3a"><td class="memItemLeft" align="right" valign="top"><a id="af2d135da37785fde457b5560f2769d3a"></a>
 <a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>A</b> () const</td></tr>
@@ -179,14 +182,17 @@ std::shared_ptr&lt; <a class="el" href="class_material.html">Material</a> &gt;&#
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a0f7271ef367468d3b7f8e84719b7f683"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0f7271ef367468d3b7f8e84719b7f683">&#9670;&nbsp;</a></span>Intersection()</h2>
+<a id="aac198b18919bb4fa17df8c92bfcbaec7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac198b18919bb4fa17df8c92bfcbaec7">&#9670;&nbsp;</a></span>HitTest()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Triangle::Intersection </td>
+          <td class="memname">bool Triangle::HitTest </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_ray.html">Ray</a>&#160;</td>
           <td class="paramname"><em>ray</em>, </td>
@@ -195,13 +201,13 @@ std::shared_ptr&lt; <a class="el" href="class_material.html">Material</a> &gt;&#
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">float &amp;&#160;</td>
-          <td class="paramname"><em>t0</em>, </td>
+          <td class="paramname"><em>distance</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">float &amp;&#160;</td>
-          <td class="paramname"><em>t1</em>&#160;</td>
+          <td class="paramtype"><a class="el" href="class_vector.html">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>normal</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -209,6 +215,11 @@ std::shared_ptr&lt; <a class="el" href="class_material.html">Material</a> &gt;&#
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 <p><a class="el" href="class_triangle.html" title="Traingle is a class which is a representation of a triangle GeometricShape.">Triangle</a> intersection is based on three steps:</p><ol type="1">
 <li>finding vectors from the intersection to each of the vertices, i.e. \(PA\) \(PB\) \(PC\)</li>
@@ -219,11 +230,13 @@ std::shared_ptr&lt; <a class="el" href="class_material.html">Material</a> &gt;&#
  </li>
 </ol>
 
+<p>Implements <a class="el" href="class_geometric_shape.html">GeometricShape</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>RayTracerApp/RayTracerApp/<a class="el" href="_triangle_8h_source.html">Triangle.h</a></li>
-<li>RayTracerApp/RayTracerApp/Triangle.cpp</li>
+<li>D:/dev/RayTracerApp/RayTracerApp/RayTracerApp/<a class="el" href="_triangle_8h_source.html">Triangle.h</a></li>
+<li>D:/dev/RayTracerApp/RayTracerApp/RayTracerApp/Triangle.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

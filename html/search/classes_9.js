@@ -1,9 +1,8 @@
 var searchData=
 [
-  ['sampledistributor_78',['SampleDistributor',['../class_sample_distributor.html',1,'']]],
-  ['samplegenerator_79',['SampleGenerator',['../class_sample_generator.html',1,'']]],
-  ['sampler_80',['Sampler',['../class_sampler.html',1,'']]],
-  ['sphere_81',['Sphere',['../class_sphere.html',1,'']]],
-  ['squaredistributor_82',['SquareDistributor',['../class_square_distributor.html',1,'']]],
-  ['surface_83',['Surface',['../class_surface.html',1,'']]]
+  ['perfectdiffuse_109',['PerfectDiffuse',['../class_perfect_diffuse.html',1,'']]],
+  ['perspectivecamera_110',['PerspectiveCamera',['../class_perspective_camera.html',1,'']]],
+  ['phong_111',['Phong',['../class_phong.html',1,'']]],
+  ['pointlight_112',['PointLight',['../class_point_light.html',1,'']]],
+  ['points_5ft_113',['points_t',['../structtinyobj_1_1points__t.html',1,'tinyobj']]]
 ];

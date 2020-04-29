@@ -1,8 +1,12 @@
 var searchData=
 [
-  ['ray_115',['Ray',['../class_ray.html#a2e3d2c29f2df4ab3da10da79d4acb852',1,'Ray::Ray()'],['../class_ray.html#a45105f0bf1d53f595a34e11977c12142',1,'Ray::Ray(Vector origin, Vector direction)'],['../class_ray.html#ad0288e84aa6367c05e94ddc3321ef830',1,'Ray::Ray(Vector origin, float dis)'],['../class_ray.html#a5573f261316305cb3b520a789c221aeb',1,'Ray::Ray(Vector origin, Vector direction, float dis)']]],
-  ['raydirection_116',['RayDirection',['../class_perspective_camera.html#adbd5edd47938c403a7fb848169e9f89d',1,'PerspectiveCamera']]],
-  ['reflect_117',['Reflect',['../class_vector.html#a3e98e3ccc4a5c060dad1d9e406a8a70a',1,'Vector']]],
-  ['reflective_118',['Reflective',['../class_reflective.html#a71fd77699ceef5eb7106d26546245580',1,'Reflective']]],
-  ['reflectproduct_119',['ReflectProduct',['../class_vector.html#a2a81d8ed4fa4e67e8065bda405cc0711',1,'Vector']]]
+  ['operator_2a_150',['operator*',['../class_color.html#a6f2ff4e130b2ddcbdf11d0b0acf52981',1,'Color::operator*(float num)'],['../class_color.html#abe1ac839b413940acf781ed1e39cce86',1,'Color::operator*(Color &amp;li)']]],
+  ['operator_2a_3d_151',['operator*=',['../class_color.html#a899b0f81a8db0f9f84c80d02c71899d5',1,'Color']]],
+  ['operator_2b_152',['operator+',['../class_color.html#a8329cabd51db0b23be71154e99152e49',1,'Color']]],
+  ['operator_2b_3d_153',['operator+=',['../class_color.html#a35ca19b76e76858765a9675bf2d4b173',1,'Color']]],
+  ['operator_2d_154',['operator-',['../class_color.html#a48c9df8579da42b543e013d5519b6bbe',1,'Color']]],
+  ['operator_2d_3d_155',['operator-=',['../class_color.html#a5759fe164448efcef8c7578005797df3',1,'Color']]],
+  ['operator_2f_156',['operator/',['../class_color.html#a9a94fddd5937130037ed5c576aa98567',1,'Color']]],
+  ['operator_2f_3d_157',['operator/=',['../class_color.html#a0837e04c411878ca8102ec5e11481125',1,'Color']]],
+  ['orthonormalbasis_158',['OrthonormalBasis',['../class_orthonormal_basis.html#a514dc92f47995a22e58213438e7878de',1,'OrthonormalBasis']]]
 ];

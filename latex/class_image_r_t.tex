@@ -23,14 +23,11 @@ Inheritance diagram for Image\+RT\+:\begin{figure}[H]
 \mbox{\Hypertarget{class_image_r_t_a24ae83419cbe1c9ec4aab3edcd24adf3}\label{class_image_r_t_a24ae83419cbe1c9ec4aab3edcd24adf3}} 
 {\bfseries Image\+RT} (int h, int w, int max\+Depth)
 \item 
-\mbox{\Hypertarget{class_image_r_t_afb67d5e275fc247a57c652018c8b9667}\label{class_image_r_t_afb67d5e275fc247a57c652018c8b9667}} 
-void {\bfseries Ray\+Trace} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_world}{World}} $>$ world, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_camera}{Camera}} $>$ camera)
+void \mbox{\hyperlink{class_image_r_t_afb67d5e275fc247a57c652018c8b9667}{Ray\+Trace}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_world}{World}} $>$ world, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_camera}{Camera}} $>$ camera)
 \item 
-\mbox{\Hypertarget{class_image_r_t_ae74c2c5bf97f797424b6e9bbcb3122af}\label{class_image_r_t_ae74c2c5bf97f797424b6e9bbcb3122af}} 
-void {\bfseries Ray\+Trace} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_world}{World}} $>$ world, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_camera}{Camera}} $>$ camera, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sampler}{Sampler}} $>$ sampler)
+void \mbox{\hyperlink{class_image_r_t_ae74c2c5bf97f797424b6e9bbcb3122af}{Ray\+Trace}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_world}{World}} $>$ world, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_camera}{Camera}} $>$ camera, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sampler}{Sampler}} $>$ sampler)
 \item 
-\mbox{\Hypertarget{class_image_r_t_a160b408dc161815b6bc1190de01e0c89}\label{class_image_r_t_a160b408dc161815b6bc1190de01e0c89}} 
-\mbox{\hyperlink{class_color}{Color}} {\bfseries Shade\+Ray} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_world}{World}} $>$ world, \mbox{\hyperlink{class_ray}{Ray}} ray, int current\+Depth)
+\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_image_r_t_a93ac5390d0817efbd5cbbab8ec2ad87a}{Shade\+Ray}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_world}{World}} $>$ world, \mbox{\hyperlink{class_ray}{Ray}} ray, int current\+Depth, \mbox{\hyperlink{struct_vector2}{Vector2}} uv)
 \item 
 void \mbox{\hyperlink{class_image_r_t_af5246ee0eb1f305eb1e9eeb45c0a2101}{Write\+Image}} (char const $\ast$filename, int x, int y, int comp)
 \item 
@@ -81,6 +78,34 @@ Basic constructor. Creates an image to prepare file to render
 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_image_r_t_afb67d5e275fc247a57c652018c8b9667}\label{class_image_r_t_afb67d5e275fc247a57c652018c8b9667}} 
+\index{ImageRT@{ImageRT}!RayTrace@{RayTrace}}
+\index{RayTrace@{RayTrace}!ImageRT@{ImageRT}}
+\doxysubsubsection{\texorpdfstring{RayTrace()}{RayTrace()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Image\+R\+T\+::\+Ray\+Trace (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_world}{World}} $>$}]{world,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_camera}{Camera}} $>$}]{camera }\end{DoxyParamCaption})}
+
+Function that render image, and save to file 
+\begin{DoxyParams}{Parameters}
+{\em world} & -\/ world, contains all objects in scene \\
+\hline
+{\em camera} & -\/ camera, from which one, image will be rendered \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_image_r_t_ae74c2c5bf97f797424b6e9bbcb3122af}\label{class_image_r_t_ae74c2c5bf97f797424b6e9bbcb3122af}} 
+\index{ImageRT@{ImageRT}!RayTrace@{RayTrace}}
+\index{RayTrace@{RayTrace}!ImageRT@{ImageRT}}
+\doxysubsubsection{\texorpdfstring{RayTrace()}{RayTrace()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Image\+R\+T\+::\+Ray\+Trace (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_world}{World}} $>$}]{world,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_camera}{Camera}} $>$}]{camera,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sampler}{Sampler}} $>$}]{sampler }\end{DoxyParamCaption})}
+
+Function that render image, and save to file 
+\begin{DoxyParams}{Parameters}
+{\em world} & -\/ world, contains all objects in scene \\
+\hline
+{\em camera} & -\/ camera, from which one, image will be rendered \\
+\hline
+{\em sampler} & -\/ sampler, that contains samples to antyaliasing \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{class_image_r_t_a310535557d4ed3efbe5c7323539ea609}\label{class_image_r_t_a310535557d4ed3efbe5c7323539ea609}} 
 \index{ImageRT@{ImageRT}!SavePixel@{SavePixel}}
 \index{SavePixel@{SavePixel}!ImageRT@{ImageRT}}
@@ -92,6 +117,26 @@ Function that writing image data to bmp file
 {\em li} & -\/ \mbox{\hyperlink{class_color}{Color}} object to save \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{class_image_r_t_a93ac5390d0817efbd5cbbab8ec2ad87a}\label{class_image_r_t_a93ac5390d0817efbd5cbbab8ec2ad87a}} 
+\index{ImageRT@{ImageRT}!ShadeRay@{ShadeRay}}
+\index{ShadeRay@{ShadeRay}!ImageRT@{ImageRT}}
+\doxysubsubsection{\texorpdfstring{ShadeRay()}{ShadeRay()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_color}{Color}} Image\+R\+T\+::\+Shade\+Ray (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_world}{World}} $>$}]{world,  }\item[{\mbox{\hyperlink{class_ray}{Ray}}}]{ray,  }\item[{int}]{current\+Depth,  }\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{uv }\end{DoxyParamCaption})}
+
+Function that counting color per pixel 
+\begin{DoxyParams}{Parameters}
+{\em world} & -\/ world, contains all objects in scene \\
+\hline
+{\em ray} & -\/ ray, that will be counting per pixel \\
+\hline
+{\em currenth\+Depth} & -\/ maximum numbers of reflections \\
+\hline
+{\em uv} & -\/ picture UV coordinates \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_color}{Color}} object 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_image_r_t_af5246ee0eb1f305eb1e9eeb45c0a2101}\label{class_image_r_t_af5246ee0eb1f305eb1e9eeb45c0a2101}} 
 \index{ImageRT@{ImageRT}!WriteImage@{WriteImage}}
 \index{WriteImage@{WriteImage}!ImageRT@{ImageRT}}
@@ -113,5 +158,5 @@ Function that writing image data to bmp file
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Ray\+Tracer\+App/\+Ray\+Tracer\+App/Image\+R\+T.\+h\item 
-Ray\+Tracer\+App/\+Ray\+Tracer\+App/Image\+R\+T.\+cpp\end{DoxyCompactItemize}
+D\+:/dev/\+Ray\+Tracer\+App/\+Ray\+Tracer\+App/\+Ray\+Tracer\+App/Image\+R\+T.\+h\item 
+D\+:/dev/\+Ray\+Tracer\+App/\+Ray\+Tracer\+App/\+Ray\+Tracer\+App/Image\+R\+T.\+cpp\end{DoxyCompactItemize}

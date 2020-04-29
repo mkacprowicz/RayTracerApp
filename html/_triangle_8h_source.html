@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>RayTracerApp: RayTracerApp/RayTracerApp/Triangle.h Source File</title>
+<title>RayTracerApp: D:/dev/RayTracerApp/RayTracerApp/RayTracerApp/Triangle.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -68,7 +68,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_41cd6085202681518ada3109d080e519.html">RayTracerApp</a></li><li class="navelem"><a class="el" href="dir_05b6ba2db2ed969cc246b4aa07dd6f7f.html">RayTracerApp</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_dd035a6a55649280f68a39d713810fd2.html">dev</a></li><li class="navelem"><a class="el" href="dir_4a6c51babcca044d5a8c848bfe0e124b.html">RayTracerApp</a></li><li class="navelem"><a class="el" href="dir_80afbd8bf5132aa1e9b48eb9f7a2cedf.html">RayTracerApp</a></li><li class="navelem"><a class="el" href="dir_8540d838ea1e84707543b7c00e293fed.html">RayTracerApp</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -86,30 +86,36 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_triangle.html">Triangle</a>();</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_triangle.html">Triangle</a>(<a class="code" href="class_vector.html">Vector</a> a, <a class="code" href="class_vector.html">Vector</a> b, <a class="code" href="class_vector.html">Vector</a> c);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_triangle.html#a0f7271ef367468d3b7f8e84719b7f683">Intersection</a>(<a class="code" href="class_ray.html">Ray</a> ray, <span class="keywordtype">float</span>&amp; t0, <span class="keywordtype">float</span>&amp; t1);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_triangle.html">Triangle</a>(<a class="code" href="class_vector.html">Vector</a> vertexa, <a class="code" href="class_vector.html">Vector</a> vertexb, <a class="code" href="class_vector.html">Vector</a> vertexc, std::shared_ptr&lt;Material&gt; mat);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_triangle.html">Triangle</a>(<a class="code" href="class_vector.html">Vector</a> vertexa, <a class="code" href="class_vector.html">Vector</a> vertexb, <a class="code" href="class_vector.html">Vector</a> vertexc, <a class="code" href="class_vector.html">Vector</a> normala, <a class="code" href="class_vector.html">Vector</a> normalb, <a class="code" href="class_vector.html">Vector</a> normalc, std::shared_ptr&lt;Material&gt; mat);</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">bool</span> HitTest(<a class="code" href="class_ray.html">Ray</a> ray, <span class="keywordtype">float</span>&amp; distance, <a class="code" href="class_vector.html">Vector</a>&amp; normal);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_triangle.html#aac198b18919bb4fa17df8c92bfcbaec7">HitTest</a>(<a class="code" href="class_ray.html">Ray</a> ray, <span class="keywordtype">float</span>&amp; distance, <a class="code" href="class_vector.html">Vector</a>&amp; normal);</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_vector.html">Vector</a> A()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> A_; }</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> A(<a class="code" href="class_vector.html">Vector</a> a) { A_ = a; }</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_vector.html">Vector</a> B()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> B_; }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> B(<a class="code" href="class_vector.html">Vector</a> b) { B_ = b; }</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_vector.html">Vector</a> C()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> C_; }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> C(<a class="code" href="class_vector.html">Vector</a> c) { C_ = c; }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_vector.html">Vector</a> A_;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_vector.html">Vector</a> B_;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_vector.html">Vector</a> C_;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_vector.html">Vector</a> A()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> A_; }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> A(<a class="code" href="class_vector.html">Vector</a> a) { A_ = a; }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_vector.html">Vector</a> B()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> B_; }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> B(<a class="code" href="class_vector.html">Vector</a> b) { B_ = b; }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_vector.html">Vector</a> C()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> C_; }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> C(<a class="code" href="class_vector.html">Vector</a> c) { C_ = c; }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_vector.html">Vector</a> A_;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_vector.html">Vector</a> B_;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_vector.html">Vector</a> C_;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <a class="code" href="class_vector.html">Vector</a> VertexA;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_vector.html">Vector</a> EdgeAB;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_vector.html">Vector</a> EdgeAC;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="class_vector.html">Vector</a> NormalA;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="class_vector.html">Vector</a> NormalAB;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <a class="code" href="class_vector.html">Vector</a> NormalAC;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_triangle_html"><div class="ttname"><a href="class_triangle.html">Triangle</a></div><div class="ttdoc">Traingle is a class which is a representation of a triangle GeometricShape.</div><div class="ttdef"><b>Definition:</b> Triangle.h:8</div></div>
+<div class="ttc" id="aclass_triangle_html_aac198b18919bb4fa17df8c92bfcbaec7"><div class="ttname"><a href="class_triangle.html#aac198b18919bb4fa17df8c92bfcbaec7">Triangle::HitTest</a></div><div class="ttdeci">bool HitTest(Ray ray, float &amp;distance, Vector &amp;normal)</div><div class="ttdef"><b>Definition:</b> Triangle.cpp:60</div></div>
 <div class="ttc" id="aclass_ray_html"><div class="ttname"><a href="class_ray.html">Ray</a></div><div class="ttdef"><b>Definition:</b> Ray.h:21</div></div>
 <div class="ttc" id="aclass_geometric_shape_html"><div class="ttname"><a href="class_geometric_shape.html">GeometricShape</a></div><div class="ttdef"><b>Definition:</b> GeometricShape.h:9</div></div>
-<div class="ttc" id="aclass_triangle_html_a0f7271ef367468d3b7f8e84719b7f683"><div class="ttname"><a href="class_triangle.html#a0f7271ef367468d3b7f8e84719b7f683">Triangle::Intersection</a></div><div class="ttdeci">bool Intersection(Ray ray, float &amp;t0, float &amp;t1)</div><div class="ttdef"><b>Definition:</b> Triangle.cpp:36</div></div>
 <div class="ttc" id="aclass_vector_html"><div class="ttname"><a href="class_vector.html">Vector</a></div><div class="ttdoc">Vector class which is a representation of a 3D vector.</div><div class="ttdef"><b>Definition:</b> Vector.h:29</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

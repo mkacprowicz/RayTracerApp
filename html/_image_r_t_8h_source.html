@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>RayTracerApp: RayTracerApp/RayTracerApp/ImageRT.h Source File</title>
+<title>RayTracerApp: D:/dev/RayTracerApp/RayTracerApp/RayTracerApp/ImageRT.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -68,7 +68,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_41cd6085202681518ada3109d080e519.html">RayTracerApp</a></li><li class="navelem"><a class="el" href="dir_05b6ba2db2ed969cc246b4aa07dd6f7f.html">RayTracerApp</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_dd035a6a55649280f68a39d713810fd2.html">dev</a></li><li class="navelem"><a class="el" href="dir_4a6c51babcca044d5a8c848bfe0e124b.html">RayTracerApp</a></li><li class="navelem"><a class="el" href="dir_80afbd8bf5132aa1e9b48eb9f7a2cedf.html">RayTracerApp</a></li><li class="navelem"><a class="el" href="dir_8540d838ea1e84707543b7c00e293fed.html">RayTracerApp</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -93,10 +93,10 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_image_r_t.html#adf3738620a02a63901d24c9702c1b60c">ImageRT</a>(<span class="keywordtype">int</span> h, <span class="keywordtype">int</span> w);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="class_image_r_t.html#adf3738620a02a63901d24c9702c1b60c">ImageRT</a>(<span class="keywordtype">int</span> h, <span class="keywordtype">int</span> w, <span class="keywordtype">int</span> maxDepth);</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> RayTrace(std::shared_ptr&lt;World&gt; world, std::shared_ptr&lt;Camera&gt; camera);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> RayTrace(std::shared_ptr&lt;World&gt; world, std::shared_ptr&lt;Camera&gt; camera, std::shared_ptr&lt;Sampler&gt; sampler);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_image_r_t.html#afb67d5e275fc247a57c652018c8b9667">RayTrace</a>(std::shared_ptr&lt;World&gt; world, std::shared_ptr&lt;Camera&gt; camera);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_image_r_t.html#afb67d5e275fc247a57c652018c8b9667">RayTrace</a>(std::shared_ptr&lt;World&gt; world, std::shared_ptr&lt;Camera&gt; camera, std::shared_ptr&lt;Sampler&gt; sampler);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_color.html">Color</a> ShadeRay(std::shared_ptr&lt;World&gt; world, <a class="code" href="class_ray.html">Ray</a> ray, <span class="keywordtype">int</span> currentDepth);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="class_color.html">Color</a> <a class="code" href="class_image_r_t.html#a93ac5390d0817efbd5cbbab8ec2ad87a">ShadeRay</a>(std::shared_ptr&lt;World&gt; world, <a class="code" href="class_ray.html">Ray</a> ray, <span class="keywordtype">int</span> currentDepth, <a class="code" href="struct_vector2.html">Vector2</a> uv);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_image_r_t.html#af5246ee0eb1f305eb1e9eeb45c0a2101">WriteImage</a>(<span class="keywordtype">char</span> <span class="keyword">const</span>* filename, <span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> comp);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
@@ -119,11 +119,14 @@ $(function() {
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_color_html"><div class="ttname"><a href="class_color.html">Color</a></div><div class="ttdoc">Color class that represents light intensity for a color in RGB colorspace.</div><div class="ttdef"><b>Definition:</b> Color.h:11</div></div>
-<div class="ttc" id="aclass_image_r_t_html_af5246ee0eb1f305eb1e9eeb45c0a2101"><div class="ttname"><a href="class_image_r_t.html#af5246ee0eb1f305eb1e9eeb45c0a2101">ImageRT::WriteImage</a></div><div class="ttdeci">void WriteImage(char const *filename, int x, int y, int comp)</div><div class="ttdef"><b>Definition:</b> ImageRT.cpp:102</div></div>
+<div class="ttc" id="aclass_image_r_t_html_a93ac5390d0817efbd5cbbab8ec2ad87a"><div class="ttname"><a href="class_image_r_t.html#a93ac5390d0817efbd5cbbab8ec2ad87a">ImageRT::ShadeRay</a></div><div class="ttdeci">Color ShadeRay(std::shared_ptr&lt; World &gt; world, Ray ray, int currentDepth, Vector2 uv)</div><div class="ttdef"><b>Definition:</b> ImageRT.cpp:94</div></div>
+<div class="ttc" id="aclass_image_r_t_html_afb67d5e275fc247a57c652018c8b9667"><div class="ttname"><a href="class_image_r_t.html#afb67d5e275fc247a57c652018c8b9667">ImageRT::RayTrace</a></div><div class="ttdeci">void RayTrace(std::shared_ptr&lt; World &gt; world, std::shared_ptr&lt; Camera &gt; camera)</div><div class="ttdef"><b>Definition:</b> ImageRT.cpp:36</div></div>
+<div class="ttc" id="aclass_image_r_t_html_af5246ee0eb1f305eb1e9eeb45c0a2101"><div class="ttname"><a href="class_image_r_t.html#af5246ee0eb1f305eb1e9eeb45c0a2101">ImageRT::WriteImage</a></div><div class="ttdeci">void WriteImage(char const *filename, int x, int y, int comp)</div><div class="ttdef"><b>Definition:</b> ImageRT.cpp:125</div></div>
 <div class="ttc" id="aclass_image_r_t_html"><div class="ttname"><a href="class_image_r_t.html">ImageRT</a></div><div class="ttdoc">ImageRT class which is a representation of a image.</div><div class="ttdef"><b>Definition:</b> ImageRT.h:17</div></div>
 <div class="ttc" id="aclass_ray_html"><div class="ttname"><a href="class_ray.html">Ray</a></div><div class="ttdef"><b>Definition:</b> Ray.h:21</div></div>
+<div class="ttc" id="astruct_vector2_html"><div class="ttname"><a href="struct_vector2.html">Vector2</a></div><div class="ttdef"><b>Definition:</b> Vector.h:6</div></div>
 <div class="ttc" id="aclass_image_r_t_html_adf3738620a02a63901d24c9702c1b60c"><div class="ttname"><a href="class_image_r_t.html#adf3738620a02a63901d24c9702c1b60c">ImageRT::ImageRT</a></div><div class="ttdeci">ImageRT(int h, int w)</div><div class="ttdef"><b>Definition:</b> ImageRT.cpp:15</div></div>
-<div class="ttc" id="aclass_image_r_t_html_a310535557d4ed3efbe5c7323539ea609"><div class="ttname"><a href="class_image_r_t.html#a310535557d4ed3efbe5c7323539ea609">ImageRT::SavePixel</a></div><div class="ttdeci">void SavePixel(Color li)</div><div class="ttdef"><b>Definition:</b> ImageRT.cpp:111</div></div>
+<div class="ttc" id="aclass_image_r_t_html_a310535557d4ed3efbe5c7323539ea609"><div class="ttname"><a href="class_image_r_t.html#a310535557d4ed3efbe5c7323539ea609">ImageRT::SavePixel</a></div><div class="ttdeci">void SavePixel(Color li)</div><div class="ttdef"><b>Definition:</b> ImageRT.cpp:134</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

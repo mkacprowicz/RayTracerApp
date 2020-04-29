@@ -4,6 +4,7 @@
 #include "Vector.h"
 #include "Color.h"
 
+//! Texture is class representing texture of objects
 class Texture
 {
 public:

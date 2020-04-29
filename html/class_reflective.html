@@ -89,6 +89,9 @@ Inheritance diagram for Reflective:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a71fd77699ceef5eb7106d26546245580"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reflective.html#a71fd77699ceef5eb7106d26546245580">Reflective</a> (<a class="el" href="class_color.html">Color</a> materialColor, float diffuse, float specular, float exponent, float reflectivity)</td></tr>
 <tr class="separator:a71fd77699ceef5eb7106d26546245580"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a08c691741939c30993392a24cbb26275"><td class="memItemLeft" align="right" valign="top"><a id="a08c691741939c30993392a24cbb26275"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>Reflective</b> (<a class="el" href="class_color.html">Color</a> materialColor, float diffuse, float specular, float exponent, float reflectivity, std::shared_ptr&lt; <a class="el" href="class_texture.html">Texture</a> &gt; texture)</td></tr>
+<tr class="separator:a08c691741939c30993392a24cbb26275"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e27ad8f5fcc64e75136e5fe231fbd9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_reflective.html#a4e27ad8f5fcc64e75136e5fe231fbd9f">Shade</a> (std::shared_ptr&lt; <a class="el" href="class_image_r_t.html">ImageRT</a> &gt; tracer, std::shared_ptr&lt; <a class="el" href="class_hit_info.html">HitInfo</a> &gt; hit)</td></tr>
 <tr class="separator:a4e27ad8f5fcc64e75136e5fe231fbd9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6aeeeb608a9bd357526e3bcff3994953"><td class="memItemLeft" align="right" valign="top"><a id="a6aeeeb608a9bd357526e3bcff3994953"></a>
@@ -103,6 +106,20 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>Reflectivity</b> () 
 <tr class="memitem:a70cf2cf95a90d01905977518ca79f98a"><td class="memItemLeft" align="right" valign="top"><a id="a70cf2cf95a90d01905977518ca79f98a"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Reflectivity</b> (float r)</td></tr>
 <tr class="separator:a70cf2cf95a90d01905977518ca79f98a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_class_material"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_material')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_material.html">Material</a></td></tr>
+<tr class="memitem:aa62929ebbcc6ed84bef870ed00e94915 inherit pub_methods_class_material"><td class="memItemLeft" align="right" valign="top"><a id="aa62929ebbcc6ed84bef870ed00e94915"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsTextured</b> () const</td></tr>
+<tr class="separator:aa62929ebbcc6ed84bef870ed00e94915 inherit pub_methods_class_material"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_attribs_class_material"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_class_material')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="class_material.html">Material</a></td></tr>
+<tr class="memitem:a795f54c2e3883a6c71f9a5cb896c900d inherit pub_attribs_class_material"><td class="memItemLeft" align="right" valign="top"><a id="a795f54c2e3883a6c71f9a5cb896c900d"></a>
+std::shared_ptr&lt; <a class="el" href="class_texture.html">Texture</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>MaterialTexture</b></td></tr>
+<tr class="separator:a795f54c2e3883a6c71f9a5cb896c900d inherit pub_attribs_class_material"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1861dbab160e9da9d7f83d1fc3031cd1 inherit pub_attribs_class_material"><td class="memItemLeft" align="right" valign="top"><a id="a1861dbab160e9da9d7f83d1fc3031cd1"></a>
+<a class="el" href="struct_vector2.html">Vector2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>UV</b></td></tr>
+<tr class="separator:a1861dbab160e9da9d7f83d1fc3031cd1 inherit pub_attribs_class_material"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a71fd77699ceef5eb7106d26546245580"></a>
@@ -206,8 +223,8 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>Reflectivity</b> (flo
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>RayTracerApp/RayTracerApp/<a class="el" href="_reflective_8h_source.html">Reflective.h</a></li>
-<li>RayTracerApp/RayTracerApp/Reflective.cpp</li>
+<li>D:/dev/RayTracerApp/RayTracerApp/RayTracerApp/<a class="el" href="_reflective_8h_source.html">Reflective.h</a></li>
+<li>D:/dev/RayTracerApp/RayTracerApp/RayTracerApp/Reflective.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

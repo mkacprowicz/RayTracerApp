@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>RayTracerApp: RayTracerApp/RayTracerApp/Phong.h Source File</title>
+<title>RayTracerApp: D:/dev/RayTracerApp/RayTracerApp/RayTracerApp/Phong.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -68,7 +68,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_41cd6085202681518ada3109d080e519.html">RayTracerApp</a></li><li class="navelem"><a class="el" href="dir_05b6ba2db2ed969cc246b4aa07dd6f7f.html">RayTracerApp</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_dd035a6a55649280f68a39d713810fd2.html">dev</a></li><li class="navelem"><a class="el" href="dir_4a6c51babcca044d5a8c848bfe0e124b.html">RayTracerApp</a></li><li class="navelem"><a class="el" href="dir_80afbd8bf5132aa1e9b48eb9f7a2cedf.html">RayTracerApp</a></li><li class="navelem"><a class="el" href="dir_8540d838ea1e84707543b7c00e293fed.html">RayTracerApp</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -86,32 +86,33 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_phong.html">Phong</a>();</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_phong.html">Phong</a>(<a class="code" href="class_color.html">Color</a> materialColor, <span class="keywordtype">float</span> diffuseCoeff, <span class="keywordtype">float</span> specular, <span class="keywordtype">float</span> specularExponent);</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_color.html">Color</a> <a class="code" href="class_phong.html#a68c859ec5e7bafd607aa27191f4d0434">Shade</a>(std::shared_ptr&lt;ImageRT&gt; tracer, std::shared_ptr&lt;HitInfo&gt; hit);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keywordtype">float</span> PhongFactor(<a class="code" href="class_vector.html">Vector</a> inDirection, <a class="code" href="class_vector.html">Vector</a> normal, <a class="code" href="class_vector.html">Vector</a> toCameraDirection);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_phong.html">Phong</a>(<a class="code" href="class_color.html">Color</a> materialColor, <span class="keywordtype">float</span> diffuseCoeff, <span class="keywordtype">float</span> specular, <span class="keywordtype">float</span> specularExponent, std::shared_ptr&lt;Texture&gt; texture);</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_color.html">Color</a> <a class="code" href="class_phong.html#a68c859ec5e7bafd607aa27191f4d0434">Shade</a>(std::shared_ptr&lt;ImageRT&gt; tracer, std::shared_ptr&lt;HitInfo&gt; hit);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">float</span> PhongFactor(<a class="code" href="class_vector.html">Vector</a> inDirection, <a class="code" href="class_vector.html">Vector</a> normal, <a class="code" href="class_vector.html">Vector</a> toCameraDirection);</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_color.html">Color</a> MaterialColor()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> MaterialColor_; }</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> MaterialColor(<a class="code" href="class_color.html">Color</a> c) { MaterialColor_ = c; }</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">float</span> DiffuseCoeff()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> DiffuseCoeff_; }</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> DiffuseCoeff(<span class="keywordtype">float</span> d) { DiffuseCoeff_ = d; }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">float</span> Specular()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Specular_; }</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> Specular(<span class="keywordtype">float</span> s) { Specular_ = s; }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">float</span> SpecularExponent()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> SpecularExponent_; }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> SpecularExponent(<span class="keywordtype">float</span> se) { SpecularExponent_ = se; }</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_color.html">Color</a> MaterialColor_;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">float</span> DiffuseCoeff_;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">float</span> Specular_;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">float</span> SpecularExponent_;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_color.html">Color</a> MaterialColor()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> MaterialColor_; }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> MaterialColor(<a class="code" href="class_color.html">Color</a> c) { MaterialColor_ = c; }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">float</span> DiffuseCoeff()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> DiffuseCoeff_; }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> DiffuseCoeff(<span class="keywordtype">float</span> d) { DiffuseCoeff_ = d; }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">float</span> Specular()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Specular_; }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> Specular(<span class="keywordtype">float</span> s) { Specular_ = s; }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">float</span> SpecularExponent()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> SpecularExponent_; }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> SpecularExponent(<span class="keywordtype">float</span> se) { SpecularExponent_ = se; }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_color.html">Color</a> MaterialColor_;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">float</span> DiffuseCoeff_;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">float</span> Specular_;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">float</span> SpecularExponent_;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_color_html"><div class="ttname"><a href="class_color.html">Color</a></div><div class="ttdoc">Color class that represents light intensity for a color in RGB colorspace.</div><div class="ttdef"><b>Definition:</b> Color.h:11</div></div>
-<div class="ttc" id="aclass_phong_html_a68c859ec5e7bafd607aa27191f4d0434"><div class="ttname"><a href="class_phong.html#a68c859ec5e7bafd607aa27191f4d0434">Phong::Shade</a></div><div class="ttdeci">Color Shade(std::shared_ptr&lt; ImageRT &gt; tracer, std::shared_ptr&lt; HitInfo &gt; hit)</div><div class="ttdef"><b>Definition:</b> Phong.cpp:49</div></div>
+<div class="ttc" id="aclass_phong_html_a68c859ec5e7bafd607aa27191f4d0434"><div class="ttname"><a href="class_phong.html#a68c859ec5e7bafd607aa27191f4d0434">Phong::Shade</a></div><div class="ttdeci">Color Shade(std::shared_ptr&lt; ImageRT &gt; tracer, std::shared_ptr&lt; HitInfo &gt; hit)</div><div class="ttdef"><b>Definition:</b> Phong.cpp:58</div></div>
 <div class="ttc" id="aclass_phong_html"><div class="ttname"><a href="class_phong.html">Phong</a></div><div class="ttdoc">Phong class is a representation of the Phong model.</div><div class="ttdef"><b>Definition:</b> Phong.h:8</div></div>
-<div class="ttc" id="aclass_material_html"><div class="ttname"><a href="class_material.html">Material</a></div><div class="ttdoc">Material pure abstract class is a representation of phisical material.</div><div class="ttdef"><b>Definition:</b> Material.h:12</div></div>
+<div class="ttc" id="aclass_material_html"><div class="ttname"><a href="class_material.html">Material</a></div><div class="ttdoc">Material pure abstract class is a representation of phisical material.</div><div class="ttdef"><b>Definition:</b> Material.h:13</div></div>
 <div class="ttc" id="aclass_vector_html"><div class="ttname"><a href="class_vector.html">Vector</a></div><div class="ttdoc">Vector class which is a representation of a 3D vector.</div><div class="ttdef"><b>Definition:</b> Vector.h:29</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

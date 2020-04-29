@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hitinfo_64',['HitInfo',['../class_hit_info.html',1,'']]]
+  ['face_91',['Face',['../struct_face.html',1,'']]]
 ];

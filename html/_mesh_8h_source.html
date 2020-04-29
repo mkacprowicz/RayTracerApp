@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>RayTracerApp: RayTracerApp/RayTracerApp/Mesh.h Source File</title>
+<title>RayTracerApp: D:/dev/RayTracerApp/RayTracerApp/RayTracerApp/Mesh.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -68,7 +68,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_41cd6085202681518ada3109d080e519.html">RayTracerApp</a></li><li class="navelem"><a class="el" href="dir_05b6ba2db2ed969cc246b4aa07dd6f7f.html">RayTracerApp</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_dd035a6a55649280f68a39d713810fd2.html">dev</a></li><li class="navelem"><a class="el" href="dir_4a6c51babcca044d5a8c848bfe0e124b.html">RayTracerApp</a></li><li class="navelem"><a class="el" href="dir_80afbd8bf5132aa1e9b48eb9f7a2cedf.html">RayTracerApp</a></li><li class="navelem"><a class="el" href="dir_8540d838ea1e84707543b7c00e293fed.html">RayTracerApp</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -82,24 +82,50 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;Ray.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_mesh.html">    7</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_mesh.html">Mesh</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="struct_face.html">    7</a></span>&#160;<span class="keyword">struct </span><a class="code" href="struct_face.html">Face</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_mesh.html">Mesh</a>();</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">void</span> PutNextTriangle(<a class="code" href="class_triangle.html">Triangle</a> t);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">void</span> ReadMeshFromFile(std::string filename);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">bool</span> CheckIntersection(<a class="code" href="class_ray.html">Ray</a> ray);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::shared_ptr&lt;std::vector&lt;Triangle&gt;&gt; Shape_;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keywordtype">int</span> A;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordtype">int</span> B;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <span class="keywordtype">int</span> C;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="struct_face.html">Face</a>(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b, <span class="keywordtype">int</span> c) : A(a), B(b), C(c) {};</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;};</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_mesh.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_mesh.html">Mesh</a></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_mesh.html">Mesh</a>();</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> PutNextTriangle(<a class="code" href="class_triangle.html">Triangle</a> t);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> ReadMeshFromFile(std::string filename);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> AddVertex(<span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y, <span class="keywordtype">float</span> z);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> AddFace(<span class="keywordtype">int</span> a, <span class="keywordtype">int</span> b, <span class="keywordtype">int</span> c);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> ComputeNormals();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">int</span> AbsoludeNdx(<span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="class_vector.html">Vector</a> GetNormal(<a class="code" href="struct_face.html">Face</a> face);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    std::shared_ptr&lt;std::vector&lt;Triangle&gt;&gt; Shape() { <span class="keywordflow">return</span> this-&gt;Shape_; };</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    std::shared_ptr&lt;std::vector&lt;Vector&gt;&gt; Verctices() { <span class="keywordflow">return</span> this-&gt;Verticles_; };</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    std::shared_ptr&lt;std::vector&lt;Vector&gt;&gt; Normals() { <span class="keywordflow">return</span> this-&gt;Normals_; };</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    std::shared_ptr&lt;std::vector&lt;Face&gt;&gt; Faces() { <span class="keywordflow">return</span> this-&gt;Faces_; };</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    std::shared_ptr&lt;std::vector&lt;Triangle&gt;&gt; Shape_;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    std::shared_ptr&lt;std::vector&lt;Vector&gt;&gt; Verticles_;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    std::shared_ptr&lt;std::vector&lt;Vector&gt;&gt; Normals_;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    std::shared_ptr&lt;std::vector&lt;Face&gt;&gt; Faces_;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_triangle_html"><div class="ttname"><a href="class_triangle.html">Triangle</a></div><div class="ttdoc">Traingle is a class which is a representation of a triangle GeometricShape.</div><div class="ttdef"><b>Definition:</b> Triangle.h:8</div></div>
-<div class="ttc" id="aclass_mesh_html"><div class="ttname"><a href="class_mesh.html">Mesh</a></div><div class="ttdef"><b>Definition:</b> Mesh.h:8</div></div>
-<div class="ttc" id="aclass_ray_html"><div class="ttname"><a href="class_ray.html">Ray</a></div><div class="ttdef"><b>Definition:</b> Ray.h:21</div></div>
+<div class="ttc" id="aclass_mesh_html"><div class="ttname"><a href="class_mesh.html">Mesh</a></div><div class="ttdef"><b>Definition:</b> Mesh.h:17</div></div>
+<div class="ttc" id="aclass_vector_html"><div class="ttname"><a href="class_vector.html">Vector</a></div><div class="ttdoc">Vector class which is a representation of a 3D vector.</div><div class="ttdef"><b>Definition:</b> Vector.h:29</div></div>
+<div class="ttc" id="astruct_face_html"><div class="ttname"><a href="struct_face.html">Face</a></div><div class="ttdef"><b>Definition:</b> Mesh.h:8</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['loader_66',['Loader',['../classobjl_1_1_loader.html',1,'objl']]]
+  ['hitinfo_93',['HitInfo',['../class_hit_info.html',1,'']]]
 ];

@@ -1,0 +1,73 @@
+\hypertarget{class_texture}{}\doxysection{Texture Class Reference}
+\label{class_texture}\index{Texture@{Texture}}
+
+
+\mbox{\hyperlink{class_texture}{Texture}} is class representing texture of objects.  
+
+
+
+
+{\ttfamily \#include $<$Texture.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_texture_ad5406229668e6ee741beddc3f37a38d1}{Texture}} (const char $\ast$filepath)
+\item 
+\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_texture_a70c85084ca76284684803ef1968dd637}{Get\+Texel\+Color}} (\mbox{\hyperlink{struct_vector2}{Vector2}} uv)
+\item 
+\mbox{\Hypertarget{class_texture_accf8358277ea90c3349c288bbe0e51da}\label{class_texture_accf8358277ea90c3349c288bbe0e51da}} 
+int {\bfseries Texture\+Width} () const
+\item 
+\mbox{\Hypertarget{class_texture_a10691f7e913a01d6b76f17cc97516f94}\label{class_texture_a10691f7e913a01d6b76f17cc97516f94}} 
+void {\bfseries Texture\+Width} (int t)
+\item 
+\mbox{\Hypertarget{class_texture_a324da6df0abc8dfa99f7147be3e57767}\label{class_texture_a324da6df0abc8dfa99f7147be3e57767}} 
+int {\bfseries Texture\+Height} () const
+\item 
+\mbox{\Hypertarget{class_texture_aff4c8e770aec2c967cfa8218a0a8387d}\label{class_texture_aff4c8e770aec2c967cfa8218a0a8387d}} 
+void {\bfseries Texture\+Height} (int t)
+\item 
+\mbox{\Hypertarget{class_texture_afc3f04bfccd1e7cf23b47cfcb8ae878f}\label{class_texture_afc3f04bfccd1e7cf23b47cfcb8ae878f}} 
+unsigned char $\ast$ {\bfseries Texture\+Data} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_texture}{Texture}} is class representing texture of objects. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_texture_ad5406229668e6ee741beddc3f37a38d1}\label{class_texture_ad5406229668e6ee741beddc3f37a38d1}} 
+\index{Texture@{Texture}!Texture@{Texture}}
+\index{Texture@{Texture}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{Texture()}{Texture()}}
+{\footnotesize\ttfamily Texture\+::\+Texture (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filepath }\end{DoxyParamCaption})}
+
+\mbox{\hyperlink{class_texture}{Texture}} constructor 
+\begin{DoxyParams}{Parameters}
+{\em filepath} & -\/ path to the texture file \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_texture_a70c85084ca76284684803ef1968dd637}\label{class_texture_a70c85084ca76284684803ef1968dd637}} 
+\index{Texture@{Texture}!GetTexelColor@{GetTexelColor}}
+\index{GetTexelColor@{GetTexelColor}!Texture@{Texture}}
+\doxysubsubsection{\texorpdfstring{GetTexelColor()}{GetTexelColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_color}{Color}} Texture\+::\+Get\+Texel\+Color (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_vector2}{Vector2}}}]{uv }\end{DoxyParamCaption})}
+
+The simplest example of texturing reproduces a rectangular texture $ (x, z) \in [-1, +1] x [-1, +1] $ on the (x,z) plane. Having a point on the plane (x, 0, z), coordinates, $ v $ can be calculated\+: \[ u = \frac{(z + 1)}{2} \\ v = \frac{(x - 1)}{2} \] Having the calculated intersection point of the coordinates (x, y, z) find the appropriate coordinate coordinates $ \phi $ and $ \theta $ assuming that the radius of such a sphere is $ r = 1 $ . Coordinate $ \phi $ will be the same as in the case of a cylinder, one should consider the value $ \theta $ . By using the running properties of the new coordinate system\+: $ \theta = \cos^{-1}(y) $. Where $ \theta = \cos^{-1}(y) $ can be represented as $ acos(y). acos(y) \in [0, \pi ] $ however, $ \theta = 0 $ when $ v = 1 $. Parameters (u, v) will be calculated\+: \[ u = \frac{ \phi }{2 \pi } \\ v = 1 - \frac{ \theta }{ \pi } \] 
+\begin{DoxyParams}{Parameters}
+{\em uv} & -\/ uv vector \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_color}{Color}} of a pixel 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/dev/\+Ray\+Tracer\+App/\+Ray\+Tracer\+App/\+Ray\+Tracer\+App/Texture.\+h\item 
+D\+:/dev/\+Ray\+Tracer\+App/\+Ray\+Tracer\+App/\+Ray\+Tracer\+App/Texture.\+cpp\end{DoxyCompactItemize}

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['imagert_96',['ImageRT',['../class_image_r_t.html#adf3738620a02a63901d24c9702c1b60c',1,'ImageRT']]],
-  ['intersection_97',['Intersection',['../class_triangle.html#a0f7271ef367468d3b7f8e84719b7f683',1,'Triangle']]]
+  ['hittest_140',['HitTest',['../class_sphere.html#a966d8217283591249e719984dff5c2a6',1,'Sphere::HitTest()'],['../class_triangle.html#aac198b18919bb4fa17df8c92bfcbaec7',1,'Triangle::HitTest()']]]
 ];

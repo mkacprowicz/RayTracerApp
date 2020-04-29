@@ -1,13 +1,28 @@
-#include "Texture.h"
+﻿#include "Texture.h"
 
 #include "vendor/stb_image/stb_image.h"
 #include "vendor/stb_image/stb_image_write.h"
 
+/**
+* Texture constructor
+* @param filepath - path to the texture file
+*/
 Texture::Texture(const char* filepath)
 {
 	this->TextureData_ = stbi_load(filepath, &this->TextureWidth_, &this->TextureHeight_, &this->TextureChannels_, 4);
 }
 
+/**
+* The simplest example of texturing reproduces a rectangular texture \f$ (x, z) \in [-1, +1] x [-1, +1] \f$ on the (x,z) plane. 
+* Having a point on the plane (x, 0, z), coordinates, \f$ v \f$ can be calculated: \f[ u = \frac{(z + 1)}{2} \\ v = \frac{(x - 1)}{2} \f]
+* Having the calculated intersection point of the coordinates (x, y, z) find the appropriate coordinate coordinates \f$ \phi \f$ and \f$ \theta \f$
+* assuming that the radius of such a sphere is \f$ r = 1 \f$ . Coordinate \f$ \phi \f$ will be the same as in the case of a cylinder, 
+* one should consider the value \f$ \theta \f$ . By using the running properties of the new coordinate system:
+* \f$ \theta = \cos^{-1}(y) \f$. Where \f$ \theta = \cos^{-1}(y) \f$ can be represented as \f$ acos(y). acos(y) \in [0, \pi ] \f$ however, 
+* \f$ \theta = 0 \f$ when \f$ v = 1 \f$. Parameters (u, v) will be calculated: \f[ u = \frac{ \phi }{2 \pi } \\ v = 1 - \frac{ \theta }{ \pi }  \f]
+* @param uv - uv vector
+* @returns Color of a pixel
+*/
 Color Texture::GetTexelColor(Vector2 uv)
 {
 	Color resultColor;

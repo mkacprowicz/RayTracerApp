@@ -1,4 +1,6 @@
 var searchData=
 [
-  ['triangle_84',['Triangle',['../class_triangle.html',1,'']]]
+  ['ray_114',['Ray',['../class_ray.html',1,'']]],
+  ['reflective_115',['Reflective',['../class_reflective.html',1,'']]],
+  ['regular_116',['Regular',['../class_regular.html',1,'']]]
 ];

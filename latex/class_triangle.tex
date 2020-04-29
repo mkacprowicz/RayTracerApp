@@ -20,10 +20,13 @@ Inheritance diagram for Triangle\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{class_triangle_a5d7f442181848a4fc005de888e213385}{Triangle}} (\mbox{\hyperlink{class_vector}{Vector}} a, \mbox{\hyperlink{class_vector}{Vector}} b, \mbox{\hyperlink{class_vector}{Vector}} c)
 \item 
-bool \mbox{\hyperlink{class_triangle_a0f7271ef367468d3b7f8e84719b7f683}{Intersection}} (\mbox{\hyperlink{class_ray}{Ray}} ray, float \&t0, float \&t1)
+\mbox{\Hypertarget{class_triangle_a14d6d11337870b780fc412a79b975049}\label{class_triangle_a14d6d11337870b780fc412a79b975049}} 
+{\bfseries Triangle} (\mbox{\hyperlink{class_vector}{Vector}} vertexa, \mbox{\hyperlink{class_vector}{Vector}} vertexb, \mbox{\hyperlink{class_vector}{Vector}} vertexc, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_material}{Material}} $>$ mat)
 \item 
-\mbox{\Hypertarget{class_triangle_aac198b18919bb4fa17df8c92bfcbaec7}\label{class_triangle_aac198b18919bb4fa17df8c92bfcbaec7}} 
-bool {\bfseries Hit\+Test} (\mbox{\hyperlink{class_ray}{Ray}} ray, float \&distance, \mbox{\hyperlink{class_vector}{Vector}} \&normal)
+\mbox{\Hypertarget{class_triangle_acff16b03d92a2bf28c7d0494b1b092a8}\label{class_triangle_acff16b03d92a2bf28c7d0494b1b092a8}} 
+{\bfseries Triangle} (\mbox{\hyperlink{class_vector}{Vector}} vertexa, \mbox{\hyperlink{class_vector}{Vector}} vertexb, \mbox{\hyperlink{class_vector}{Vector}} vertexc, \mbox{\hyperlink{class_vector}{Vector}} normala, \mbox{\hyperlink{class_vector}{Vector}} normalb, \mbox{\hyperlink{class_vector}{Vector}} normalc, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_material}{Material}} $>$ mat)
+\item 
+bool \mbox{\hyperlink{class_triangle_aac198b18919bb4fa17df8c92bfcbaec7}{Hit\+Test}} (\mbox{\hyperlink{class_ray}{Ray}} ray, float \&distance, \mbox{\hyperlink{class_vector}{Vector}} \&normal)
 \item 
 \mbox{\Hypertarget{class_triangle_af2d135da37785fde457b5560f2769d3a}\label{class_triangle_af2d135da37785fde457b5560f2769d3a}} 
 \mbox{\hyperlink{class_vector}{Vector}} {\bfseries A} () const
@@ -71,11 +74,11 @@ Constructor that creates triangle with 3 vertices
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_triangle_a0f7271ef367468d3b7f8e84719b7f683}\label{class_triangle_a0f7271ef367468d3b7f8e84719b7f683}} 
-\index{Triangle@{Triangle}!Intersection@{Intersection}}
-\index{Intersection@{Intersection}!Triangle@{Triangle}}
-\doxysubsubsection{\texorpdfstring{Intersection()}{Intersection()}}
-{\footnotesize\ttfamily bool Triangle\+::\+Intersection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}}}]{ray,  }\item[{float \&}]{t0,  }\item[{float \&}]{t1 }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_triangle_aac198b18919bb4fa17df8c92bfcbaec7}\label{class_triangle_aac198b18919bb4fa17df8c92bfcbaec7}} 
+\index{Triangle@{Triangle}!HitTest@{HitTest}}
+\index{HitTest@{HitTest}!Triangle@{Triangle}}
+\doxysubsubsection{\texorpdfstring{HitTest()}{HitTest()}}
+{\footnotesize\ttfamily bool Triangle\+::\+Hit\+Test (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ray}{Ray}}}]{ray,  }\item[{float \&}]{distance,  }\item[{\mbox{\hyperlink{class_vector}{Vector}} \&}]{normal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
 
 \mbox{\hyperlink{class_triangle}{Triangle}} intersection is based on three steps\+:
 \begin{DoxyEnumerate}
@@ -84,7 +87,11 @@ Constructor that creates triangle with 3 vertices
 \item if all angles are smaller then point P lies inside the triangle We determine angle between individual pairs of vectors vector from the vector product containing the sine of the angle and instead of comparing it with the angle $\pi$ we check its scalar product from the normal triangle. A triangle normal vector is nothing more than a vector product of two non-\/parallel vectors from the plane. By using the points from the triangle, using them clockwise, the normal vector will have the following form\+: \[ n = (b - a) \times (c - a) \] 
 \end{DoxyEnumerate}
 
+Implements \mbox{\hyperlink{class_geometric_shape}{Geometric\+Shape}}.
+
+
+
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-Ray\+Tracer\+App/\+Ray\+Tracer\+App/Triangle.\+h\item 
-Ray\+Tracer\+App/\+Ray\+Tracer\+App/Triangle.\+cpp\end{DoxyCompactItemize}
+D\+:/dev/\+Ray\+Tracer\+App/\+Ray\+Tracer\+App/\+Ray\+Tracer\+App/Triangle.\+h\item 
+D\+:/dev/\+Ray\+Tracer\+App/\+Ray\+Tracer\+App/\+Ray\+Tracer\+App/Triangle.\+cpp\end{DoxyCompactItemize}

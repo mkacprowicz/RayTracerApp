@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['lenght_11',['Lenght',['../class_vector.html#a37e1cb37a4b9d60b01829cd1e72c7377',1,'Vector']]],
-  ['lenghtsquared_12',['LenghtSquared',['../class_vector.html#aae8aa1942be11256a53db1a8b301afd6',1,'Vector']]],
-  ['lerp_13',['Lerp',['../class_vector.html#a1ee35def753edc9a9490b1ecd241b051',1,'Vector']]],
-  ['loader_14',['Loader',['../classobjl_1_1_loader.html',1,'objl']]]
+  ['hitinfo_12',['HitInfo',['../class_hit_info.html',1,'']]],
+  ['hittest_13',['HitTest',['../class_sphere.html#a966d8217283591249e719984dff5c2a6',1,'Sphere::HitTest()'],['../class_triangle.html#aac198b18919bb4fa17df8c92bfcbaec7',1,'Triangle::HitTest()']]]
 ];

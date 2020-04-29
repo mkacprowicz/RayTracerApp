@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>RayTracerApp: RayTracerApp/RayTracerApp/PerfectDiffuse.h Source File</title>
+<title>RayTracerApp: D:/dev/RayTracerApp/RayTracerApp/RayTracerApp/PerfectDiffuse.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -68,7 +68,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_41cd6085202681518ada3109d080e519.html">RayTracerApp</a></li><li class="navelem"><a class="el" href="dir_05b6ba2db2ed969cc246b4aa07dd6f7f.html">RayTracerApp</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_275089585c7fc1b5fd5d7d42c69cb1da.html">D:</a></li><li class="navelem"><a class="el" href="dir_dd035a6a55649280f68a39d713810fd2.html">dev</a></li><li class="navelem"><a class="el" href="dir_4a6c51babcca044d5a8c848bfe0e124b.html">RayTracerApp</a></li><li class="navelem"><a class="el" href="dir_80afbd8bf5132aa1e9b48eb9f7a2cedf.html">RayTracerApp</a></li><li class="navelem"><a class="el" href="dir_8540d838ea1e84707543b7c00e293fed.html">RayTracerApp</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -86,19 +86,20 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="class_perfect_diffuse.html">PerfectDiffuse</a>();</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <a class="code" href="class_perfect_diffuse.html">PerfectDiffuse</a>(<a class="code" href="class_color.html">Color</a> rgb);</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_color.html">Color</a> Shade(std::shared_ptr&lt;ImageRT&gt; tracer, std::shared_ptr&lt;HitInfo&gt; hit);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_color.html">Color</a> MaterialColor()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> MaterialColor_; }</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> MaterialColor(<a class="code" href="class_color.html">Color</a> c) { MaterialColor_ = c; }</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <a class="code" href="class_color.html">Color</a> MaterialColor_;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_perfect_diffuse.html">PerfectDiffuse</a>(<a class="code" href="class_color.html">Color</a> rgb, std::shared_ptr&lt;Texture&gt; texture);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_color.html">Color</a> Shade(std::shared_ptr&lt;ImageRT&gt; tracer, std::shared_ptr&lt;HitInfo&gt; hit);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_color.html">Color</a> MaterialColor()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> MaterialColor_; }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> MaterialColor(<a class="code" href="class_color.html">Color</a> c) { MaterialColor_ = c; }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_color.html">Color</a> MaterialColor_;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;};</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_color_html"><div class="ttname"><a href="class_color.html">Color</a></div><div class="ttdoc">Color class that represents light intensity for a color in RGB colorspace.</div><div class="ttdef"><b>Definition:</b> Color.h:11</div></div>
-<div class="ttc" id="aclass_material_html"><div class="ttname"><a href="class_material.html">Material</a></div><div class="ttdoc">Material pure abstract class is a representation of phisical material.</div><div class="ttdef"><b>Definition:</b> Material.h:12</div></div>
+<div class="ttc" id="aclass_material_html"><div class="ttname"><a href="class_material.html">Material</a></div><div class="ttdoc">Material pure abstract class is a representation of phisical material.</div><div class="ttdef"><b>Definition:</b> Material.h:13</div></div>
 <div class="ttc" id="aclass_perfect_diffuse_html"><div class="ttname"><a href="class_perfect_diffuse.html">PerfectDiffuse</a></div><div class="ttdef"><b>Definition:</b> PerfectDiffuse.h:7</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
