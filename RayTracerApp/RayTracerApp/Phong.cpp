@@ -61,7 +61,8 @@ Color Phong::Shade(std::shared_ptr<ImageRT> tracer, std::shared_ptr<HitInfo> hit
 	
 	for (auto light : hit->CurrentWorld()->Lights())
 	{
-		Vector inDirection = (light->Position() - hit->HitPoint()).NormalizeProduct();
+		Vector lightPos = light->Sample();
+		Vector inDirection = (lightPos - hit->HitPoint()).NormalizeProduct();
 		float diffuseFactor = inDirection.Dot(hit->Normal());
 
 		if (diffuseFactor < 0)
@@ -69,7 +70,7 @@ Color Phong::Shade(std::shared_ptr<ImageRT> tracer, std::shared_ptr<HitInfo> hit
 			continue;
 		}
 
-		if (hit->CurrentWorld()->AnyObstacleBetween(hit->HitPoint(), light->Position()))
+		if (hit->CurrentWorld()->AnyObstacleBetween(hit->HitPoint(), lightPos))
 		{
 			continue;
 		}

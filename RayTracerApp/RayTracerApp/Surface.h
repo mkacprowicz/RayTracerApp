@@ -17,7 +17,7 @@ public:
 	Vector Normal() const { return Normal_; }
 	void Normal(Vector d) { Normal_ = d; }
 	Vector Point() const { return Point_; }
-	void Point(Vector d) { Point_ = d; }	
+	void Point(Vector p) { Point_ = p; }	
 
 private:
 	Vector Normal_;

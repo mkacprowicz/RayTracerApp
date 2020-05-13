@@ -8,7 +8,6 @@
 class Sampler
 {
 public:
-
 	Sampler(std::shared_ptr<SampleGenerator> sampler, std::shared_ptr <SampleDistributor> mapper, int sampleCt, int setCt);
 
 	Vector2 Single();

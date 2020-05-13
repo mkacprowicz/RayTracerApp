@@ -2,6 +2,7 @@
 
 #include "pch.h"
 #include "PointLight.h"
+#include "PointLight.h"
 #include "HitInfo.h"
 #include "World.h"
 #include "Texture.h"

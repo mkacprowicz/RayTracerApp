@@ -115,6 +115,28 @@ Color ImageRT::ShadeRay(std::shared_ptr<World> world, Ray ray, int currentDepth,
 	return material->Shade(shared_from_this(), info);
 }
 
+Color ImageRT::ShadeRay(std::shared_ptr<World> world, Ray ray, int currentDepth)
+{
+	if (currentDepth > this->MaxDepth_)
+	{
+		return Color(0, 0, 0);
+	}
+
+	std::shared_ptr<HitInfo> info = world->TraceRay(ray);
+
+
+	info->Depth(currentDepth + 1);
+
+	if (info->HitObject() == nullptr)
+	{
+		return world->BackgroundColor();
+	}
+
+	auto material = info->HitObject()->ShapeMaterial();
+
+	return material->Shade(shared_from_this(), info);
+}
+
 /**
 * Function that writing image data to bmp file
 * @param filename - filename of bmp file
