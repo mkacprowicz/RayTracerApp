@@ -81,26 +81,35 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;pch.h&quot;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;Vector.h&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;Color.h&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;Sampler.h&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="class_point_light.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_point_light.html">PointLight</a></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_point_light.html">PointLight</a>();</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_point_light.html">PointLight</a>(<a class="code" href="class_vector.html">Vector</a> pos, <a class="code" href="class_color.html">Color</a> rgb);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="class_vector.html">Vector</a> Position()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Position_; }</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> Position(<a class="code" href="class_vector.html">Vector</a> v) { Position_ = v; }</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_color.html">Color</a> LightColor()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> LightColor_; }</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> LightColor(<a class="code" href="class_color.html">Color</a> c) { LightColor_ = c; }</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_vector.html">Vector</a> Position_;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="class_color.html">Color</a> LightColor_;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="comment">//PointLight();</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="class_point_light.html">PointLight</a>(<a class="code" href="class_vector.html">Vector</a> position, <a class="code" href="class_color.html">Color</a> color);</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_point_light.html">PointLight</a>(<a class="code" href="class_vector.html">Vector</a> center, <a class="code" href="class_color.html">Color</a> color, std::shared_ptr&lt;Sampler&gt; sampler, <span class="keywordtype">double</span> radius);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="class_vector.html">Vector</a> Sample();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_vector.html">Vector</a> RemapSampleToUnitSphere(<a class="code" href="struct_vector2.html">Vector2</a> sample);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="class_vector.html">Vector</a> Center()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Center_; }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> Center(<a class="code" href="class_vector.html">Vector</a> v) { Center_ = v; }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="class_color.html">Color</a> LightColor()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> LightColor_; }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> LightColor(<a class="code" href="class_color.html">Color</a> c) { LightColor_ = c; }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">float</span> Radius()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Radius_; }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> Radius(<span class="keywordtype">float</span> r) { Radius_ = r; }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_vector.html">Vector</a> Center_;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <a class="code" href="class_color.html">Color</a> LightColor_;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::shared_ptr&lt;Sampler&gt; LightSampler_;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">float</span> Radius_;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_color_html"><div class="ttname"><a href="class_color.html">Color</a></div><div class="ttdoc">Color class that represents light intensity for a color in RGB colorspace.</div><div class="ttdef"><b>Definition:</b> Color.h:11</div></div>
+<div class="ttc" id="astruct_vector2_html"><div class="ttname"><a href="struct_vector2.html">Vector2</a></div><div class="ttdef"><b>Definition:</b> Vector.h:6</div></div>
 <div class="ttc" id="aclass_vector_html"><div class="ttname"><a href="class_vector.html">Vector</a></div><div class="ttdoc">Vector class which is a representation of a 3D vector.</div><div class="ttdef"><b>Definition:</b> Vector.h:29</div></div>
 <div class="ttc" id="aclass_point_light_html"><div class="ttname"><a href="class_point_light.html">PointLight</a></div><div class="ttdoc">PointLight class which create point light in scene.</div><div class="ttdef"><b>Definition:</b> PointLight.h:10</div></div>
 <!-- start footer part -->

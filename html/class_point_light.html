@@ -83,21 +83,36 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a593bb776f40ecc9b68afae0c08a6edf2"><td class="memItemLeft" align="right" valign="top"><a id="a593bb776f40ecc9b68afae0c08a6edf2"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>PointLight</b> (<a class="el" href="class_vector.html">Vector</a> pos, <a class="el" href="class_color.html">Color</a> rgb)</td></tr>
-<tr class="separator:a593bb776f40ecc9b68afae0c08a6edf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a645c17786f55594504d53361fdc39ca1"><td class="memItemLeft" align="right" valign="top"><a id="a645c17786f55594504d53361fdc39ca1"></a>
-<a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Position</b> () const</td></tr>
-<tr class="separator:a645c17786f55594504d53361fdc39ca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab83ae4e64c216fd149a8fbe5ad9566ee"><td class="memItemLeft" align="right" valign="top"><a id="ab83ae4e64c216fd149a8fbe5ad9566ee"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>Position</b> (<a class="el" href="class_vector.html">Vector</a> v)</td></tr>
-<tr class="separator:ab83ae4e64c216fd149a8fbe5ad9566ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3e312b39c06732dda8373429a13812b"><td class="memItemLeft" align="right" valign="top"><a id="af3e312b39c06732dda8373429a13812b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>PointLight</b> (<a class="el" href="class_vector.html">Vector</a> position, <a class="el" href="class_color.html">Color</a> color)</td></tr>
+<tr class="separator:af3e312b39c06732dda8373429a13812b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab585bb683deec0d8e399e05554a9dd95"><td class="memItemLeft" align="right" valign="top"><a id="ab585bb683deec0d8e399e05554a9dd95"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>PointLight</b> (<a class="el" href="class_vector.html">Vector</a> center, <a class="el" href="class_color.html">Color</a> color, std::shared_ptr&lt; <a class="el" href="class_sampler.html">Sampler</a> &gt; sampler, double radius)</td></tr>
+<tr class="separator:ab585bb683deec0d8e399e05554a9dd95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f188f4e590b7a2474c68465992d1f0c"><td class="memItemLeft" align="right" valign="top"><a id="a4f188f4e590b7a2474c68465992d1f0c"></a>
+<a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Sample</b> ()</td></tr>
+<tr class="separator:a4f188f4e590b7a2474c68465992d1f0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8e64c603c90b628b4ddc1a037f0b3e1d"><td class="memItemLeft" align="right" valign="top"><a id="a8e64c603c90b628b4ddc1a037f0b3e1d"></a>
+<a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>RemapSampleToUnitSphere</b> (<a class="el" href="struct_vector2.html">Vector2</a> sample)</td></tr>
+<tr class="separator:a8e64c603c90b628b4ddc1a037f0b3e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52e7ed3a9ddf94876cb3b742c8fa247c"><td class="memItemLeft" align="right" valign="top"><a id="a52e7ed3a9ddf94876cb3b742c8fa247c"></a>
+<a class="el" href="class_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Center</b> () const</td></tr>
+<tr class="separator:a52e7ed3a9ddf94876cb3b742c8fa247c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52d7dca5de88a3fb52ba89161d21cea0"><td class="memItemLeft" align="right" valign="top"><a id="a52d7dca5de88a3fb52ba89161d21cea0"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Center</b> (<a class="el" href="class_vector.html">Vector</a> v)</td></tr>
+<tr class="separator:a52d7dca5de88a3fb52ba89161d21cea0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e9ad409a088291c0d9d0fcdbc16fa1e"><td class="memItemLeft" align="right" valign="top"><a id="a5e9ad409a088291c0d9d0fcdbc16fa1e"></a>
 <a class="el" href="class_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>LightColor</b> () const</td></tr>
 <tr class="separator:a5e9ad409a088291c0d9d0fcdbc16fa1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3872ae50ae246f4fb39a420ff7e42be"><td class="memItemLeft" align="right" valign="top"><a id="ae3872ae50ae246f4fb39a420ff7e42be"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>LightColor</b> (<a class="el" href="class_color.html">Color</a> c)</td></tr>
 <tr class="separator:ae3872ae50ae246f4fb39a420ff7e42be"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d8bc221ee1672a6d80660630f2ba254"><td class="memItemLeft" align="right" valign="top"><a id="a6d8bc221ee1672a6d80660630f2ba254"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>Radius</b> () const</td></tr>
+<tr class="separator:a6d8bc221ee1672a6d80660630f2ba254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40c9f360eb1f9c72021f88a08538ceab"><td class="memItemLeft" align="right" valign="top"><a id="a40c9f360eb1f9c72021f88a08538ceab"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Radius</b> (float r)</td></tr>
+<tr class="separator:a40c9f360eb1f9c72021f88a08538ceab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_point_light.html" title="PointLight class which create point light in scene.">PointLight</a> class which create point light in scene. </p>

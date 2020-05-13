@@ -12,20 +12,35 @@
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_point_light_a593bb776f40ecc9b68afae0c08a6edf2}\label{class_point_light_a593bb776f40ecc9b68afae0c08a6edf2}} 
-{\bfseries Point\+Light} (\mbox{\hyperlink{class_vector}{Vector}} pos, \mbox{\hyperlink{class_color}{Color}} rgb)
+\mbox{\Hypertarget{class_point_light_af3e312b39c06732dda8373429a13812b}\label{class_point_light_af3e312b39c06732dda8373429a13812b}} 
+{\bfseries Point\+Light} (\mbox{\hyperlink{class_vector}{Vector}} position, \mbox{\hyperlink{class_color}{Color}} color)
 \item 
-\mbox{\Hypertarget{class_point_light_a645c17786f55594504d53361fdc39ca1}\label{class_point_light_a645c17786f55594504d53361fdc39ca1}} 
-\mbox{\hyperlink{class_vector}{Vector}} {\bfseries Position} () const
+\mbox{\Hypertarget{class_point_light_ab585bb683deec0d8e399e05554a9dd95}\label{class_point_light_ab585bb683deec0d8e399e05554a9dd95}} 
+{\bfseries Point\+Light} (\mbox{\hyperlink{class_vector}{Vector}} center, \mbox{\hyperlink{class_color}{Color}} color, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_sampler}{Sampler}} $>$ sampler, double radius)
 \item 
-\mbox{\Hypertarget{class_point_light_ab83ae4e64c216fd149a8fbe5ad9566ee}\label{class_point_light_ab83ae4e64c216fd149a8fbe5ad9566ee}} 
-void {\bfseries Position} (\mbox{\hyperlink{class_vector}{Vector}} v)
+\mbox{\Hypertarget{class_point_light_a4f188f4e590b7a2474c68465992d1f0c}\label{class_point_light_a4f188f4e590b7a2474c68465992d1f0c}} 
+\mbox{\hyperlink{class_vector}{Vector}} {\bfseries Sample} ()
+\item 
+\mbox{\Hypertarget{class_point_light_a8e64c603c90b628b4ddc1a037f0b3e1d}\label{class_point_light_a8e64c603c90b628b4ddc1a037f0b3e1d}} 
+\mbox{\hyperlink{class_vector}{Vector}} {\bfseries Remap\+Sample\+To\+Unit\+Sphere} (\mbox{\hyperlink{struct_vector2}{Vector2}} sample)
+\item 
+\mbox{\Hypertarget{class_point_light_a52e7ed3a9ddf94876cb3b742c8fa247c}\label{class_point_light_a52e7ed3a9ddf94876cb3b742c8fa247c}} 
+\mbox{\hyperlink{class_vector}{Vector}} {\bfseries Center} () const
+\item 
+\mbox{\Hypertarget{class_point_light_a52d7dca5de88a3fb52ba89161d21cea0}\label{class_point_light_a52d7dca5de88a3fb52ba89161d21cea0}} 
+void {\bfseries Center} (\mbox{\hyperlink{class_vector}{Vector}} v)
 \item 
 \mbox{\Hypertarget{class_point_light_a5e9ad409a088291c0d9d0fcdbc16fa1e}\label{class_point_light_a5e9ad409a088291c0d9d0fcdbc16fa1e}} 
 \mbox{\hyperlink{class_color}{Color}} {\bfseries Light\+Color} () const
 \item 
 \mbox{\Hypertarget{class_point_light_ae3872ae50ae246f4fb39a420ff7e42be}\label{class_point_light_ae3872ae50ae246f4fb39a420ff7e42be}} 
 void {\bfseries Light\+Color} (\mbox{\hyperlink{class_color}{Color}} c)
+\item 
+\mbox{\Hypertarget{class_point_light_a6d8bc221ee1672a6d80660630f2ba254}\label{class_point_light_a6d8bc221ee1672a6d80660630f2ba254}} 
+float {\bfseries Radius} () const
+\item 
+\mbox{\Hypertarget{class_point_light_a40c9f360eb1f9c72021f88a08538ceab}\label{class_point_light_a40c9f360eb1f9c72021f88a08538ceab}} 
+void {\bfseries Radius} (float r)
 \end{DoxyCompactItemize}
 
 

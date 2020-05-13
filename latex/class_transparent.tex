@@ -1,0 +1,100 @@
+\hypertarget{class_transparent}{}\doxysection{Transparent Class Reference}
+\label{class_transparent}\index{Transparent@{Transparent}}
+
+
+\mbox{\hyperlink{class_transparent}{Transparent}} is a class representing transparent objects.  
+
+
+
+
+{\ttfamily \#include $<$Transparent.\+h$>$}
+
+Inheritance diagram for Transparent\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_transparent}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_transparent_acc32ebbfbfbb3e55655dd8554f76d2eb}\label{class_transparent_acc32ebbfbfbb3e55655dd8554f76d2eb}} 
+{\bfseries Transparent} (\mbox{\hyperlink{class_color}{Color}} color, float diffuse, float specular, float exponent, float reflection, float refraction, float transmission)
+\item 
+\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_transparent_aa841400f06a48a2fb08855201a27ebf4}{Shade}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_image_r_t}{Image\+RT}} $>$ tracer, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_hit_info}{Hit\+Info}} $>$ hit)
+\item 
+\mbox{\Hypertarget{class_transparent_a2f607d8c8b5ed6dc3dd03733914942e1}\label{class_transparent_a2f607d8c8b5ed6dc3dd03733914942e1}} 
+bool {\bfseries Is\+Total\+Internal\+Reflection} (float refraction\+Coeff)
+\item 
+\mbox{\Hypertarget{class_transparent_ad14120bc1bdfedaeb39faa8f00db0adb}\label{class_transparent_ad14120bc1bdfedaeb39faa8f00db0adb}} 
+float {\bfseries Find\+Refraction\+Coeff} (float eta, float cos\+Incident\+Angle)
+\item 
+\mbox{\Hypertarget{class_transparent_a0f12a86a13ad5acd4d8923a1e589b41f}\label{class_transparent_a0f12a86a13ad5acd4d8923a1e589b41f}} 
+\mbox{\hyperlink{class_ray}{Ray}} {\bfseries Compute\+Transmission\+Direction} (\mbox{\hyperlink{class_vector}{Vector}} hit\+Point, \mbox{\hyperlink{class_vector}{Vector}} to\+Camera\+Direction, \mbox{\hyperlink{class_vector}{Vector}} normal, float eta, float cos\+Transmitted\+Angle, float cos\+Incident\+Angle)
+\item 
+\mbox{\Hypertarget{class_transparent_a9987aa28589988a6e91adb872b3278bc}\label{class_transparent_a9987aa28589988a6e91adb872b3278bc}} 
+\mbox{\hyperlink{class_color}{Color}} {\bfseries Compute\+Transmission\+Color} (float eta, \mbox{\hyperlink{class_vector}{Vector}} normal, \mbox{\hyperlink{class_vector}{Vector}} transmission\+Direction)
+\item 
+\mbox{\Hypertarget{class_transparent_ac36927f9df1cafb940e77893fb924959}\label{class_transparent_ac36927f9df1cafb940e77893fb924959}} 
+\mbox{\hyperlink{class_color}{Color}} {\bfseries Base\+Color} () const
+\item 
+\mbox{\Hypertarget{class_transparent_aec56b946ec1c16a4ca5b2f38b6b8e5db}\label{class_transparent_aec56b946ec1c16a4ca5b2f38b6b8e5db}} 
+void {\bfseries Base\+Color} (\mbox{\hyperlink{class_color}{Color}} c)
+\item 
+\mbox{\Hypertarget{class_transparent_af24ad908b042faf3fa3da96edee78abb}\label{class_transparent_af24ad908b042faf3fa3da96edee78abb}} 
+float {\bfseries Refraction} () const
+\item 
+\mbox{\Hypertarget{class_transparent_a0f7cbd993a948cb2b60cf48953f231d0}\label{class_transparent_a0f7cbd993a948cb2b60cf48953f231d0}} 
+void {\bfseries Refraction} (float r)
+\item 
+\mbox{\Hypertarget{class_transparent_a3e3b85be1d9851a1a71ff944ea42de82}\label{class_transparent_a3e3b85be1d9851a1a71ff944ea42de82}} 
+float {\bfseries Reflection} () const
+\item 
+\mbox{\Hypertarget{class_transparent_a9a21df912b791187210b61abb7d0790a}\label{class_transparent_a9a21df912b791187210b61abb7d0790a}} 
+void {\bfseries Reflection} (float r)
+\item 
+\mbox{\Hypertarget{class_transparent_a761edf75289d0ec953432428c469511f}\label{class_transparent_a761edf75289d0ec953432428c469511f}} 
+float {\bfseries Transmission} () const
+\item 
+\mbox{\Hypertarget{class_transparent_a7e2e0d3031fd0b96f08a63187425965e}\label{class_transparent_a7e2e0d3031fd0b96f08a63187425965e}} 
+void {\bfseries Transmission} (float r)
+\item 
+\mbox{\Hypertarget{class_transparent_aa024d61b9c9f4ba13451ffb819539567}\label{class_transparent_aa024d61b9c9f4ba13451ffb819539567}} 
+float {\bfseries Specular} () const
+\item 
+\mbox{\Hypertarget{class_transparent_a09efff8adc5399514f3e913cac67ea95}\label{class_transparent_a09efff8adc5399514f3e913cac67ea95}} 
+void {\bfseries Specular} (float r)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_transparent}{Transparent}} is a class representing transparent objects. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_transparent_aa841400f06a48a2fb08855201a27ebf4}\label{class_transparent_aa841400f06a48a2fb08855201a27ebf4}} 
+\index{Transparent@{Transparent}!Shade@{Shade}}
+\index{Shade@{Shade}!Transparent@{Transparent}}
+\doxysubsubsection{\texorpdfstring{Shade()}{Shade()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_color}{Color}} Transparent\+::\+Shade (\begin{DoxyParamCaption}\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_image_r_t}{Image\+RT}} $>$}]{tracer,  }\item[{std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_hit_info}{Hit\+Info}} $>$}]{hit }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+The part of the light beam that is not reflected passes through the boundary plane and propagates further into the new center. The resulting ray is defined as a refracted ray. The phenomenon of light passing through the surface separating two different media is called refraction. Refraction consists in changing the direction of wave propagation associated with changing its speed. Consequently, this causes a change in wavelength at a constant frequency. The fact that the light can propagate in a given medium indicates its transparency. The law of physics describing the change in the direction of the light beam when passing through the border between two transparent centers with different refractive indexes is called Snell\textquotesingle{}s law. This law says that the incident and refracted radius and the perpendicular incident (normal) lie in one plane, and the angles meet the condition\+: \[ \frac{\sin \theta_{1}}{\sin \theta_{2}} = \frac{n_2}{n_1} \] It should be noted that Snell\textquotesingle{}s law describes the geometrical relationships that occur between the directions of rays in a complete manner only for homogeneous media. In the case of the anisotropic surfaces mentioned above, the light ray may separate into two rays. As in the case of a mirror reflection, in order to reproduce the phenomenon of refraction, a new radius must be taken from the point of intersection. The direction of this radius will of course depend on the angle of incidence relative to the normal vector of the surface at the intersection and the refractive indexes of both centers. To calculate the secondary ray directional vector, we can use the basic trigonometric identities and the Snell\textquotesingle{}s law presented\+: \[ \lambda_{s} \sin \theta = \lambda_{t} \sin \phi \\ \sin^{2} \phi + cos^{2} \phi = 1 \\ \cos^{2} \phi = 1 - \frac{\lambda^{2}_{s} (1 - \cos^{2} \theta)}{\lambda^{2}_{t}} \\ t = b \sin \phi - n \cos \phi \\ d = b \sin \theta - n \cos \theta \\ b = \frac{d + n \cos \theta}{\sin \theta} \\ t = \frac{\sin \phi (d+n \cos \theta)}{\sin \theta} - n \cos \phi = \frac{\lambda_{s} (d+n \cos \theta)}{\lambda_{t}} - n \cos \phi = \frac{\lambda_{s} (d-n(d \cdot n))}{\lambda_t} - n \sqrt{1 - \frac{\lambda_{s}^{2}(1 - (d \cdot n)^{2})}{\lambda^{2}_{t}}} \] As a result of refraction, surrounding objects immediately behind the bending medium of light rays are distorted. 
+\begin{DoxyParams}{Parameters}
+{\em tracer} & -\/ Raytracer object \\
+\hline
+{\em hit} & -\/ info about hit of a ray \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_color}{Color}} object 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_material}{Material}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/dev/\+Ray\+Tracer\+App/\+Ray\+Tracer\+App/\+Ray\+Tracer\+App/Transparent.\+h\item 
+D\+:/dev/\+Ray\+Tracer\+App/\+Ray\+Tracer\+App/\+Ray\+Tracer\+App/Transparent.\+cpp\end{DoxyCompactItemize}

@@ -85,31 +85,30 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_sampler.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_sampler.html">Sampler</a></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_sampler.html">Sampler</a>(std::shared_ptr&lt;SampleGenerator&gt; sampler, std::shared_ptr &lt;SampleDistributor&gt; mapper, <span class="keywordtype">int</span> sampleCt, <span class="keywordtype">int</span> setCt);</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="struct_vector2.html">Vector2</a> Single();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">int</span> SampleNdx()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> SampleNdx_; }</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> SampleNdx(<span class="keywordtype">int</span> s) { SampleNdx_ = s; }</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">int</span> SetNdx()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> SetNdx_; }</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">void</span> SetNdx(<span class="keywordtype">int</span> s) { SetNdx_ = s; }</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> SampleCount()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> SampleCount_; }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> SampleCount(<span class="keywordtype">int</span> s) { SampleCount_ = s; }</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">int</span> SetCount()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Sets_.size();  }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::random_device RandomDevice;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::mt19937_64 RandomGenerator;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    std::uniform_int_distribution&lt;int&gt; Random;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    std::vector&lt;std::vector&lt;Vector2&gt;&gt; Sets_;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">int</span> SampleNdx_;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">int</span> SetNdx_;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">int</span> SampleCount_;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="class_sampler.html">Sampler</a>(std::shared_ptr&lt;SampleGenerator&gt; sampler, std::shared_ptr &lt;SampleDistributor&gt; mapper, <span class="keywordtype">int</span> sampleCt, <span class="keywordtype">int</span> setCt);</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="struct_vector2.html">Vector2</a> Single();</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">int</span> SampleNdx()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> SampleNdx_; }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">void</span> SampleNdx(<span class="keywordtype">int</span> s) { SampleNdx_ = s; }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">int</span> SetNdx()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> SetNdx_; }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> SetNdx(<span class="keywordtype">int</span> s) { SetNdx_ = s; }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> SampleCount()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> SampleCount_; }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> SampleCount(<span class="keywordtype">int</span> s) { SampleCount_ = s; }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> SetCount()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> Sets_.size();  }</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    std::random_device RandomDevice;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    std::mt19937_64 RandomGenerator;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    std::uniform_int_distribution&lt;int&gt; Random;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    std::vector&lt;std::vector&lt;Vector2&gt;&gt; Sets_;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> SampleNdx_;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">int</span> SetNdx_;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">int</span> SampleCount_;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_sampler_html"><div class="ttname"><a href="class_sampler.html">Sampler</a></div><div class="ttdoc">Sampler class which is a class to organising samples for antyaliasing.</div><div class="ttdef"><b>Definition:</b> Sampler.h:9</div></div>
 <div class="ttc" id="astruct_vector2_html"><div class="ttname"><a href="struct_vector2.html">Vector2</a></div><div class="ttdef"><b>Definition:</b> Vector.h:6</div></div>

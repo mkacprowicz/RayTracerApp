@@ -2,7 +2,7 @@
 #include "pch.h"
 #include "Material.h"
 #include "Phong.h"
-
+//! Transparent is a class representing transparent objects
 class Transparent : public Material
 {
 public:
