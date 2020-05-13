@@ -23,17 +23,14 @@ Inheritance diagram for Transparent\+:\begin{figure}[H]
 \item 
 \mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_transparent_aa841400f06a48a2fb08855201a27ebf4}{Shade}} (std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_image_r_t}{Image\+RT}} $>$ tracer, std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{class_hit_info}{Hit\+Info}} $>$ hit)
 \item 
-\mbox{\Hypertarget{class_transparent_a2f607d8c8b5ed6dc3dd03733914942e1}\label{class_transparent_a2f607d8c8b5ed6dc3dd03733914942e1}} 
-bool {\bfseries Is\+Total\+Internal\+Reflection} (float refraction\+Coeff)
+bool \mbox{\hyperlink{class_transparent_a2f607d8c8b5ed6dc3dd03733914942e1}{Is\+Total\+Internal\+Reflection}} (float refraction\+Coeff)
 \item 
 \mbox{\Hypertarget{class_transparent_ad14120bc1bdfedaeb39faa8f00db0adb}\label{class_transparent_ad14120bc1bdfedaeb39faa8f00db0adb}} 
 float {\bfseries Find\+Refraction\+Coeff} (float eta, float cos\+Incident\+Angle)
 \item 
-\mbox{\Hypertarget{class_transparent_a0f12a86a13ad5acd4d8923a1e589b41f}\label{class_transparent_a0f12a86a13ad5acd4d8923a1e589b41f}} 
-\mbox{\hyperlink{class_ray}{Ray}} {\bfseries Compute\+Transmission\+Direction} (\mbox{\hyperlink{class_vector}{Vector}} hit\+Point, \mbox{\hyperlink{class_vector}{Vector}} to\+Camera\+Direction, \mbox{\hyperlink{class_vector}{Vector}} normal, float eta, float cos\+Transmitted\+Angle, float cos\+Incident\+Angle)
+\mbox{\hyperlink{class_ray}{Ray}} \mbox{\hyperlink{class_transparent_a0f12a86a13ad5acd4d8923a1e589b41f}{Compute\+Transmission\+Direction}} (\mbox{\hyperlink{class_vector}{Vector}} hit\+Point, \mbox{\hyperlink{class_vector}{Vector}} to\+Camera\+Direction, \mbox{\hyperlink{class_vector}{Vector}} normal, float eta, float cos\+Transmitted\+Angle, float cos\+Incident\+Angle)
 \item 
-\mbox{\Hypertarget{class_transparent_a9987aa28589988a6e91adb872b3278bc}\label{class_transparent_a9987aa28589988a6e91adb872b3278bc}} 
-\mbox{\hyperlink{class_color}{Color}} {\bfseries Compute\+Transmission\+Color} (float eta, \mbox{\hyperlink{class_vector}{Vector}} normal, \mbox{\hyperlink{class_vector}{Vector}} transmission\+Direction)
+\mbox{\hyperlink{class_color}{Color}} \mbox{\hyperlink{class_transparent_a9987aa28589988a6e91adb872b3278bc}{Compute\+Transmission\+Color}} (float eta, \mbox{\hyperlink{class_vector}{Vector}} normal, \mbox{\hyperlink{class_vector}{Vector}} transmission\+Direction)
 \item 
 \mbox{\Hypertarget{class_transparent_ac36927f9df1cafb940e77893fb924959}\label{class_transparent_ac36927f9df1cafb940e77893fb924959}} 
 \mbox{\hyperlink{class_color}{Color}} {\bfseries Base\+Color} () const
@@ -72,6 +69,62 @@ void {\bfseries Specular} (float r)
 \mbox{\hyperlink{class_transparent}{Transparent}} is a class representing transparent objects. 
 
 \doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_transparent_a9987aa28589988a6e91adb872b3278bc}\label{class_transparent_a9987aa28589988a6e91adb872b3278bc}} 
+\index{Transparent@{Transparent}!ComputeTransmissionColor@{ComputeTransmissionColor}}
+\index{ComputeTransmissionColor@{ComputeTransmissionColor}!Transparent@{Transparent}}
+\doxysubsubsection{\texorpdfstring{ComputeTransmissionColor()}{ComputeTransmissionColor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_color}{Color}} Transparent\+::\+Compute\+Transmission\+Color (\begin{DoxyParamCaption}\item[{float}]{eta,  }\item[{\mbox{\hyperlink{class_vector}{Vector}}}]{normal,  }\item[{\mbox{\hyperlink{class_vector}{Vector}}}]{transmission\+Direction }\end{DoxyParamCaption})}
+
+Computes color of a transmission 
+\begin{DoxyParams}{Parameters}
+{\em transmission\+Direction} & \\
+\hline
+{\em normal} & -\/ normal \mbox{\hyperlink{class_vector}{Vector}} \\
+\hline
+{\em eta} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_color}{Color}} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_transparent_a0f12a86a13ad5acd4d8923a1e589b41f}\label{class_transparent_a0f12a86a13ad5acd4d8923a1e589b41f}} 
+\index{Transparent@{Transparent}!ComputeTransmissionDirection@{ComputeTransmissionDirection}}
+\index{ComputeTransmissionDirection@{ComputeTransmissionDirection}!Transparent@{Transparent}}
+\doxysubsubsection{\texorpdfstring{ComputeTransmissionDirection()}{ComputeTransmissionDirection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_ray}{Ray}} Transparent\+::\+Compute\+Transmission\+Direction (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_vector}{Vector}}}]{hit\+Point,  }\item[{\mbox{\hyperlink{class_vector}{Vector}}}]{to\+Camera\+Direction,  }\item[{\mbox{\hyperlink{class_vector}{Vector}}}]{normal,  }\item[{float}]{eta,  }\item[{float}]{cos\+Transmitted\+Angle,  }\item[{float}]{cos\+Incident\+Angle }\end{DoxyParamCaption})}
+
+Computes direction of a transmission 
+\begin{DoxyParams}{Parameters}
+{\em hit\+Point} & -\/ \mbox{\hyperlink{class_vector}{Vector}} of hit \\
+\hline
+{\em to\+Camera\+Direction} & -\/ Direction to the camera \\
+\hline
+{\em normal} & -\/ normal \mbox{\hyperlink{class_vector}{Vector}} \\
+\hline
+{\em eta} & \\
+\hline
+{\em cos\+Transmitted\+Angle} & \\
+\hline
+{\em cos\+Incident\+Angle} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\mbox{\hyperlink{class_ray}{Ray}} object 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_transparent_a2f607d8c8b5ed6dc3dd03733914942e1}\label{class_transparent_a2f607d8c8b5ed6dc3dd03733914942e1}} 
+\index{Transparent@{Transparent}!IsTotalInternalReflection@{IsTotalInternalReflection}}
+\index{IsTotalInternalReflection@{IsTotalInternalReflection}!Transparent@{Transparent}}
+\doxysubsubsection{\texorpdfstring{IsTotalInternalReflection()}{IsTotalInternalReflection()}}
+{\footnotesize\ttfamily bool Transparent\+::\+Is\+Total\+Internal\+Reflection (\begin{DoxyParamCaption}\item[{float}]{refraction\+Coeff }\end{DoxyParamCaption})}
+
+Checks whether total internal reflection occured 
+\begin{DoxyParams}{Parameters}
+{\em refraction\+Coeff} & -\/ Refraction Coeffitient \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool -\/ true or false 
+\end{DoxyReturn}
 \mbox{\Hypertarget{class_transparent_aa841400f06a48a2fb08855201a27ebf4}\label{class_transparent_aa841400f06a48a2fb08855201a27ebf4}} 
 \index{Transparent@{Transparent}!Shade@{Shade}}
 \index{Shade@{Shade}!Transparent@{Transparent}}

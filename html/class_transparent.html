@@ -97,17 +97,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acc32ebbfbfbb3e55655dd8554f76d2eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa841400f06a48a2fb08855201a27ebf4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transparent.html#aa841400f06a48a2fb08855201a27ebf4">Shade</a> (std::shared_ptr&lt; <a class="el" href="class_image_r_t.html">ImageRT</a> &gt; tracer, std::shared_ptr&lt; <a class="el" href="class_hit_info.html">HitInfo</a> &gt; hit)</td></tr>
 <tr class="separator:aa841400f06a48a2fb08855201a27ebf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2f607d8c8b5ed6dc3dd03733914942e1"><td class="memItemLeft" align="right" valign="top"><a id="a2f607d8c8b5ed6dc3dd03733914942e1"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>IsTotalInternalReflection</b> (float refractionCoeff)</td></tr>
+<tr class="memitem:a2f607d8c8b5ed6dc3dd03733914942e1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transparent.html#a2f607d8c8b5ed6dc3dd03733914942e1">IsTotalInternalReflection</a> (float refractionCoeff)</td></tr>
 <tr class="separator:a2f607d8c8b5ed6dc3dd03733914942e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad14120bc1bdfedaeb39faa8f00db0adb"><td class="memItemLeft" align="right" valign="top"><a id="ad14120bc1bdfedaeb39faa8f00db0adb"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>FindRefractionCoeff</b> (float eta, float cosIncidentAngle)</td></tr>
 <tr class="separator:ad14120bc1bdfedaeb39faa8f00db0adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f12a86a13ad5acd4d8923a1e589b41f"><td class="memItemLeft" align="right" valign="top"><a id="a0f12a86a13ad5acd4d8923a1e589b41f"></a>
-<a class="el" href="class_ray.html">Ray</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ComputeTransmissionDirection</b> (<a class="el" href="class_vector.html">Vector</a> hitPoint, <a class="el" href="class_vector.html">Vector</a> toCameraDirection, <a class="el" href="class_vector.html">Vector</a> normal, float eta, float cosTransmittedAngle, float cosIncidentAngle)</td></tr>
+<tr class="memitem:a0f12a86a13ad5acd4d8923a1e589b41f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_ray.html">Ray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transparent.html#a0f12a86a13ad5acd4d8923a1e589b41f">ComputeTransmissionDirection</a> (<a class="el" href="class_vector.html">Vector</a> hitPoint, <a class="el" href="class_vector.html">Vector</a> toCameraDirection, <a class="el" href="class_vector.html">Vector</a> normal, float eta, float cosTransmittedAngle, float cosIncidentAngle)</td></tr>
 <tr class="separator:a0f12a86a13ad5acd4d8923a1e589b41f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9987aa28589988a6e91adb872b3278bc"><td class="memItemLeft" align="right" valign="top"><a id="a9987aa28589988a6e91adb872b3278bc"></a>
-<a class="el" href="class_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>ComputeTransmissionColor</b> (float eta, <a class="el" href="class_vector.html">Vector</a> normal, <a class="el" href="class_vector.html">Vector</a> transmissionDirection)</td></tr>
+<tr class="memitem:a9987aa28589988a6e91adb872b3278bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_transparent.html#a9987aa28589988a6e91adb872b3278bc">ComputeTransmissionColor</a> (float eta, <a class="el" href="class_vector.html">Vector</a> normal, <a class="el" href="class_vector.html">Vector</a> transmissionDirection)</td></tr>
 <tr class="separator:a9987aa28589988a6e91adb872b3278bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac36927f9df1cafb940e77893fb924959"><td class="memItemLeft" align="right" valign="top"><a id="ac36927f9df1cafb940e77893fb924959"></a>
 <a class="el" href="class_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><b>BaseColor</b> () const</td></tr>
@@ -157,6 +154,138 @@ std::shared_ptr&lt; <a class="el" href="class_texture.html">Texture</a> &gt;&#16
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_transparent.html" title="Transparent is a class representing transparent objects.">Transparent</a> is a class representing transparent objects. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a9987aa28589988a6e91adb872b3278bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9987aa28589988a6e91adb872b3278bc">&#9670;&nbsp;</a></span>ComputeTransmissionColor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_color.html">Color</a> Transparent::ComputeTransmissionColor </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>eta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vector.html">Vector</a>&#160;</td>
+          <td class="paramname"><em>normal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vector.html">Vector</a>&#160;</td>
+          <td class="paramname"><em>transmissionDirection</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Computes color of a transmission </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">transmissionDirection</td><td></td></tr>
+    <tr><td class="paramname">normal</td><td>- normal <a class="el" href="class_vector.html" title="Vector class which is a representation of a 3D vector.">Vector</a> </td></tr>
+    <tr><td class="paramname">eta</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_color.html" title="Color class that represents light intensity for a color in RGB colorspace.">Color</a> object </dd></dl>
+
+</div>
+</div>
+<a id="a0f12a86a13ad5acd4d8923a1e589b41f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f12a86a13ad5acd4d8923a1e589b41f">&#9670;&nbsp;</a></span>ComputeTransmissionDirection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_ray.html">Ray</a> Transparent::ComputeTransmissionDirection </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_vector.html">Vector</a>&#160;</td>
+          <td class="paramname"><em>hitPoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vector.html">Vector</a>&#160;</td>
+          <td class="paramname"><em>toCameraDirection</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_vector.html">Vector</a>&#160;</td>
+          <td class="paramname"><em>normal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>eta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>cosTransmittedAngle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>cosIncidentAngle</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Computes direction of a transmission </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hitPoint</td><td>- <a class="el" href="class_vector.html" title="Vector class which is a representation of a 3D vector.">Vector</a> of hit </td></tr>
+    <tr><td class="paramname">toCameraDirection</td><td>- Direction to the camera </td></tr>
+    <tr><td class="paramname">normal</td><td>- normal <a class="el" href="class_vector.html" title="Vector class which is a representation of a 3D vector.">Vector</a> </td></tr>
+    <tr><td class="paramname">eta</td><td></td></tr>
+    <tr><td class="paramname">cosTransmittedAngle</td><td></td></tr>
+    <tr><td class="paramname">cosIncidentAngle</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="class_ray.html">Ray</a> object </dd></dl>
+
+</div>
+</div>
+<a id="a2f607d8c8b5ed6dc3dd03733914942e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f607d8c8b5ed6dc3dd03733914942e1">&#9670;&nbsp;</a></span>IsTotalInternalReflection()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Transparent::IsTotalInternalReflection </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>refractionCoeff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Checks whether total internal reflection occured </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">refractionCoeff</td><td>- Refraction Coeffitient </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool - true or false </dd></dl>
+
+</div>
+</div>
 <a id="aa841400f06a48a2fb08855201a27ebf4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa841400f06a48a2fb08855201a27ebf4">&#9670;&nbsp;</a></span>Shade()</h2>
 

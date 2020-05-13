@@ -79,6 +79,11 @@ Color Transparent::Shade(std::shared_ptr<ImageRT> tracer, std::shared_ptr<HitInf
 	return finalColor;
 }
 
+/**
+* Checks whether total internal reflection occured
+* @param refractionCoeff - Refraction Coeffitient
+* @returns bool - true or false
+*/
 bool Transparent::IsTotalInternalReflection(float refractionCoeff)
 {
 	return refractionCoeff < 0;
@@ -89,6 +94,16 @@ float Transparent::FindRefractionCoeff(float eta, float cosIncidentAngle)
 	return 1 - (1 - cosIncidentAngle * cosIncidentAngle) / (eta * eta);
 }
 
+/**
+* Computes direction of a transmission
+* @param hitPoint - Vector of hit
+* @param toCameraDirection - Direction to the camera
+* @param normal - normal Vector
+* @param eta
+* @param cosTransmittedAngle
+* @param cosIncidentAngle
+* @returns Ray object
+*/
 Ray Transparent::ComputeTransmissionDirection(Vector hitPoint, Vector toCameraDirection, Vector normal, float eta, float cosTransmittedAngle, float cosIncidentAngle)
 {
 	if (cosIncidentAngle < 0)
@@ -102,6 +117,13 @@ Ray Transparent::ComputeTransmissionDirection(Vector hitPoint, Vector toCameraDi
 	return Ray(hitPoint, direction);
 }
 
+/**
+* Computes color of a transmission
+* @param transmissionDirection
+* @param normal - normal Vector
+* @param eta
+* @returns Color object
+*/
 Color Transparent::ComputeTransmissionColor(float eta, Vector normal, Vector transmissionDirection)
 {
 	return ((Color(255,255,255) * this->Transmission_) / (eta * eta));
